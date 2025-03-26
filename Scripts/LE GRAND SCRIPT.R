@@ -5,23 +5,23 @@ library(tidyverse)
 #--------LOAD DONNEES----------
 
 setwd("")
-source("fct_load_data.r")
+source("Scripts/fct_load_data.r")
 # Option 1: Utiliser la fonction pour fusionner les données
   #donnees <- load_data("/Users/francoismartin/Desktop/BAC_Écologie/H25/BIO500/Projet_session/series_temporelles/donnees") 
 # Option 2: read.csv() pour aller chercher le fichier donnees.csv, les données pré-fusionnées. 
-donnees <- read.csv("donnees.csv")
+donnees <- read.csv("data/raw/donnees.csv")
 donnees$X <-  NULL
 donnees <- unique(donnees)
 #---------NETTOYAGE ET VALIDATION DES DONNÉES-----------------
 
 #Fonction de nettoyage des colonnes (ex: colonne lisense)
 
-source("fct_cleanup_col.R")
+source("Scripts/fct_cleanup_col.R")
 donnees <- cleanup_col(donnees)
 
 #Fonction de validation des données géographiques (met en longitude, latitude)
 
-source("fct_cleanup_geom.R")
+source("Scripts/fct_cleanup_geom.R")
 donnees <- cleanup_geom(donnees)
 
 summary(donnees)
@@ -64,7 +64,7 @@ unnest(c(years,values))) #déplier le dataframe et créer une ligne pour chaque 
 
 #Fonction de validation des années
 
-source("fct_cleanup_years.r")
+source("Scripts/fct_cleanup_years.r")
 abondance <- cleanup_years(abondance)
 
 summary(abondance)
@@ -87,7 +87,7 @@ summary(geom)
 #--------TABLEAU SECONDAIRE TAXO--------
 #La table "Table_taxo" à été produite à partir de la table "taxonomie" présente dans les données fournies, avec le script "Production Table_taxo.R"
 
-taxo <- read.csv("Table_taxo.csv")
+taxo <- read.csv("data/Nettoyé/Table_taxo.csv")
 
 head(taxo)
 

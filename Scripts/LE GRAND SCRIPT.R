@@ -4,7 +4,6 @@ library(tidyverse)
 
 #--------LOAD DONNEES----------
 
-setwd("")
 source("Scripts/fct_load_data.r")
 # Option 1: Utiliser la fonction pour fusionner les données
   #donnees <- load_data("/Users/francoismartin/Desktop/BAC_Écologie/H25/BIO500/Projet_session/series_temporelles/donnees") 
@@ -12,9 +11,10 @@ source("Scripts/fct_load_data.r")
 donnees <- read.csv("data/raw/donnees.csv")
 donnees$X <-  NULL
 donnees <- unique(donnees)
+
 #---------NETTOYAGE ET VALIDATION DES DONNÉES-----------------
 
-#Fonction de nettoyage des colonnes (ex: colonne lisense)
+#Fonction de nettoyage des colonnes (ex: colonne license)
 
 source("Scripts/fct_cleanup_col.R")
 donnees <- cleanup_col(donnees)
@@ -103,10 +103,16 @@ population <- subset(donnees, select=c(TSN,unit,cle_pop,cle_source,cle_geom),sub
 head(population)
 
 
+#--#--#--#--#--#--#--#--#--#--#--#--#--#
 
+##- ##- ##- I N J E C T I O N ##- ##- ##
 
+#--#--#--#--#--#--#--#--#--#--#--#--#--#
 
+library(DBI)
+library(RSQLite)
 
+# je sais plus trop, il faut faire db.connect et tout, j'ai ajouté dans get.ignore le fichier sql alors on pourra refaire le code chq fois.
 
 
 

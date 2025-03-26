@@ -1,0 +1,403 @@
+"","observed_scientific_name","valid_scientific_name","rank","vernacular_fr","kingdom","phylum","class","order","family","genus","species","TSN"
+"1","Cryptacanthodes maculatus","Cryptacanthodes maculatus","species","Terrassier tacheté","Animalia","Chordata","Teleostei","Perciformes","Cryptacanthodidae","Cryptacanthodes","Cryptacanthodes maculatus",171609
+"2","Lumpenus lampretaeformis","Lumpenus lampretaeformis","species","Lompénie-serpent","Animalia","Chordata","Teleostei","Perciformes","Stichaeidae","Lumpenus","Lumpenus lampretaeformis",631023
+"3","Osmerus mordax","Osmerus mordax","species","Éperlan arc-en-ciel","Animalia","Chordata","Teleostei","Osmeriformes","Osmeridae","Osmerus","Osmerus mordax",162041
+"4","Apeltes quadracus","Apeltes quadracus","species","Épinoche à quatre épines","Animalia","Chordata","Teleostei","Gasterosteiformes","Gasterosteidae","Apeltes","Apeltes quadracus",166397
+"5","Lithobates palustris","Lithobates palustris","species","Grenouille des marais","Animalia","Chordata","Amphibia","Anura","Ranidae","Lithobates","Lithobates palustris",775107
+"6","Notophthalmus viridescens","Notophthalmus viridescens","species","Triton vert","Animalia","Chordata","Amphibia","Caudata","Salamandridae","Notophthalmus","Notophthalmus viridescens",173615
+"7","Cygnus columbianus","Cygnus columbianus","species","Cygne siffleur","Animalia","Chordata","Aves","Anseriformes","Anatidae","Cygnus","Cygnus columbianus",174987
+"8","Sterna dougallii dougallii","Sterna dougallii dougallii","subspecies","","Animalia","Chordata","Aves","Charadriiformes","Laridae","Sterna","Sterna dougallii",176891
+"9","Sterna dougallii","Sterna dougallii","species","Sterne de dougall","Animalia","Chordata","Aves","Charadriiformes","Laridae","Sterna","Sterna dougallii",176891
+"10","Sterna hirundo","Sterna hirundo","species","Sterne pierregarin","Animalia","Chordata","Aves","Charadriiformes","Laridae","Sterna","Sterna hirundo",176888
+"11","Sterna hirundo hirundo","Sterna hirundo hirundo","subspecies","","Animalia","Chordata","Aves","Charadriiformes","Laridae","Sterna","Sterna hirundo",176888
+"12","Sterna paradisaea","Sterna paradisaea","species","Sterne arctique","Animalia","Chordata","Aves","Charadriiformes","Laridae","Sterna","Sterna paradisaea",176890
+"13","Eumesogrammus praecisus","Eumesogrammus praecisus","species","Quatre-lignes Atlantique","Animalia","Chordata","Teleostei","Perciformes","Stichaeidae","Eumesogrammus","Eumesogrammus praecisus",171601
+"14","Acipenser oxyrinchus","Acipenser","genus","","Animalia","Chordata","Chondrostei","Acipenseriformes","Acipenseridae","Acipenser","Acipenser oxyrinchus",553269
+"15","Acipenser oxyrinchus oxyrinchus","Acipenser oxyrinchus","species","Esturgeon noir","Animalia","Chordata","Chondrostei","Acipenseriformes","Acipenseridae","Acipenser","Acipenser oxyrinchus",553269
+"16","Liopsetta putnami","Liopsetta putnami","species","Plie lisse","Animalia","Chordata","Teleostei","Pleuronectiformes","Pleuronectidae","Liopsetta","Pleuronectes putnami",172914
+"17","Alopias vulpinus","Alopias vulpinus","species","Renard marin","Animalia","Chordata","Elasmobranchii","Lamniformes","Alopiidae","Alopias","Alopias vulpinus",159916
+"18","Lithobates pipiens","Lithobates pipiens","species","Grenouille léopard","Animalia","Chordata","Amphibia","Anura","Ranidae","Lithobates","Lithobates pipiens",775108
+"19","Lithobates sylvaticus","Lithobates sylvaticus","species","Grenouille des bois","Animalia","Chordata","Amphibia","Anura","Ranidae","Lithobates","Lithobates sylvaticus",775117
+"20","Pseudacris crucifer","Pseudacris crucifer","species","Rainette crucifère","Animalia","Chordata","Amphibia","Anura","Hylidae","Pseudacris","Pseudacris crucifer",207303
+"21","Dryophytes versicolor","Dryophytes versicolor","species","","Animalia","Chordata","Amphibia","Anura","Hylidae","Dryophytes","Dryophytes versicolor",1095495
+"22","Anaxyrus americanus","Anaxyrus americanus","species","Crapaud d'amérique","Animalia","Chordata","Amphibia","Anura","Bufonidae","Anaxyrus","Anaxyrus americanus",773511
+"23","Lithobates clamitans","Lithobates clamitans","species","","Animalia","Chordata","Amphibia","Anura","Ranidae","Lithobates","Lithobates clamitans",775087
+"24","Lithobates catesbeianus","Lithobates catesbeianus","species","Grenouille-taureau","Animalia","Chordata","Amphibia","Anura","Ranidae","Lithobates","Lithobates catesbeianus",775084
+"25","Delphinapterus leucas","Delphinapterus leucas","species","Béluga","Animalia","Chordata","Mammalia","Cetacea","Monodontidae","Delphinapterus","Delphinapterus leucas",180483
+"26","Acipenser brevirostrum","Acipenser","genus","Esturgeon à museau court","Animalia","Chordata","Chondrostei","Acipenseriformes","Acipenseridae","Acipenser","Acipenser brevirostrum",161069
+"27","Acipenser fulvescens","Acipenser fulvescens","species","Esturgeon jaune","Animalia","Chordata","Chondrostei","Acipenseriformes","Acipenseridae","Acipenser","Acipenser fulvescens",161071
+"28","Falco peregrinus anatum","Falco peregrinus anatum","subspecies","","Animalia","Chordata","Aves","Falconiformes","Falconidae","Falco","Falco peregrinus",175604
+"29","Falco peregrinus","Falco peregrinus","species","Faucon pèlerin","Animalia","Chordata","Aves","Falconiformes","Falconidae","Falco","Falco peregrinus",175604
+"30","Desmognathus fuscus fuscus","Desmognathus fuscus","species","","Animalia","Chordata","Amphibia","Caudata","Plethodontidae","Desmognathus","Desmognathus fuscus",173633
+"31","Desmognathus fuscus","Desmognathus fuscus","species","","Animalia","Chordata","Amphibia","Caudata","Plethodontidae","Desmognathus","Desmognathus fuscus",173633
+"32","Eubalaena glacialis","Eubalaena glacialis","species","Baleine noire","Animalia","Chordata","Mammalia","Cetacea","Balaenidae","Eubalaena","Eubalaena glacialis",180537
+"33","Carcharodon carcharias","Carcharodon carcharias","species","Requin blanc","Animalia","Chordata","Elasmobranchii","Lamniformes","Lamnidae","Carcharodon","Carcharodon carcharias",159903
+"34","Ammodytes dubius","Ammodytes dubius","species","Lançon du Nord","Animalia","Chordata","Teleostei","Perciformes","Ammodytidae","Ammodytes","Ammodytes dubius",171674
+"35","Amblyraja radiata","Amblyraja radiata","species","Raie épineuse","Animalia","Chordata","Elasmobranchii","Rajiformes","Rajidae","Amblyraja","Amblyraja radiata",564149
+"36","Alosa sapidissima","Alosa sapidissima","species","Alose savoureuse","Animalia","Chordata","Teleostei","Clupeiformes","Clupeidae","Alosa","Alosa sapidissima",161702
+"37","Alosa pseudoharengus","Alosa pseudoharengus","species","Gaspareau","Animalia","Chordata","Teleostei","Clupeiformes","Clupeidae","Alosa","Alosa pseudoharengus",161706
+"38","Anarhichas minor","Anarhichas minor","species","Loup tacheté","Animalia","Chordata","Teleostei","Perciformes","Anarhichadidae","Anarhichas","Anarhichas minor",171342
+"39","Anarhichas lupus","Anarhichas lupus","species","Loup Atlantique","Animalia","Chordata","Teleostei","Perciformes","Anarhichadidae","Anarhichas","Anarhichas lupus",171341
+"40","Anarhichas denticulatus","Anarhichas denticulatus","species","Loup gélatineux","Animalia","Chordata","Teleostei","Perciformes","Anarhichadidae","Anarhichas","Anarhichas denticulatus",550561
+"41","Artediellus uncinatus","Artediellus uncinatus","species","Hameçon neigeux","Animalia","Chordata","Teleostei","Scorpaeniformes","Cottidae","Artediellus","Artediellus uncinatus",167207
+"42","Centroscyllium fabricii","Centroscyllium fabricii","species","Aiguillat noir","Animalia","Chordata","Elasmobranchii","Squaliformes","Etmopteridae","Centroscyllium","Centroscyllium fabricii",160703
+"43","Boreogadus saida","Boreogadus saida","species","Saida franc","Animalia","Chordata","Teleostei","Gadiformes","Gadidae","Boreogadus","Boreogadus saida",164706
+"44","Aspidophoroides monopterygius","Aspidophoroides monopterygius","species","Poisson-alligator Atlantique","Animalia","Chordata","Teleostei","Scorpaeniformes","Agonidae","Aspidophoroides","Aspidophoroides monopterygius",167439
+"45","Cottunculus microps","Cottunculus microps","species","Cotte polaire","Animalia","Chordata","Teleostei","Scorpaeniformes","Psychrolutidae","Cottunculus","Cottunculus microps",167408
+"46","Clupea harengus","Clupea harengus","species","Hareng Atlantique","Animalia","Chordata","Teleostei","Clupeiformes","Clupeidae","Clupea","Clupea harengus",161722
+"47","Enchelyopus cimbrius","Enchelyopus cimbrius","species","Motelle à quatre barbillons","Animalia","Chordata","Teleostei","Gadiformes","Lotidae","Enchelyopus","Enchelyopus cimbrius",164748
+"48","Cyclopterus lumpus","Cyclopterus lumpus","species","Grosse poule de mer","Animalia","Chordata","Teleostei","Scorpaeniformes","Cyclopteridae","Cyclopterus","Cyclopterus lumpus",167612
+"49","Nezumia bairdii","Nezumia bairdii","species","","Animalia","Chordata","Teleostei","Gadiformes","Macrouridae","Nezumia","Nezumia bairdii",165395
+"50","Ardenna gravis","Puffinus gravis","species","Puffin majeur","Animalia","Chordata","Aves","Procellariiformes","Procellariidae","Puffinus","Puffinus gravis",174549
+"51","Myxine glutinosa","Myxine glutinosa","species","Myxine du Nord","Animalia","Chordata","Myxini","Myxiniformes","Myxinidae","Myxine","Myxine glutinosa",159772
+"52","Myoxocephalus scorpius","Myoxocephalus scorpius","species","Chaboisseau à épines courtes","Animalia","Chordata","Teleostei","Scorpaeniformes","Cottidae","Myoxocephalus","Myoxocephalus scorpius",167318
+"53","Myoxocephalus scorpioides","Myoxocephalus scorpioides","species","Chaboisseau arctique","Animalia","Chordata","Teleostei","Scorpaeniformes","Cottidae","Myoxocephalus","Myoxocephalus scorpioides",167317
+"54","Myoxocephalus octodecemspinosus","Myoxocephalus octodecemspinosus","species","Chaboisseau à dix-huit épines","Animalia","Chordata","Teleostei","Scorpaeniformes","Cottidae","Myoxocephalus","Myoxocephalus octodecemspinosus",167320
+"55","Merluccius bilinearis","Merluccius bilinearis","species","Merlu argenté","Animalia","Chordata","Teleostei","Gadiformes","Merlucciidae","Merluccius","Merluccius bilinearis",164791
+"56","Melanostigma atlanticum","Melanostigma atlanticum","species","Mollasse Atlantique","Animalia","Chordata","Teleostei","Perciformes","Zoarcidae","Melanostigma","Melanostigma atlanticum",165296
+"57","Melanogrammus aeglefinus","Melanogrammus aeglefinus","species","Aiglefin","Animalia","Chordata","Teleostei","Gadiformes","Gadidae","Melanogrammus","Melanogrammus aeglefinus",164744
+"58","Mallotus villosus","Mallotus villosus","species","Capelan","Animalia","Chordata","Teleostei","Osmeriformes","Osmeridae","Mallotus","Mallotus villosus",162035
+"59","Malacoraja senta","Malacoraja senta","species","Raie à queue de velours","Animalia","Chordata","Chondrichthyes","Rajiformes","Rajidae","Malacoraja","Malacoraja senta",564151
+"60","Lophius americanus","Lophius americanus","species","Baudroie d'amérique","Animalia","Chordata","Teleostei","Lophiiformes","Lophiidae","Lophius","Lophius americanus",164499
+"61","Myzopsetta ferruginea","Limanda","genus","","Animalia","Chordata","Teleostei","Pleuronectiformes","Pleuronectidae","Limanda","Limanda ferruginea",172909
+"62","Leucoraja ocellata","Leucoraja ocellata","species","Raie tachetée","Animalia","Chordata","Elasmobranchii","Rajiformes","Rajidae","Leucoraja","Leucoraja ocellata",564145
+"63","Leptoclinus maculatus","Leptoclinus maculatus","species","Lompénie tachetée","Animalia","Chordata","Teleostei","Perciformes","Stichaeidae","Leptoclinus","Leptoclinus maculatus",171603
+"64","Leptagonus decagonus","Leptagonus decagonus","species","Agone Atlantique","Animalia","Chordata","Teleostei","Scorpaeniformes","Agonidae","Leptagonus","Leptagonus decagonus",167478
+"65","Icelus spatula","Icelus gilberti","species","Icèle spatulée","Animalia","Chordata","Teleostei","Scorpaeniformes","Cottidae","Icelus","Icelus gilberti",644027
+"66","Hippoglossus hippoglossus","Hippoglossus hippoglossus","species","Flétan Atlantique","Animalia","Chordata","Teleostei","Pleuronectiformes","Pleuronectidae","Hippoglossus","Hippoglossus hippoglossus",172933
+"67","Hippoglossoides platessoides","Hippoglossoides platessoides","species","Plie canadienne","Animalia","Chordata","Teleostei","Pleuronectiformes","Pleuronectidae","Hippoglossoides","Hippoglossoides platessoides",172877
+"68","Rissa tridactyla","Rissa tridactyla","species","Mouette tridactyle","Animalia","Chordata","Aves","Charadriiformes","Laridae","Rissa","Rissa tridactyla",176875
+"69","Hemitripterus americanus","Hemitripterus americanus","species","Hémitriptère Atlantique","Animalia","Chordata","Teleostei","Scorpaeniformes","Hemitripteridae","Hemitripterus","Hemitripterus americanus",167289
+"70","Gymnocanthus tricuspis","Gymnocanthus tricuspis","species","Tricorne arctique","Animalia","Chordata","Teleostei","Scorpaeniformes","Cottidae","Gymnocanthus","Gymnocanthus tricuspis",167275
+"71","Gymnelus viridis","Gymnelus viridis","species","Unernak caméléon","Animalia","Chordata","Teleostei","Perciformes","Zoarcidae","Gymnelus","Gymnelus viridis",631028
+"72","Glyptocephalus cynoglossus","Glyptocephalus cynoglossus","species","Plie grise","Animalia","Chordata","Teleostei","Pleuronectiformes","Pleuronectidae","Glyptocephalus","Glyptocephalus cynoglossus",172873
+"73","Gasterosteus aculeatus aculeatus","Gasterosteus aculeatus","species","","Animalia","Chordata","Teleostei","Gasterosteiformes","Gasterosteidae","Gasterosteus","Gasterosteus aculeatus",166365
+"74","Gasterosteus aculeatus","Gasterosteus aculeatus","species","Épinoche à trois épines","Animalia","Chordata","Teleostei","Gasterosteiformes","Gasterosteidae","Gasterosteus","Gasterosteus aculeatus",166365
+"75","Gadus morhua","Gadus morhua","species","Morue de l'atlantique","Animalia","Chordata","Teleostei","Gadiformes","Gadidae","Gadus","Gadus morhua",164712
+"76","Eumicrotremus spinosus","Eumicrotremus spinosus","species","Petite poule de mer Atlantique","Animalia","Chordata","Teleostei","Scorpaeniformes","Cyclopteridae","Eumicrotremus","Eumicrotremus spinosus",167545
+"77","Zoarces americanus","Zoarces americanus","species","Loquette d'amérique","Animalia","Chordata","Teleostei","Perciformes","Zoarcidae","Zoarces","Zoarces americanus",165318
+"78","Urophycis tenuis","Urophycis tenuis","species","Merluche blanche","Animalia","Chordata","Teleostei","Gadiformes","Phycidae","Urophycis","Urophycis tenuis",164732
+"79","Ulvaria subbifurcata","Ulvaria subbifurcata","species","Ulvaire deux-lignes","Animalia","Chordata","Teleostei","Perciformes","Stichaeidae","Ulvaria","Ulvaria subbifurcata",171616
+"80","Triglops murrayi","Triglops murrayi","species","Faux-trigle armé","Animalia","Chordata","Teleostei","Scorpaeniformes","Cottidae","Triglops","Triglops murrayi",167375
+"81","Peprilus triacanthus","Peprilus triacanthus","species","Stromatée à fossettes","Animalia","Chordata","Teleostei","Perciformes","Stromateidae","Peprilus","Peprilus triacanthus",172567
+"82","Careproctus reinhardti","Careproctus reinhardti","species","Petite limace de mer","Animalia","Chordata","Teleostei","Scorpaeniformes","Liparidae","Careproctus","Careproctus reinhardti",167522
+"83","Tautogolabrus adspersus","Tautogolabrus adspersus","species","Tanche-tautogue","Animalia","Chordata","Teleostei","Perciformes","Labridae","Tautogolabrus","Tautogolabrus adspersus",170481
+"84","Stichaeus punctatus punctatus","Stichaeus punctatus punctatus","subspecies","Stichée arctique","Animalia","Chordata","","Perciformes","Stichaeidae","Stichaeus","Stichaeus punctatus",171596
+"85","Stichaeus punctatus","Stichaeus punctatus","species","Stichée arctique","Animalia","Chordata","Teleostei","Perciformes","Stichaeidae","Stichaeus","Stichaeus punctatus",171596
+"86","Squalus acanthias","Squalus acanthias","species","Aiguillat commun","Animalia","Chordata","Chondrichthyes","Squaliformes","Squalidae","Squalus","Squalus acanthias",160617
+"87","Scophthalmus aquosus","Scophthalmus aquosus","species","Turbot de sable","Animalia","Chordata","Teleostei","Pleuronectiformes","Scophthalmidae","Scophthalmus","Scophthalmus aquosus",172746
+"88","Pseudacris triseriata","Pseudacris triseriata","species","Rainette faux-grillon de l'ouest","Animalia","Chordata","Amphibia","Anura","Hylidae","Pseudacris","Pseudacris triseriata",173525
+"89","Scomber scombrus","Scomber scombrus","species","Maquereau bleu","Animalia","Chordata","Teleostei","Perciformes","Scombridae","Scomber","Scomber scombrus",172414
+"90","Reinhardtius hippoglossoides","Reinhardtius hippoglossoides","species","Flétan du groenland","Animalia","Chordata","Teleostei","Pleuronectiformes","Pleuronectidae","Reinhardtius","Reinhardtius hippoglossoides",172930
+"91","Pseudopleuronectes americanus","Pseudopleuronectes americanus","species","Plie rouge","Animalia","Chordata","Teleostei","Pleuronectiformes","Pleuronectidae","Pseudopleuronectes","Pseudopleuronectes americanus",172905
+"92","Pollachius virens","Pollachius virens","species","Goberge","Animalia","Chordata","Teleostei","Gadiformes","Gadidae","Pollachius","Pollachius virens",164727
+"93","Phycis chesteri","Phycis chesteri","species","Merluche à longues nageoires","Animalia","Chordata","Teleostei","Gadiformes","Phycidae","Phycis","Phycis chesteri",164733
+"94","Osmerus mordax mordax","Osmerus mordax mordax","subspecies","Eperlan d'amerique","Animalia","Chordata","Teleostei","Osmeriformes","Osmeridae","Osmerus","Osmerus mordax",162041
+"95","Microtus pennsylvanicus","Microtus pennsylvanicus","species","Campagnol des champs","Animalia","Chordata","Mammalia","Rodentia","Cricetidae","Microtus","Microtus pennsylvanicus",180297
+"96","Zapus hudsonius","Zapus hudsonius","species","Souris sauteuse des champs","Animalia","Chordata","Mammalia","Rodentia","Dipodidae","Zapus","Zapus hudsonius",180386
+"97","Phoca vitulina","Phoca vitulina","species","Phoque commun","Animalia","Chordata","Mammalia","Carnivora","Phocidae","Phoca","Phoca vitulina",180643
+"98","Erethizon dorsata","Erethizon dorsatus","species","","Animalia","Chordata","Mammalia","Rodentia","Erethizontidae","Erethizon","Erethizon dorsatus",825295
+"99","Pekania pennanti","Pekania pennanti","species","Pékan","Animalia","Chordata","Mammalia","Carnivora","Mustelidae","Pekania","Pekania pennanti",1086061
+"100","Peromyscus maniculatus","Peromyscus maniculatus","species","Souris sylvestre","Animalia","Chordata","Mammalia","Rodentia","Cricetidae","Peromyscus","Peromyscus maniculatus",180276
+"101","Tamias striatus","Tamias striatus","species","Tamia rayé","Animalia","Chordata","Mammalia","Rodentia","Sciuridae","Tamias","Tamias striatus",180207
+"102","Myodes gapperi","Myodes gapperi","species","Campagnol de gapper","Animalia","Chordata","Mammalia","Rodentia","Cricetidae","Myodes","Myodes gapperi",970612
+"103","Anser caerulescens","Anser caerulescens","species","Oie des neiges","Animalia","Chordata","Aves","Anseriformes","Anatidae","Anser","Anser caerulescens",175029
+"104","Anser caerulescens caerulescens","Anser caerulescens caerulescens","subspecies","","Animalia","Chordata","Aves","Anseriformes","Anatidae","Anser","Anser caerulescens",175029
+"105","Histrionicus histrionicus","Histrionicus histrionicus","species","Arlequin plongeur","Animalia","Chordata","Aves","Anseriformes","Anatidae","Histrionicus","Histrionicus histrionicus",175149
+"106","Chelydra serpentina","Chelydra serpentina","species","Chélydre serpentine","Animalia","Chordata","Testudines","Testudines","Chelydridae","Chelydra","Chelydra serpentina",173752
+"107","Bathyraja spinicauda","Bathyraja spinicauda","species","Raie à queue épineuse","Animalia","Chordata","Elasmobranchii","Rajiformes","Arhynchobatidae","Bathyraja","Bathyraja spinicauda",160932
+"108","Sternotherus odoratus","Sternotherus odoratus","species","","Animalia","Chordata","Reptilia","Testudines","Kinosternidae","Sternotherus","Sternotherus odoratus",173758
+"109","Chrysemys picta","Chrysemys picta","species","Tortue peinte","Animalia","Chordata","Testudines","Testudines","Emydidae","Chrysemys","Chrysemys picta",173783
+"110","Graptemys geographica","Graptemys","genus","Tortue géographique","Animalia","Chordata","Reptilia","Testudines","Emydidae","Graptemys","Graptemys geographica",173794
+"111","Emydoidea blandingii","Emydoidea blandingii","species","Tortue mouchetée","Animalia","Chordata","Reptilia","Testudines","Emydidae","Emys","Emydoidea blandingii",173789
+"112","Merluccius albidus","Merluccius albidus","species","Merlu","Animalia","Chordata","Teleostei","Gadiformes","Merlucciidae","Merluccius","Merluccius albidus",164793
+"113","Citharichthys arctifrons","Citharichthys arctifrons","species","Plie du gulf stream","Animalia","Chordata","Teleostei","Pleuronectiformes","Paralichthyidae","Citharichthys","Citharichthys arctifrons",172719
+"114","Leucoraja erinacea","Leucoraja erinacea","species","Raie-hérisson","Animalia","Chordata","Chondrichthyes","Rajiformes","Rajidae","Leucoraja","Leucoraja erinacea",564130
+"115","Paralichthys oblongus","Paralichthys oblongus","species","Cardeau à quatre ocelles","Animalia","Chordata","Teleostei","Pleuronectiformes","Paralichthyidae","Hippoglossina","Hippoglossina oblonga",172783
+"116","Notacanthus chemnitzii","Notacanthus chemnitzii","species","","Animalia","Chordata","Teleostei","Notacanthiformes","Notacanthidae","Notacanthus","Notacanthus chemnitzii",161690
+"117","Ardenna grisea","Puffinus griseus","species","Puffin fuligineux","Animalia","Chordata","Aves","Procellariiformes","Procellariidae","Puffinus","Puffinus griseus",174553
+"118","Gadus macrocephalus","Gadus macrocephalus","species","Morue du Pacifique","Animalia","Chordata","Teleostei","Gadiformes","Gadidae","Gadus","Gadus macrocephalus",164711
+"119","Chlorophthalmus agassizi","Chlorophthalmus agassizi","species","Éperlan du large","Animalia","Chordata","Teleostei","Aulopiformes","Chlorophthalmidae","Chlorophthalmus","Chlorophthalmus agassizi",162430
+"120","Helicolenus dactylopterus","Helicolenus dactylopterus","species","Rascasse du fond","Animalia","Chordata","Teleostei","Scorpaeniformes","Sebastidae","Helicolenus","Helicolenus dactylopterus",166787
+"121","Synaphobranchus kaupii","Synaphobranchus kaupii","species","","Animalia","Chordata","Teleostei","Anguilliformes","Synaphobranchidae","Synaphobranchus","Synaphobranchus kaupii",635794
+"122","Trachyrincus murrayi","Trachyrincus murrayi","species","Grenadier-scie","Animalia","Chordata","Teleostei","Gadiformes","Macrouridae","Trachyrincus","Trachyrincus murrayi",165419
+"123","Argentina silus","Argentina silus","species","Grande argentine","Animalia","Chordata","Teleostei","Osmeriformes","Argentinidae","Argentina","Argentina silus",162064
+"124","Urophycis chuss","Urophycis chuss","species","Merluche-écureuil","Animalia","Chordata","Teleostei","Gadiformes","Gadidae","Urophycis","Urophycis chuss",164730
+"125","Simenchelys parasitica","Simenchelys parasitica","species","Anguille a nez court","Animalia","Chordata","Teleostei","Anguilliformes","Synaphobranchidae","Simenchelys","Simenchelys parasitica",161594
+"126","Uria aalge","Uria aalge","species","Guillemot marmette","Animalia","Chordata","Aves","Charadriiformes","Alcidae","Uria","Uria aalge",176974
+"127","Antimora rostrata","Antimora rostrata","species","Antimore bleu","Animalia","Chordata","Teleostei","Gadiformes","Moridae","Antimora","Antimora rostrata",164672
+"128","Anaxyrus fowleri","Anaxyrus fowleri","species","","Animalia","Chordata","Amphibia","Anura","Bufonidae","Anaxyrus","Anaxyrus fowleri",773520
+"129","Artediellus atlanticus","Artediellus","genus","Hameçon Atlantique","Animalia","Chordata","Teleostei","Scorpaeniformes","Cottidae","Artediellus","Artediellus atlanticus",167208
+"130","Careproctus ranula","Careproctus ranula","species","Limace acadienne","Animalia","Chordata","Teleostei","Scorpaeniformes","Liparidae","Careproctus","Careproctus ranula",643676
+"131","Brosme brosme","Brosme brosme","species","Brosme","Animalia","Chordata","Teleostei","Gadiformes","Lotidae","Brosme","Brosme brosme",164740
+"132","Bathylagus euryops","Bathylagus euryops","species","Garcette-goitre","Animalia","Chordata","Teleostei","Osmeriformes","Bathylagidae","Bathylagus","Bathylagus euryops",162091
+"133","Cottunculus thomsonii","Cottunculus thomsonii","species","Cotte blême","Animalia","Chordata","Teleostei","Scorpaeniformes","Psychrolutidae","Cottunculus","Cottunculus thomsonii",643682
+"134","Coryphaenoides rupestris","Coryphaenoides rupestris","species","Grenadier de roche","Animalia","Chordata","Teleostei","Gadiformes","Macrouridae","Coryphaenoides","Coryphaenoides rupestris",165350
+"135","Chiasmodon niger","Chiasmodon niger","species","Gargare noir","Animalia","Chordata","Teleostei","Perciformes","Chiasmodontidae","Chiasmodon","Chiasmodon niger",171086
+"136","Chauliodus sloani","Chauliodus sloani","species","Chauliode très lumineux","Animalia","Chordata","Teleostei","Stomiiformes","Stomiidae","Chauliodus","Chauliodus sloani",162281
+"137","Dipturus laevis","Dipturus laevis","species","Grande raie","Animalia","Chordata","Chondrichthyes","Rajiformes","Rajidae","Dipturus","Dipturus laevis",564139
+"138","Dibranchus atlanticus","Dibranchus atlanticus","species","","Animalia","Chordata","Teleostei","Lophiiformes","Ogcocephalidae","Dibranchus","Dibranchus atlanticus",164589
+"139","Harriotta raleighana","Harriotta raleighana","species","Chimère de raleigh","Animalia","Chordata","Chondrichthyes","Chimaeriformes","Rhinochimaeridae","Harriotta","Harriotta raleighana",161029
+"140","Liparis fabricii","Liparis fabricii","species","Limace gélatineuse","Animalia","Chordata","Teleostei","Scorpaeniformes","Liparidae","Liparis","Liparis fabricii",550548
+"141","Myotis lucifugus","Myotis lucifugus","species","Petite chauve-souris brune","Animalia","Chordata","Mammalia","Chiroptera","Vespertilionidae","Myotis","Myotis lucifugus",179988
+"142","Gaidropsarus ensis","Gaidropsarus ensis","species","Mustèle arctique à trois barbillons","Animalia","Chordata","Teleostei","Gadiformes","Lotidae","Gaidropsarus","Gaidropsarus ensis",164769
+"143","Magnisudis atlantica","Magnisudis atlantica","species","Barracudine","Animalia","Chordata","Teleostei","Aulopiformes","Paralepididae","Magnisudis","Magnisudis atlantica",644691
+"144","Liparis tunicatus","Liparis","genus","","Animalia","Chordata","Equisetopsida","Asparagales","Liparidae","Liparis","Liparis tunicatus",167579
+"145","Liparis gibbus","Liparis gibbus","species","Limace marbrée","Animalia","Chordata","Teleostei","Scorpaeniformes","Liparidae","Liparis","Liparis gibbus",167561
+"146","Liparis atlanticus","Liparis atlanticus","species","","Animalia","Chordata","Teleostei","Lepidoptera","Liparidae","Liparis","Ocneria atlantica",NA
+"147","Lycodes vahlii","Lycodes vahlii","species","Lycode à carreaux","Animalia","Chordata","Teleostei","Perciformes","Zoarcidae","Lycodes","Lycodes vahlii",165284
+"148","Lycodes terraenovae","Lycodes colletti","species","","Animalia","Chordata","Teleostei","Perciformes","Zoarcidae","Lycodes","Lycodes terraenovae",630981
+"149","Lycodes reticulatus","Lycodes reticulatus","species","Lycode arctique","Animalia","Chordata","Teleostei","Perciformes","Zoarcidae","Lycodes","Lycodes reticulatus",165280
+"150","Macrourus berglax","Macrourus berglax","species","Grenadier berglax","Animalia","Chordata","Teleostei","Gadiformes","Macrouridae","Macrourus","Macrourus berglax",165421
+"151","Lycodes pallidus","Lycodes colletti","species","","Animalia","Chordata","Teleostei","Perciformes","Zoarcidae","Lycodes","Lycodes uschakovi",631169
+"152","Lycodes lavalaei","Lycodes lavalaei","species","Lycode du labrador","Animalia","Chordata","Teleostei","Perciformes","Zoarcidae","Lycodes","Lycodes lavalaei",165276
+"153","Lycodes esmarkii","Lycodes colletti","species","","Animalia","Chordata","Teleostei","Perciformes","Zoarcidae","Lycodes","Lycodes colletti",631141
+"154","Lycenchelys verrillii","Lycenchelys verrillii","species","","Animalia","Chordata","Teleostei","Perciformes","Zoarcidae","Lycenchelys","Lycenchelys verrillii",631024
+"155","Lithobates clamitans melanota","Lithobates clamitans","species","","Animalia","Chordata","Amphibia","Anura","Ranidae","Lithobates","Lithobates clamitans",775087
+"156","Lumpenus fabricii","Lumpenus fabricii","species","Lompénie élancée","Animalia","Chordata","Teleostei","Perciformes","Stichaeidae","Lumpenus","Lumpenus fabricii",171582
+"157","Lycodonus mirabilis","Lycodonus mirabilis","species","Lycaspine à chevrons","Animalia","Chordata","Teleostei","Perciformes","Zoarcidae","Lycodonus","Lycodonus mirabilis",630983
+"158","Microgadus tomcod","Microgadus tomcod","species","Poulamon Atlantique","Animalia","Chordata","Teleostei","Gadiformes","Gadidae","Microgadus","Microgadus tomcod",164720
+"159","Sebastes mentella","Sebastes mentella","species","Sébaste Atlantique","Animalia","Chordata","Teleostei","Scorpaeniformes","Sebastidae","Sebastes","Sebastes mentella",166756
+"160","Menidia menidia","Menidia menidia","species","Capucette","Animalia","Chordata","Teleostei","Atheriniformes","Atherinopsidae","Menidia","Menidia menidia",165994
+"161","Pholis gunnellus","Pholis gunnellus","species","Gonnelle","Animalia","Chordata","Teleostei","Perciformes","Pholidae","Pholis","Pholis gunnellus",171645
+"162","Paralepis coregonoides","Arctozenus risso","species","","Animalia","Chordata","Teleostei","Aulopiformes","Paralepididae","Arctozenus","Arctozenus risso",644684
+"163","Nemichthys scolopaceus","Nemichthys scolopaceus","species","Avocette ruban","Animalia","Chordata","Teleostei","Anguilliformes","Nemichthyidae","Nemichthys","Nemichthys scolopaceus",161624
+"164","Scomberesox saurus","Scomberesox saurus","species","Balaou","Animalia","Chordata","Teleostei","Beloniformes","Scomberesocidae","Scomberesox","Scomberesox saurus",165612
+"165","Rhinochimaera atlantica","Rhinochimaera atlantica","species","Chimère couteau","Animalia","Chordata","Chondrichthyes","Chimaeriformes","Rhinochimaeridae","Rhinochimaera","Rhinochimaera atlantica",161027
+"166","Rajella fyllae","Rajella fyllae","species","Raie ronde","Animalia","Chordata","Elasmobranchii","Rajiformes","Rajidae","Rajella","Rajella fyllae",564135
+"167","Esox masquinongy","Esox masquinongy","species","Maskinongé","Animalia","Chordata","Teleostei","Esociformes","Esocidae","Esox","Esox masquinongy",162144
+"168","Cottus cognatus","Cottus cognatus","species","","Animalia","Chordata","","Scorpaeniformes","Cottidae","Cottus","Cottus bairdii",167237
+"169","Polymixia lowei","Polymixia lowei","species","Poisson chèvre","Animalia","Chordata","Teleostei","Polymixiiformes","Polymixiidae","Polymixia","Polymixia lowei",166126
+"170","Polyacanthonotus rissoanus","Polyacanthonotus rissoanus","species","Policante","Animalia","Chordata","Teleostei","Notacanthiformes","Notacanthidae","Polyacanthonotus","Polyacanthonotus rissoanus",161685
+"171","Stomias boa ferox","Stomias boa ferox","subspecies","Dragon-boa","Animalia","Chordata","Teleostei","Stomiiformes","Stomiidae","Stomias","Stomias boa",162289
+"172","Stomias boa","Stomias boa","species","Dragon-boa","Animalia","Chordata","Teleostei","Stomiiformes","Stomiidae","Stomias","Stomias boa",162289
+"173","Somniosus microcephalus","Somniosus microcephalus","species","Laimargue","Animalia","Chordata","Elasmobranchii","Squaliformes","Somniosidae","Somniosus","Somniosus microcephalus",160611
+"174","Sigmops elongatus","Gonostoma elongatum","species","","Animalia","Chordata","Teleostei","Stomiiformes","Gonostomatidae","Sigmops","Sigmops elongatus",622362
+"175","Serrivomer beanii","Serrivomer beanii","species","","Animalia","Chordata","Teleostei","Anguilliformes","Serrivomeridae","Serrivomer","Serrivomer beanii",635762
+"176","Sebastes norvegicus","Sebastes norvegicus","species","Sébaste orangé","Animalia","Chordata","Teleostei","Scorpaeniformes","Scorpaenidae","Sebastes","Sebastes norvegicus",166781
+"177","Zenopsis conchifer","Zenopsis conchifera","species","Faux st.-pierre","Animalia","Chordata","Teleostei","Zeiformes","Zeidae","Zenopsis","Zenopsis conchifer",166284
+"178","Branta bernicla hrota","Branta bernicla hrota","subspecies","","Animalia","Chordata","Aves","Anseriformes","Anatidae","Branta","Branta bernicla",175011
+"179","Branta bernicla","Branta bernicla","species","Bernache cravant","Animalia","Chordata","Aves","Anseriformes","Anatidae","Branta","Branta bernicla",175011
+"180","Larus smithsonianus","Larus smithsonianus","species","Goéland hudsonien","Animalia","Chordata","Aves","Charadriiformes","Laridae","Larus","Larus smithsonianus",824077
+"181","Morus bassanus","Morus bassanus","species","Fou de bassan","Animalia","Chordata","Aves","Suliformes","Sulidae","Morus","Morus bassanus",174712
+"182","Balaenoptera physalus","Balaenoptera physalus","species","Rorqual commun","Animalia","Chordata","Mammalia","Cetacea","Balaenopteridae","Balaenoptera","Balaenoptera physalus",180527
+"183","Scolopax minor","Scolopax minor","species","Bécasse d'amérique","Animalia","Chordata","Aves","Charadriiformes","Scolopacidae","Scolopax","Scolopax minor",176580
+"184","Plethodon cinereus","Plethodon cinereus","species","Salamandre rayée","Animalia","Chordata","Amphibia","Caudata","Plethodontidae","Plethodon","Plethodon cinereus",173649
+"185","Alces americanus","Alces americanus","species","Orignal","Animalia","Chordata","Mammalia","Artiodactyla","Cervidae","Alces","Alces americanus",898198
+"186","Necturus maculosus","Necturus maculosus","species","Necture tacheté","Animalia","Chordata","Amphibia","Caudata","Proteidae","Necturus","Necturus maculosus",173630
+"187","Ambystoma maculatum","Ambystoma maculatum","species","Salamandre maculée","Animalia","Chordata","Amphibia","Caudata","Ambystomatidae","Ambystoma","Ambystoma maculatum",173590
+"188","Balaenoptera musculus","Balaenoptera musculus","species","Rorqual bleu","Animalia","Chordata","Mammalia","Cetacea","Balaenopteridae","Balaenoptera","Balaenoptera musculus",180528
+"189","Megaptera novaeangliae","Megaptera novaeangliae","species","Rorqual à bosse","Animalia","Chordata","Mammalia","Cetacea","Balaenopteridae","Megaptera","Megaptera novaeangliae",180530
+"190","Micropterus dolomieu","Micropterus dolomieu","species","Achigan à petite bouche","Animalia","Chordata","Teleostei","Perciformes","Centrarchidae","Micropterus","Micropterus dolomieu",168159
+"191","Phoca vitulina concolor","Phoca vitulina vitulina","subspecies","","Animalia","Chordata","Mammalia","Carnivora","Phocidae","Phoca","Phoca vitulina",180643
+"192","Balaenoptera acutorostrata","Balaenoptera acutorostrata","species","Petit rorqual","Animalia","Chordata","Mammalia","Cetacea","Balaenopteridae","Balaenoptera","Balaenoptera acutorostrata",180524
+"193","Ambystoma jeffersonianum","Ambystoma jeffersonianum","species","Salamandre de jefferson","Animalia","Chordata","Amphibia","Caudata","Ambystomatidae","Ambystoma","Ambystoma jeffersonianum",173598
+"194","Myotis septentrionalis","Myotis septentrionalis","species","Chauve-souris nordique","Animalia","Chordata","Mammalia","Chiroptera","Vespertilionidae","Myotis","Myotis septentrionalis",180000
+"195","Anguilla rostrata","Anguilla rostrata","species","Anguille d'amérique","Animalia","Chordata","Teleostei","Anguilliformes","Anguillidae","Anguilla","Anguilla rostrata",161127
+"196","Phocoena phocoena","Phocoena phocoena","species","Marsouin commun","Animalia","Chordata","Mammalia","Cetacea","Phocoenidae","Phocoena","Phocoena phocoena",180473
+"197","Calidris canutus","Calidris canutus","species","Bécasseau maubèche","Animalia","Chordata","Aves","Charadriiformes","Scolopacidae","Calidris","Calidris canutus",176642
+"198","Calidris canutus rufa","Calidris canutus rufa","subspecies","","Animalia","Chordata","Aves","Charadriiformes","Scolopacidae","Calidris","Calidris canutus",176642
+"199","Brevoortia tyrannus","Brevoortia tyrannus","species","Alose tyran","Animalia","Chordata","Teleostei","Clupeiformes","Clupeidae","Brevoortia","Brevoortia tyrannus",161732
+"200","Brevoortia tyrannus harengus","Brevoortia tyrannus","species","Alose tyran","Animalia","Chordata","Teleostei","Clupeiformes","Clupeidae","Brevoortia","Brevoortia tyrannus",161732
+"201","Salmo salar","Salmo salar","species","Saumon Atlantique","Animalia","Chordata","Teleostei","Salmoniformes","Salmonidae","Salmo","Salmo salar",161996
+"202","Clupea harengus harengus","Clupea harengus harengus","subspecies","","Animalia","Chordata","Teleostei","Clupeiformes","Clupeidae","Clupea","Clupea harengus",161722
+"203","Cetorhinus maximus","Cetorhinus maximus","species","Pèlerin","Animalia","Chordata","Elasmobranchii","Lamniformes","Cetorhinidae","Cetorhinus","Cetorhinus maximus",159907
+"204","Halichoerus grypus","Halichoerus grypus","species","Phoque gris","Animalia","Chordata","Mammalia","Carnivora","Phocidae","Halichoerus","Halichoerus grypus",180653
+"205","Tamiasciurus hudsonicus","Tamiasciurus hudsonicus","species","Écureuil roux","Animalia","Chordata","Mammalia","Rodentia","Sciuridae","Tamiasciurus","Tamiasciurus hudsonicus",180166
+"206","Blarina brevicauda","Blarina brevicauda","species","Grande musaraigne","Animalia","Chordata","Mammalia","Soricomorpha","Soricidae","Blarina","Blarina brevicauda",179967
+"207","Napaeozapus insignis","Napaeozapus insignis","species","Souris sauteuse des bois","Animalia","Chordata","Mammalia","Rodentia","Dipodidae","Napaeozapus","Napaeozapus insignis",180390
+"208","Sorex cinereus","Sorex cinereus","species","Musaraigne cendrée","Animalia","Chordata","Mammalia","Soricomorpha","Soricidae","Sorex","Sorex cinereus",179929
+"209","Clemmys guttata","Clemmys guttata","species","Tortue ponctuée","Animalia","Chordata","Testudines","Testudines","Emydidae","Clemmys","Clemmys guttata",173771
+"210","Synchiropus agassizii","Foetorepus agassizii","species","","Animalia","Chordata","Teleostei","Perciformes","Callionymidae","Foetorepus","Foetorepus agassizii",642555
+"211","Paralichthys dentatus","Paralichthys dentatus","species","Cardeau d'été","Animalia","Chordata","Teleostei","Pleuronectiformes","Paralichthyidae","Paralichthys","Paralichthys dentatus",172735
+"212","Petromyzon marinus","Petromyzon marinus","species","Lamproie marine","Animalia","Chordata","Petromyzonti","Petromyzontiformes","Petromyzontidae","Petromyzon","Petromyzon marinus",159722
+"213","Selene setapinnis","Selene setapinnis","species","Lune","Animalia","Chordata","Teleostei","Perciformes","Carangidae","Selene","Selene setapinnis",168684
+"214","Tetronarce nobiliana","Tetronarce nobiliana","species","Torpille noire","Animalia","Chordata","Elasmobranchii","Torpediniformes","Torpedinidae","Tetronarce","Tetronarce nobiliana",NA
+"215","Arenaria interpres","Arenaria interpres","species","Tournepierre à collier","Animalia","Chordata","Aves","Charadriiformes","Scolopacidae","Arenaria","Arenaria interpres",176571
+"216","Numenius phaeopus","Numenius phaeopus","species","Courlis corlieu","Animalia","Chordata","Aves","Charadriiformes","Scolopacidae","Numenius","Numenius phaeopus",176599
+"217","Calidris alba","Calidris alba","species","Bécasseau sanderling","Animalia","Chordata","Aves","Charadriiformes","Scolopacidae","Calidris","Calidris alba",176669
+"218","Pluvialis squatarola","Pluvialis squatarola","species","Pluvier argenté","Animalia","Chordata","Aves","Charadriiformes","Charadriidae","Pluvialis","Pluvialis squatarola",176567
+"219","Coccyzus americanus","Coccyzus americanus","species","Coulicou à bec jaune","Animalia","Chordata","Aves","Cuculiformes","Cuculidae","Coccyzus","Coccyzus americanus",177831
+"220","Circus hudsonius","Circus","genus","Busard d'amérique","Animalia","Chordata","Aves","Accipitriformes","Accipitridae","Circus","Circus cyaneus",175430
+"221","Antrostomus vociferus","Antrostomus vociferus","species","Engoulevent bois-pourri","Animalia","Chordata","Aves","Caprimulgiformes","Caprimulgidae","Antrostomus","Antrostomus vociferus",1077358
+"222","Buteo platypterus","Buteo platypterus","species","Petite buse","Animalia","Chordata","Aves","Accipitriformes","Accipitridae","Buteo","Buteo platypterus",175365
+"223","Buteo lineatus","Buteo lineatus","species","Buse à épaulettes","Animalia","Chordata","Aves","Accipitriformes","Accipitridae","Buteo","Buteo lineatus",175359
+"224","Bombycilla cedrorum","Bombycilla cedrorum","species","Jaseur d'amérique","Animalia","Chordata","Aves","Passeriformes","Bombycillidae","Bombycilla","Bombycilla cedrorum",178532
+"225","Icterus galbula","Icterus galbula","species","Oriole du Nord","Animalia","Chordata","Aves","Passeriformes","Icteridae","Icterus","Icterus galbula",179083
+"226","Quiscalus quiscula","Quiscalus quiscula","species","Quiscale bronzé","Animalia","Chordata","Aves","Passeriformes","Icteridae","Quiscalus","Quiscalus quiscula",179104
+"227","Passerella iliaca","Passerella iliaca","species","Bruant fauve","Animalia","Chordata","Aves","Passeriformes","Passerellidae","Passerella","Passerella iliaca",179464
+"228","Molothrus ater","Molothrus ater","species","Vacher à tête brune","Animalia","Chordata","Aves","Passeriformes","Icteridae","Molothrus","Molothrus ater",179112
+"229","Euphagus cyanocephalus","Euphagus cyanocephalus","species","Quiscale de brewer","Animalia","Chordata","Aves","Passeriformes","Icteridae","Euphagus","Euphagus cyanocephalus",179094
+"230","Hesperiphona vespertina","Hesperiphona vespertina","species","Hesperiphona vespertinus","Animalia","Chordata","Aves","Passeriformes","Fringillidae","Hesperiphona","Hesperiphona vespertina",179175
+"231","Spinus tristis","Spinus tristis","species","Chardonneret jaune","Animalia","Chordata","Aves","Passeriformes","Fringillidae","Spinus","Spinus tristis",179249
+"232","Sturnella magna","Sturnella magna","species","Sturnelle des prés","Animalia","Chordata","Aves","Passeriformes","Icteridae","Sturnella","Sturnella magna",179034
+"233","Sturnella magna magna","Sturnella magna magna","subspecies","","Animalia","Chordata","Aves","Passeriformes","Icteridae","Sturnella","Sturnella magna",179034
+"234","Passer domesticus","Passer domesticus","species","Moineau domestique","Animalia","Chordata","Aves","Passeriformes","Passeridae","Passer","Passer domesticus",179628
+"235","Mimus polyglottos","Mimus polyglottos","species","Moqueur polyglotte","Animalia","Chordata","Aves","Passeriformes","Mimidae","Mimus","Mimus polyglottos",178620
+"236","Melanerpes erythrocephalus","Melanerpes erythrocephalus","species","Pic à tête rouge","Animalia","Chordata","Aves","Piciformes","Picidae","Melanerpes","Melanerpes erythrocephalus",178186
+"237","Loxia curvirostra","Loxia curvirostra","species","Bec-croisé des sapins","Animalia","Chordata","Aves","Passeriformes","Fringillidae","Loxia","Loxia curvirostra",179259
+"238","Hirundo rustica","Hirundo rustica","species","Hirondelle rustique","Animalia","Chordata","Aves","Passeriformes","Hirundinidae","Hirundo","Hirundo rustica",178448
+"239","Eremophila alpestris","Eremophila alpestris","species","Alouette hausse-col","Animalia","Chordata","Aves","Passeriformes","Alaudidae","Eremophila","Eremophila alpestris",178402
+"240","Setophaga palmarum","Setophaga palmarum","species","Paruline à couronne rousse","Animalia","Chordata","Aves","Passeriformes","Parulidae","Setophaga","Setophaga palmarum",950043
+"241","Porzana carolina","Porzana carolina","species","Marouette de caroline","Animalia","Chordata","Aves","Gruiformes","Rallidae","Porzana","Porzana carolina",176242
+"242","Podilymbus podiceps","Podilymbus podiceps","species","Grèbe à bec bigarré","Animalia","Chordata","Aves","Podicipediformes","Podicipedidae","Podilymbus","Podilymbus podiceps",174505
+"243","Pandion haliaetus","Pandion haliaetus","species","Balbuzard pêcheur","Animalia","Chordata","Aves","Accipitriformes","Pandionidae","Pandion","Pandion haliaetus",175590
+"244","Cistothorus palustris","Cistothorus palustris","species","Troglodyte des marais","Animalia","Chordata","Aves","Passeriformes","Troglodytidae","Cistothorus","Cistothorus palustris",178608
+"245","Botaurus lentiginosus","Botaurus lentiginosus","species","Butor d'amérique","Animalia","Chordata","Aves","Pelecaniformes","Ardeidae","Botaurus","Botaurus lentiginosus",174856
+"246","Zenaida macroura","Zenaida macroura","species","Tourterelle triste","Animalia","Chordata","Aves","Columbiformes","Columbidae","Zenaida","Zenaida macroura",177125
+"247","Vireo flavifrons","Vireo flavifrons","species","Viréo à gorge jaune","Animalia","Chordata","Aves","Passeriformes","Vireonidae","Vireo","Vireo flavifrons",179009
+"248","Vermivora cyanoptera","Vermivora cyanoptera","species","Paruline à ailes bleues","Animalia","Chordata","Aves","Passeriformes","Parulidae","Vermivora","Vermivora cyanoptera",950011
+"249","Troglodytes aedon","Troglodytes aedon","species","Troglodyte familier","Animalia","Chordata","Aves","Passeriformes","Troglodytidae","Troglodytes","Troglodytes aedon",178541
+"250","Tachycineta bicolor","Tachycineta bicolor","species","Hirondelle bicolore","Animalia","Chordata","Aves","Passeriformes","Hirundinidae","Tachycineta","Tachycineta bicolor",178431
+"251","Haemorhous mexicanus","Haemorhous mexicanus","species","Roselin familier","Animalia","Chordata","Aves","Passeriformes","Fringillidae","Haemorhous","Haemorhous mexicanus",997805
+"252","Ardea herodias","Ardea herodias","species","Grand héron","Animalia","Chordata","Aves","Pelecaniformes","Ardeidae","Ardea","Ardea herodias",174773
+"253","Hydroprogne caspia","Hydroprogne caspia","species","Sterne caspienne","Animalia","Chordata","Aves","Charadriiformes","Laridae","Hydroprogne","Hydroprogne caspia",176935
+"254","Poecile atricapillus","Poecile atricapillus","species","Mésange à tête noire","Animalia","Chordata","Aves","Passeriformes","Paridae","Poecile","Poecile atricapillus",554382
+"255","Haliaeetus leucocephalus","Haliaeetus leucocephalus","species","Pygargue à tête blanche","Animalia","Chordata","Aves","Accipitriformes","Accipitridae","Haliaeetus","Haliaeetus leucocephalus",175420
+"256","Catharus bicknelli","Catharus bicknelli","species","Grive de bicknell","Animalia","Chordata","Aves","Passeriformes","Turdidae","Catharus","Catharus bicknelli",554148
+"257","Sialia sialis","Sialia sialis","species","Merlebleu de l'est","Animalia","Chordata","Aves","Passeriformes","Turdidae","Sialia","Sialia sialis",179801
+"258","Baeolophus bicolor","Baeolophus bicolor","species","Mésange bicolore","Animalia","Chordata","Aves","Passeriformes","Paridae","Baeolophus","Baeolophus bicolor",554138
+"259","Lepus americanus","Lepus americanus","species","Lièvre d'amérique","Animalia","Chordata","Mammalia","Lagomorpha","Leporidae","Lepus","Lepus americanus",180112
+"260","Rangifer tarandus","Rangifer tarandus","species","Caribou","Animalia","Chordata","Mammalia","Artiodactyla","Cervidae","Rangifer","Rangifer tarandus",180701
+"261","Dolichonyx oryzivorus","Dolichonyx oryzivorus","species","Goglu des prés","Animalia","Chordata","Aves","Passeriformes","Icteridae","Dolichonyx","Dolichonyx oryzivorus",179032
+"262","Aquila chrysaetos","Aquila chrysaetos","species","Aigle royal","Animalia","Chordata","Aves","Accipitriformes","Accipitridae","Aquila","Aquila chrysaetos",175407
+"263","Ambloplites rupestris","Ambloplites rupestris","species","Crapet de roche","Animalia","Chordata","Teleostei","Perciformes","Centrarchidae","Ambloplites","Ambloplites rupestris",168097
+"264","Perca flavescens","Perca flavescens","species","Perchaude","Animalia","Chordata","Teleostei","Perciformes","Percidae","Perca","Perca flavescens",168469
+"265","Notemigonus crysoleucas","Notemigonus crysoleucas","species","Méné jaune","Animalia","Chordata","Teleostei","Cypriniformes","Cyprinidae","Notemigonus","Notemigonus crysoleucas",163368
+"266","Buteo lagopus","Buteo lagopus","species","Buse pattue","Animalia","Chordata","Aves","Accipitriformes","Accipitridae","Buteo","Buteo lagopus",175373
+"267","Accipiter gentilis","Accipiter gentilis","species","Autour des palombes","Animalia","Chordata","Aves","Accipitriformes","Accipitridae","Accipiter","Accipiter gentilis",175300
+"268","Accipiter cooperii","Accipiter cooperii","species","Epervier de cooper","Animalia","Chordata","Aves","Accipitriformes","Accipitridae","Accipiter","Accipiter cooperii",175309
+"269","Accipiter striatus","Accipiter striatus","species","Epervier brun","Animalia","Chordata","Aves","Accipitriformes","Accipitridae","Accipiter","Accipiter striatus",175304
+"270","Morone chrysops","Morone chrysops","species","Bar blanc","Animalia","Chordata","Teleostei","Perciformes","Moronidae","Morone","Morone chrysops",167681
+"271","Martes americana","Martes americana","species","Martre d'amérique","Animalia","Chordata","Mammalia","Carnivora","Mustelidae","Martes","Martes americana",180559
+"272","Lynx rufus","Lynx rufus","species","Lynx roux","Animalia","Chordata","Mammalia","Carnivora","Felidae","Lynx","Lynx rufus",180582
+"273","Ursus americanus","Ursus americanus","species","Ours noir","Animalia","Chordata","Mammalia","Carnivora","Ursidae","Ursus","Ursus americanus",180544
+"274","Odocoileus virginianus","Odocoileus virginianus","species","Cerf de Virginie","Animalia","Chordata","Mammalia","Artiodactyla","Cervidae","Odocoileus","Odocoileus virginianus",180699
+"275","Castor canadensis","Castor canadensis","species","Castor","Animalia","Chordata","Mammalia","Rodentia","Castoridae","Castor","Castor canadensis",180212
+"276","Cyprinus carpio","Cyprinus","genus","Cyprin","Animalia","Chordata","Teleostei","Cypriniformes","Cyprinidae","Cyprinus","Cyprinus carpio",163344
+"277","Fundulus heteroclitus","Fundulus heteroclitus","species","Choquemort","Animalia","Chordata","Teleostei","Cyprinodontiformes","Fundulidae","Fundulus","Fundulus heteroclitus",165647
+"278","Glaucomys sabrinus","Glaucomys sabrinus","species","Grand polatouche","Animalia","Chordata","Mammalia","Rodentia","Sciuridae","Glaucomys","Glaucomys sabrinus",180169
+"279","Uria lomvia","Uria lomvia","species","Guillemot de brünnich","Animalia","Chordata","Aves","Charadriiformes","Alcidae","Uria","Uria lomvia",176978
+"280","Salmo trutta","Salmo trutta","species","Truite brune","Animalia","Chordata","Teleostei","Salmoniformes","Salmonidae","Salmo","Salmo trutta",161997
+"281","Plethodon jordani","Plethodon jordani","species","","Animalia","Chordata","Amphibia","Caudata","Plethodontidae","Plethodon","Plethodon jordani",173660
+"282","Odobenus rosmarus","Odobenus rosmarus","species","Morse","Animalia","Chordata","Mammalia","Carnivora","Odobenidae","Odobenus","Odobenus rosmarus",180639
+"283","Limosa haemastica","Limosa haemastica","species","Barge hudsonienne","Animalia","Chordata","Aves","Charadriiformes","Scolopacidae","Limosa","Limosa haemastica",176690
+"284","Lepus arcticus","Lepus arcticus","species","Lièvre arctique","Animalia","Chordata","Mammalia","Lagomorpha","Leporidae","Lepus","Lepus arcticus",552511
+"285","Lepus arcticus bangsii","Lepus arcticus bangsii","subspecies","","Animalia","Chordata","Mammalia","Lagomorpha","Leporidae","Lepus","Lepus arcticus",552511
+"286","Storeria dekayi","Storeria dekayi","species","Couleuvre brune","Animalia","Chordata","Reptilia","Squamata","Colubridae","Storeria","Storeria dekayi",174129
+"287","Sistrurus catenatus","Sistrurus catenatus","species","Sistrurus catenatus catenatus","Animalia","Chordata","Squamata","Squamata","Viperidae","Sistrurus","Sistrurus catenatus",174304
+"288","Hyperoodon ampullatus","Hyperoodon ampullatus","species","Baleine à bec commune","Animalia","Chordata","Mammalia","Cetacea","Hyperoodontidae","Hyperoodon","Hyperoodon ampullatus",180504
+"289","Morone americana","Morone americana","species","Baret","Animalia","Chordata","Teleostei","Perciformes","Moronidae","Morone","Morone americana",167678
+"290","Isurus oxyrinchus","Isurus oxyrinchus","species","Mako à nageoires courtes","Animalia","Chordata","Elasmobranchii","Lamniformes","Lamnidae","Isurus","Isurus oxyrinchus",159924
+"291","Dermochelys coriacea","Dermochelys coriacea","species","Tortue luth","Animalia","Chordata","Testudines","Testudines","Dermochelyidae","Dermochelys","Dermochelys coriacea",173843
+"292","Sistrurus catenatus catenatus","Sistrurus catenatus","species","","Animalia","Chordata","Squamata","Squamata","Viperidae","Sistrurus","Sistrurus catenatus",174304
+"293","Nerodia sipedon","Nerodia sipedon","species","Couleuvre d'eau","Animalia","Chordata","Squamata","Squamata","Colubridae","Nerodia","Nerodia sipedon",174251
+"294","Nerodia sipedon insularum","Nerodia sipedon insularum","subspecies","","Animalia","Chordata","Squamata","Squamata","Colubridae","Nerodia","Nerodia sipedon",174251
+"295","Amia calva","Amia calva","species","Poisson-castor","Animalia","Chordata","Holostei","Amiiformes","Amiidae","Amia","Amia calva",161104
+"296","Ameiurus nebulosus","Ameiurus nebulosus","species","Barbotte brune","Animalia","Chordata","Teleostei","Siluriformes","Ictaluridae","Ameiurus","Ameiurus nebulosus",164043
+"297","Aplodinotus grunniens","Aplodinotus grunniens","species","Malachigan","Animalia","Chordata","Teleostei","Perciformes","Sciaenidae","Aplodinotus","Aplodinotus grunniens",169364
+"298","Catostomus commersonii","Catostomus commersonii","species","","Animalia","Chordata","Teleostei","Cypriniformes","Catostomidae","Catostomus","Catostomus commersonii",553273
+"299","Carpiodes cyprinus","Carpiodes cyprinus","species","Couette","Animalia","Chordata","Teleostei","Cypriniformes","Catostomidae","Carpiodes","Carpiodes cyprinus",163917
+"300","Esox lucius","Esox lucius","species","Grand brochet","Animalia","Chordata","Teleostei","Esociformes","Esocidae","Esox","Esox lucius",162139
+"301","Dorosoma cepedianum","Dorosoma cepedianum","species","Alose à gésier","Animalia","Chordata","Teleostei","Clupeiformes","Clupeidae","Dorosoma","Dorosoma cepedianum",161737
+"302","Ictalurus punctatus","Ictalurus punctatus","species","Barbue de rivière","Animalia","Chordata","Teleostei","Siluriformes","Ictaluridae","Ictalurus","Ictalurus punctatus",163998
+"303","Lepomis gibbosus","Lepomis gibbosus","species","Crapet-soleil","Animalia","Chordata","Teleostei","Perciformes","Centrarchidae","Lepomis","Lepomis gibbosus",168144
+"304","Lepisosteus osseus","Lepisosteus osseus","species","Lépisosté osseux","Animalia","Chordata","Holostei","Lepisosteiformes","Lepisosteidae","Lepisosteus","Lepisosteus osseus",161094
+"305","Moxostoma macrolepidotum","Moxostoma macrolepidotum","species","Chevalier rouge","Animalia","Chordata","Teleostei","Cypriniformes","Catostomidae","Moxostoma","Moxostoma macrolepidotum",163928
+"306","Moxostoma anisurum","Moxostoma anisurum","species","Chevalier blanc","Animalia","Chordata","Teleostei","Cypriniformes","Catostomidae","Moxostoma","Moxostoma anisurum",163933
+"307","Micropterus salmoides","Micropterus salmoides","species","Achigan à grande bouche","Animalia","Chordata","Teleostei","Perciformes","Centrarchidae","Micropterus","Micropterus salmoides",168160
+"308","Percopsis omiscomaycus","Percopsis omiscomaycus","species","Omisco","Animalia","Chordata","Teleostei","Percopsiformes","Percopsidae","Percopsis","Percopsis omiscomaycus",164409
+"309","Noturus flavus","Noturus flavus","species","Barbotte des rapides","Animalia","Chordata","Teleostei","Siluriformes","Ictaluridae","Noturus","Noturus flavus",164013
+"310","Notropis hudsonius","Notropis hudsonius","species","Queue à tache noire","Animalia","Chordata","Teleostei","Cypriniformes","Cyprinidae","Notropis","Notropis hudsonius",163404
+"311","Pomoxis nigromaculatus","Pomoxis nigromaculatus","species","Marigane noire","Animalia","Chordata","Teleostei","Perciformes","Centrarchidae","Pomoxis","Pomoxis nigromaculatus",168167
+"312","Sander vitreus","Sander vitreus","species","Doré jaune","Animalia","Chordata","Teleostei","Perciformes","Percidae","Sander","Sander vitreus",650173
+"313","Anchoa mitchilli","Anchoa mitchilli","species","Anchois américain","Animalia","Chordata","Teleostei","Clupeiformes","Engraulidae","Anchoa","Anchoa mitchilli",161839
+"314","Canis lupus","Canis lupus","species","Loup","Animalia","Chordata","Mammalia","Carnivora","Canidae","Canis","Canis lupus",180596
+"315","Gyrinophilus porphyriticus","Gyrinophilus porphyriticus","species","Salamandre pourpre","Animalia","Chordata","Amphibia","Caudata","Plethodontidae","Gyrinophilus","Gyrinophilus porphyriticus",173715
+"316","Eurycea bislineata","Eurycea bislineata","species","Salamandre à deux lignes","Animalia","Chordata","Amphibia","Caudata","Plethodontidae","Eurycea","Eurycea bislineata",173685
+"317","Desmognathus ochrophaeus","Desmognathus ochrophaeus","species","","Animalia","Chordata","Amphibia","Caudata","Plethodontidae","Desmognathus","Desmognathus ochrophaeus",173641
+"318","Orcinus orca","Orcinus orca","species","Épaulard","Animalia","Chordata","Mammalia","Cetacea","Delphinidae","Orcinus","Orcinus orca",180469
+"319","Larus marinus","Larus marinus","species","Goéland marin","Animalia","Chordata","Aves","Charadriiformes","Laridae","Larus","Larus marinus",176815
+"320","Rangifer tarandus caribou","Rangifer tarandus caribou","subspecies","Caribou des bois","Animalia","Chordata","Mammalia","Artiodactyla","Cervidae","Rangifer","Rangifer tarandus",180701
+"321","Coregonus zenithicus","Coregonus zenithicus","species","Cisco à mâchoires égales","Animalia","Chordata","Teleostei","Salmoniformes","Salmonidae","Coregonus","Coregonus zenithicus",161948
+"322","Coregonus hoyi","Coregonus hoyi","species","","Animalia","Chordata","Teleostei","Salmoniformes","Salmonidae","Coregonus","Coregonus hoyi",161943
+"323","Coregonus artedi","Coregonus artedi","species","Cisco de lac","Animalia","Chordata","Teleostei","Salmoniformes","Salmonidae","Coregonus","Coregonus artedi",161942
+"324","Macrhybopsis storeriana","Macrhybopsis storeriana","species","Méné à grandes écailles","Animalia","Chordata","Teleostei","Cypriniformes","Cyprinidae","Macrhybopsis","Macrhybopsis storeriana",163870
+"325","Anser caerulescens atlanticus","Anser caerulescens atlanticus","subspecies","","Animalia","Chordata","Aves","Anseriformes","Anatidae","Anser","Anser caerulescens",175029
+"326","Notophthalmus viridescens louisianensis","Notophthalmus viridescens","species","","Animalia","Chordata","Amphibia","Caudata","Salamandridae","Notophthalmus","Notophthalmus viridescens",173615
+"327","Sphyrna lewini","Sphyrna lewini","species","Grand requin marteau","Animalia","Chordata","Elasmobranchii","Carcharhiniformes","Sphyrnidae","Sphyrna","Sphyrna lewini",160508
+"328","Oncorhynchus gorbuscha","Oncorhynchus gorbuscha","species","Saumon rose","Animalia","Chordata","Teleostei","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus gorbuscha",161975
+"329","Ursus maritimus","Ursus maritimus","species","Ours blanc","Animalia","Chordata","Mammalia","Carnivora","Ursidae","Ursus","Ursus maritimus",180542
+"330","Neogobius melanostomus","Neogobius melanostomus","species","Gobie à taches noires","Animalia","Chordata","Teleostei","Perciformes","Gobiidae","Neogobius","Neogobius melanostomus",172072
+"331","Lota lota","Lota lota","species","Lotte","Animalia","Chordata","Teleostei","Gadiformes","Lotidae","Lota","Lota lota",164725
+"332","Prosopium cylindraceum","Prosopium cylindraceum","species","Ménomini rond","Animalia","Chordata","Teleostei","Salmoniformes","Salmonidae","Prosopium","Prosopium cylindraceum",162008
+"333","Oncorhynchus mykiss","Oncorhynchus mykiss","species","Truite arc-en-ciel","Animalia","Chordata","Teleostei","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus mykiss",161989
+"334","Lepomis macrochirus","Lepomis","genus","","Animalia","Chordata","Teleostei","Perciformes","Centrarchidae","Lepomis","Lepomis macrochirus",168141
+"335","Moxostoma carinatum","Moxostoma carinatum","species","Chevalier de rivière","Animalia","Chordata","Teleostei","Cypriniformes","Catostomidae","Moxostoma","Moxostoma carinatum",163936
+"336","Moxostoma valenciennesi","Moxostoma valenciennesi","species","Chevalier jaune","Animalia","Chordata","Teleostei","Cypriniformes","Catostomidae","Moxostoma","Moxostoma valenciennesi",163947
+"337","Oncorhynchus tshawytscha","Oncorhynchus tshawytscha","species","Saumon chinook","Animalia","Chordata","Teleostei","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus tshawytscha",161980
+"338","Salvelinus namaycush","Salvelinus namaycush","species","Touladi","Animalia","Chordata","Teleostei","Salmoniformes","Salmonidae","Salvelinus","Salvelinus namaycush",162002
+"339","Coregonus clupeaformis","Coregonus clupeaformis","species","Grand corégone","Animalia","Chordata","Teleostei","Salmoniformes","Salmonidae","Coregonus","Coregonus clupeaformis",161941
+"340","Percina caprodes","Percina caprodes","species","Fouille-roche zébré","Animalia","Chordata","Teleostei","Perciformes","Percidae","Percina","Percina caprodes",168472
+"341","Etheostoma nigrum","Etheostoma nigrum","species","","Animalia","Chordata","Teleostei","Perciformes","Percidae","Etheostoma","Etheostoma nigrum",168369
+"342","Carassius auratus","Carassius auratus","species","Carassin","Animalia","Chordata","Teleostei","Cypriniformes","Cyprinidae","Carassius","Carassius auratus",163350
+"343","Ictiobus cyprinellus","Ictiobus cyprinellus","species","","Animalia","Chordata","Teleostei","Cypriniformes","Catostomidae","Ictiobus","Ictiobus cyprinellus",163956
+"344","Notropis atherinoides","Notropis atherinoides","species","Méné émeraude","Animalia","Chordata","Teleostei","Cypriniformes","Cyprinidae","Notropis","Notropis atherinoides",163412
+"345","Semotilus corporalis","Semotilus corporalis","species","Ouitouche","Animalia","Chordata","Teleostei","Cypriniformes","Leuciscidae","Semotilus","Semotilus corporalis",163375
+"346","Labidesthes sicculus","Labidesthes sicculus","species","Crayon d'argent","Animalia","Chordata","Teleostei","Atheriniformes","Atherinopsidae","Labidesthes","Labidesthes sicculus",166016
+"347","Canis latrans","Canis latrans","species","Coyote","Animalia","Chordata","Mammalia","Carnivora","Canidae","Canis","Canis latrans",180599
+"348","Thunnus thynnus","Thunnus thynnus","species","Thon rouge","Animalia","Chordata","Teleostei","Perciformes","Scombridae","Thunnus","Thunnus thynnus",172421
+"349","Hydrobates leucorhous","Hydrobates","genus","Pétrel cul-blanc","Animalia","Chordata","Aves","Procellariiformes","Hydrobatidae","Hydrobates","Oceanodroma leucorhoa",174628
+"350","Alca torda","Alca torda","species","Petit pingouin","Animalia","Chordata","Aves","Charadriiformes","Alcidae","Alca","Alca torda",176971
+"351","Leucoraja garmani","Leucoraja garmani","species","Raie rosette","Animalia","Chordata","Chondrichthyes","Rajiformes","Rajidae","Leucoraja","Leucoraja garmani",564136
+"352","Rostroraja eglanteria","Rostroraja","genus","","Animalia","Chordata","Elasmobranchii","Rajiformes","Rajidae","Raja","Raja eglanteria",160855
+"353","Micropogonias undulatus","Micropogonias undulatus","species","Tambour brésilien","Animalia","Chordata","Teleostei","Perciformes","Sciaenidae","Micropogonias","Micropogonias undulatus",169283
+"354","Morone saxatilis","Morone saxatilis","species","Bar rayé","Animalia","Chordata","Teleostei","Perciformes","Moronidae","Morone","Morone saxatilis",167680
+"355","Cynoscion regalis","Cynoscion regalis","species","Acoupa royal","Animalia","Chordata","Teleostei","Perciformes","Sciaenidae","Cynoscion","Cynoscion regalis",169241
+"356","Fundulus diaphanus","Fundulus diaphanus","species","Fondule barré","Animalia","Chordata","Teleostei","Cyprinodontiformes","Fundulidae","Fundulus","Fundulus diaphanus",165646
+"357","Ammodytes americanus","Ammodytes americanus","species","Lançon d'amérique","Animalia","Chordata","Teleostei","Perciformes","Ammodytidae","Ammodytes","Ammodytes americanus",171673
+"358","Stenotomus chrysops","Stenotomus chrysops","species","Spare doré","Animalia","Chordata","Teleostei","Perciformes","Sparidae","Stenotomus","Stenotomus chrysops",169182
+"359","Lopholatilus chamaeleonticeps","Lopholatilus chamaeleonticeps","species","Tile chameau","Animalia","Chordata","Teleostei","Perciformes","Malacanthidae","Lopholatilus","Lopholatilus chamaeleonticeps",168546
+"360","Centropristis striata","Centropristis striata","species","Fanfre noir","Animalia","Chordata","Teleostei","Perciformes","Serranidae","Centropristis","Centropristis striata",167687
+"361","Sebastes fasciatus","Sebastes fasciatus","species","Sébaste acadien","Animalia","Chordata","Teleostei","Scorpaeniformes","Scorpaenidae","Sebastes","Sebastes fasciatus",166774
+"362","Pomatomus saltatrix","Pomatomus saltatrix","species","Coupe-fil","Animalia","Chordata","Teleostei","Perciformes","Pomatomidae","Pomatomus","Pomatomus saltatrix",168559
+"363","Pantherophis obsoletus","Pantherophis obsoletus","species","Serpent-ratier noir","Animalia","Chordata","Squamata","Squamata","Colubridae","Pantherophis","Pantherophis obsoletus",1081826
+"364","Pantherophis obsoletus obsoleta","Pantherophis obsoletus","species","Serpent-ratier noir","Animalia","Chordata","Squamata","Squamata","Colubridae","Pantherophis","Pantherophis obsoletus",1081826
+"365","Procyon lotor","Procyon lotor","species","Raton laveur","Animalia","Chordata","Mammalia","Carnivora","Procyonidae","Procyon","Procyon lotor",180575
+"366","Clemmys insculpta","Glyptemys insculpta","species","Tortue des bois","Animalia","Chordata","Testudines","Testudines","Emydidae","Glyptemys","Glyptemys insculpta",668669
+"367","Pseudacris maculata","Pseudacris maculata","species","Rainette faux-grillon boréale","Animalia","Chordata","Amphibia","Anura","Hylidae","Pseudacris","Pseudacris maculata",207312
+"368","Eptesicus fuscus","Eptesicus fuscus","species","Grande chauve-souris brune","Animalia","Chordata","Mammalia","Chiroptera","Vespertilionidae","Eptesicus","Eptesicus fuscus",180008
+"369","Lasiurus borealis","Lasiurus borealis","species","Chauve-souris rousse","Animalia","Chordata","Mammalia","Chiroptera","Vespertilionidae","Lasiurus","Lasiurus borealis",180016
+"370","Lasiurus cinereus","Aeorestes cinereus","species","Chauve-souris cendrée","Animalia","Chordata","Mammalia","Chiroptera","Vespertilionidae","Aeorestes","Aeorestes cinereus",1157324
+"371","Prionace glauca","Prionace glauca","species","Requin bleu","Animalia","Chordata","Elasmobranchii","Carcharhiniformes","Carcharhinidae","Prionace","Prionace glauca",160424
+"372","Lepisosteus oculatus","Lepisosteus oculatus","species","Lépisosté tacheté","Animalia","Chordata","Holostei","Lepisosteiformes","Lepisosteidae","Lepisosteus","Lepisosteus oculatus",161095
+"373","Odobenus rosmarus rosmarus","Odobenus rosmarus rosmarus","subspecies","","Animalia","Chordata","Mammalia","Carnivora","Odobenidae","Odobenus","Odobenus rosmarus",180639
+"374","Tamias minimus","Tamias minimus","species","Tamia mineur","Animalia","Chordata","Mammalia","Rodentia","Sciuridae","Tamias","Tamias minimus",180144
+"375","Mustela erminea","Mustela erminea","species","Hermine","Animalia","Chordata","Mammalia","Carnivora","Mustelidae","Mustela","Mustela erminea",180555
+"376","Lepomis gulosus","Lepomis gulosus","species","Crapet sac-à-lait","Animalia","Chordata","Teleostei","Perciformes","Centrarchidae","Lepomis","Lepomis gulosus",168138
+"377","Noturus gyrinus","Noturus gyrinus","species","Chat-fou brun","Animalia","Chordata","Teleostei","Siluriformes","Ictaluridae","Noturus","Noturus gyrinus",164003
+"378","Ameiurus natalis","Ameiurus natalis","species","Barbotte jaune","Animalia","Chordata","Teleostei","Siluriformes","Ictaluridae","Ameiurus","Ameiurus natalis",164041
+"379","Ameiurus melas","Ameiurus melas","species","Barbotte noire","Animalia","Chordata","Teleostei","Siluriformes","Ictaluridae","Ameiurus","Ameiurus melas",164039
+"380","Pimephales notatus","Pimephales notatus","species","Ventre-pourri","Animalia","Chordata","Teleostei","Cypriniformes","Cyprinidae","Pimephales","Pimephales notatus",163516
+"381","Umbra limi","Umbra limi","species","Umbre de vase","Animalia","Chordata","Teleostei","Esociformes","Umbridae","Umbra","Umbra limi",162152
+"382","Esox americanus","Esox americanus","species","Brochet d'amérique","Animalia","Chordata","Teleostei","Esociformes","Esocidae","Esox","Esox americanus",162140
+"383","Myoxocephalus thompsonii","Myoxocephalus thompsonii","species","","Animalia","Chordata","Teleostei","Scorpaeniformes","Cottidae","Myoxocephalus","Myoxocephalus thompsonii",167323
+"384","Gasterosteus wheatlandi","Gasterosteus","genus","","Animalia","Chordata","Teleostei","Gasterosteiformes","Gasterosteidae","Gasterosteus","Gasterosteus wheatlandi",166385
+"385","Myoxocephalus aenaeus","Myoxocephalus aenaeus","species","Chaboisseau bronzé","Animalia","Chordata","Teleostei","Scorpaeniformes","Cottidae","Myoxocephalus","Myoxocephalus aenaeus",167321
+"386","Pungitius pungitius","Pungitius pungitius","species","Épinoche à neuf épines","Animalia","Chordata","Teleostei","Gasterosteiformes","Gasterosteidae","Pungitius","Pungitius pungitius",166387
+"387","Syngnathus fuscus","Syngnathus fuscus","species","Syngnathe brun","Animalia","Chordata","Teleostei","Syngnathiformes","Syngnathidae","Syngnathus","Syngnathus fuscus",166451
+"388","Salvelinus fontinalis","Salvelinus fontinalis","species","Omble aurora","Animalia","Chordata","Teleostei","Salmoniformes","Salmonidae","Salvelinus","Salvelinus fontinalis",162003
+"389","Stenella coeruleoalba","Stenella coeruleoalba","species","Dauphin bleu et blanc","Animalia","Chordata","Mammalia","Cetacea","Delphinidae","Stenella","Stenella coeruleoalba",180434
+"390","Delphinus delphis","Delphinus delphis","species","Bec d'oie","Animalia","Chordata","Mammalia","Cetacea","Delphinidae","Delphinus","Delphinus delphis",180438
+"391","Lagenorhynchus acutus","Lagenorhynchus acutus","species","Dauphin à flancs blancs","Animalia","Chordata","Mammalia","Cetacea","Delphinidae","Lagenorhynchus","Lagenorhynchus acutus",180443
+"392","Globicephala melas","Globicephala melas","species","Globicéphale noir de l'atlantique","Animalia","Chordata","Mammalia","Cetacea","Delphinidae","Globicephala","Globicephala melas",552461
+"393","Mesoplodon bidens","Mesoplodon bidens","species","Baleine à bec de sowerby","Animalia","Chordata","Mammalia","Cetacea","Hyperoodontidae","Mesoplodon","Mesoplodon bidens",180515
+"394","Strix varia","Strix varia","species","Chouette rayée","Animalia","Chordata","Aves","Strigiformes","Strigidae","Strix","Strix varia",177921
+"395","Aegolius acadicus","Aegolius acadicus","species","Petite nyctale","Animalia","Chordata","Aves","Strigiformes","Strigidae","Aegolius","Aegolius acadicus",177942
+"396","Asio flammeus","Asio flammeus","species","Hibou des marais","Animalia","Chordata","Aves","Strigiformes","Strigidae","Asio","Asio flammeus",177935
+"397","Bubo virginianus","Bubo virginianus","species","Grand-duc d'amérique","Animalia","Chordata","Aves","Strigiformes","Strigidae","Bubo","Bubo virginianus",177884
+"398","Aegolius funereus","Aegolius funereus","species","Nyctale de tengmalm","Animalia","Chordata","Aves","Strigiformes","Strigidae","Aegolius","Aegolius funereus",177938
+"399","Asio otus","Asio otus","species","Hibou moyen-duc","Animalia","Chordata","Aves","Strigiformes","Strigidae","Asio","Asio otus",177932
+"400","Cyprinodon variegatus variegatus","Cyprinodon variegatus","species","","Animalia","Chordata","","Cyprinodontiformes","Cyprinodontidae","Cyprinodon","Cyprinodon variegatus",165631
+"401","Cyprinodon variegatus","Cyprinodon variegatus","species","Pétote","Animalia","Chordata","Teleostei","Cyprinodontiformes","Cyprinodontidae","Cyprinodon","Cyprinodon variegatus",165631
+"402","Fundulus heteroclitus heteroclitus","Fundulus heteroclitus","species","","Animalia","Chordata","","Cyprinodontiformes","Fundulidae","Fundulus","Fundulus heteroclitus",165647

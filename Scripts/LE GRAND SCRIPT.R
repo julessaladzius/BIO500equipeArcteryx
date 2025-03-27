@@ -102,7 +102,49 @@ population <- subset(donnees, select=c(TSN,unit,cle_pop,cle_source,cle_geom),sub
 
 head(population)
 
+##----CRÉATION DES TABLES EN SQL----##
 
+library(RSQLite)
+
+#Connexion au serveur
+
+connexion <- dbConnect(SQLite(),db.name="donnees")
+
+#Création de la table "abondance"
+
+creer_abondance <- 
+  "CREATE TABLE abondance(
+years	INTEGER,
+val		REAL, 
+cle_pop	INTEGER,
+PRIMARY KEY(cle_pop)
+);"
+dbSendQuery(connexion,creer_abondance) #****modifier la colonne "values" par "val", sinon erreur parce que c'est une commande SQL
+
+# Création de la table "source"
+
+creer_source <- 
+  "CREATE TABLE source(
+cle_source		INTEGER,
+original_source VARCHAR(100),
+title			VARCHAR(500),
+publisher		VARCHAR(100),
+owner			VARCHAR(100),
+license			VARCHAR(100),
+PRIMARY KEY(cle_source)
+);"
+dbSendQuery(connexion,creer_source)
+
+# Création de la table "geom"
+
+creer_geom <- 
+  "CREATE TABLE geom(
+cle_geom	INTEGER,
+latitude	REAL,
+longitude 	REAL,
+PRIMARY KEY(cle_geom)
+);"
+dbSendQuery(connexion,creer_geom)
 
 
 

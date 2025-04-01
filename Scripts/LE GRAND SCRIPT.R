@@ -157,7 +157,7 @@ creer_geom <-
 cle_geom	INTEGER,
 latitude	REAL,
 longitude 	REAL,
-PRIMARY KEY(cle_geom)
+PRIMARY KEY(cle_geom,latitude,longitude)
 );"
 dbSendQuery(connexion,creer_geom)
 
@@ -177,7 +177,9 @@ family					 VARCHAR(100),
 genus 					 VARCHAR(100),
 species				     VARCHAR(100),
 TSN 					 INTEGER,
-PRIMARY KEY(TSN)
+PRIMARY KEY(observed_scientific_name,valid_scientific_name,rank,vernacular_fr,kingdom,phylum,class,ord,family,genus,species,TSN)
 );"
 dbSendQuery(connexion,creer_taxo)
 
+colnames(taxo)[9] <- "ord" #modification colonne "order" par "ord" sinon erreur
+taxo <- subset(taxo,select=-c(X)) # enlève colonne "X" 

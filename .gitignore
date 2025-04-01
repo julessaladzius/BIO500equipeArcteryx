@@ -2,6 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
-
 # Fichiers de base de données
-#.sqlite
+.sqlite

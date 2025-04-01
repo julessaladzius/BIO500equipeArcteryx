@@ -150,14 +150,25 @@ file.exists("donnees") #JE TROUVE PAAAAAAS
 
 
 #Création de la table "abondance"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4918fd843abb27bfe117aa4e5f02b8c9f5f5abb7
 creer_abondance <- 
   "CREATE TABLE abondance(
 years	  INTEGER,
 val		  REAL, 
 cle_pop	INTEGER,
+<<<<<<< HEAD
 PRIMARY KEY(cle_pop, years)
+=======
+PRIMARY KEY (years,val,cle_pop)
+>>>>>>> 4918fd843abb27bfe117aa4e5f02b8c9f5f5abb7
 );"
-dbSendQuery(connexion,creer_abondance) #****modifier la colonne "values" par "val", sinon erreur parce que c'est une commande SQL
+dbSendQuery(connexion,creer_abondance) 
+
+#****modifier la colonne "values" par "val", sinon erreur parce que c'est une commande SQL
+colnames(abondance)[2] <- "val"
 
 
 # Création de la table "source"
@@ -169,7 +180,7 @@ title			      VARCHAR(500),
 publisher		    VARCHAR(100),
 owner			      VARCHAR(100),
 license			VARCHAR(100),
-PRIMARY KEY(cle_source)
+PRIMARY KEY(cle_source,original_source,title,publisher,owner,license)
 );"
 dbSendQuery(connexion,creer_source)
 
@@ -180,7 +191,7 @@ creer_geom <-
 cle_geom	INTEGER,
 latitude	REAL,
 longitude 	REAL,
-PRIMARY KEY(cle_geom)
+PRIMARY KEY(cle_geom,latitude,longitude)
 );"
 dbSendQuery(connexion,creer_geom)
 
@@ -200,10 +211,11 @@ family					 VARCHAR(100),
 genus 					 VARCHAR(100),
 species				     VARCHAR(100),
 TSN 					 INTEGER,
-PRIMARY KEY(TSN)
+PRIMARY KEY(observed_scientific_name,valid_scientific_name,rank,vernacular_fr,kingdom,phylum,class,ord,family,genus,species,TSN)
 );"
 dbSendQuery(connexion,creer_taxo)
 
+<<<<<<< HEAD
 
 # Création de la table finale "population"
 creer_population <- "
@@ -219,3 +231,24 @@ CREATE TABLE population (
   FOREIGN KEY (cle_source) REFERENCES source(cle_source)
 );"
 dbSendQuery(connexion, creer_population)
+=======
+colnames(taxo)[9] <- "ord" #modification colonne "order" par "ord" sinon erreur
+taxo <- subset(taxo,select=-c(X)) # enlève colonne "X" 
+
+# Création de la table "population"
+
+creer_population <- 
+  "CREATE TABLE population(
+TSN			INTEGER,
+unit		VARCHAR(100),
+cle_pop		INTEGER,
+cle_source	INTEGER,
+cle_geom 	INTEGER,
+PRIMARY KEY (TSN,unit,cle_pop,cle_source,cle_geom),
+FOREIGN KEY (TSN) REFERENCES taxo(TSN),
+FOREIGN KEY (cle_pop) REFERENCES abondance(cle_pop),
+FOREIGN KEY (cle_source) REFERENCES source(cle_source),
+FOREIGN KEY (cle_geom) REFERENCES geom(cle_geom) 
+);"
+dbSendQuery(connexion,creer_population)
+>>>>>>> 4918fd843abb27bfe117aa4e5f02b8c9f5f5abb7

@@ -144,7 +144,7 @@ title			VARCHAR(500),
 publisher		VARCHAR(100),
 owner			VARCHAR(100),
 license			VARCHAR(100),
-PRIMARY KEY(cle_source)
+PRIMARY KEY(cle_source,original_source,title,publisher,owner,license)
 );"
 dbSendQuery(connexion,creer_source)
 

@@ -141,29 +141,20 @@ library(dplyr)
 
 #Connexion au serveur
 
-connexion <- dbConnect(SQLite(),db.name="donneessql")
+#connexion <- dbConnect(SQLite(),dbname="database/donneessql")
 
 # Contrainte de clé étrangère
 dbExecute(connexion, "PRAGMA foreign_keys = ON;")
 
-file.exists("donnees") #JE TROUVE PAAAAAAS
 
 
 #Création de la table "abondance"
-<<<<<<< HEAD
-=======
-
->>>>>>> 4918fd843abb27bfe117aa4e5f02b8c9f5f5abb7
 creer_abondance <- 
   "CREATE TABLE abondance(
 years	  INTEGER,
 val		  REAL, 
 cle_pop	INTEGER,
-<<<<<<< HEAD
 PRIMARY KEY(cle_pop, years)
-=======
-PRIMARY KEY (years,val,cle_pop)
->>>>>>> 4918fd843abb27bfe117aa4e5f02b8c9f5f5abb7
 );"
 dbSendQuery(connexion,creer_abondance) 
 
@@ -206,16 +197,15 @@ vernacular_fr			 VARCHAR(100),
 kingdom					 VARCHAR(100),
 phylum 					 VARCHAR(100),
 class 					 VARCHAR(100),
-order 					 VARCHAR(100),
+ord 					 VARCHAR(100),
 family					 VARCHAR(100),
 genus 					 VARCHAR(100),
 species				     VARCHAR(100),
 TSN 					 INTEGER,
-PRIMARY KEY(observed_scientific_name,valid_scientific_name,rank,vernacular_fr,kingdom,phylum,class,ord,family,genus,species,TSN)
+PRIMARY KEY(TSN)
 );"
 dbSendQuery(connexion,creer_taxo)
 
-<<<<<<< HEAD
 
 # Création de la table finale "population"
 creer_population <- "
@@ -231,7 +221,6 @@ CREATE TABLE population (
   FOREIGN KEY (cle_source) REFERENCES source(cle_source)
 );"
 dbSendQuery(connexion, creer_population)
-=======
 colnames(taxo)[9] <- "ord" #modification colonne "order" par "ord" sinon erreur
 taxo <- subset(taxo,select=-c(X)) # enlève colonne "X" 
 
@@ -244,11 +233,12 @@ unit		VARCHAR(100),
 cle_pop		INTEGER,
 cle_source	INTEGER,
 cle_geom 	INTEGER,
-PRIMARY KEY (TSN,unit,cle_pop,cle_source,cle_geom),
+PRIMARY KEY (cle_pop,cle_geom),
 FOREIGN KEY (TSN) REFERENCES taxo(TSN),
 FOREIGN KEY (cle_pop) REFERENCES abondance(cle_pop),
 FOREIGN KEY (cle_source) REFERENCES source(cle_source),
 FOREIGN KEY (cle_geom) REFERENCES geom(cle_geom) 
 );"
 dbSendQuery(connexion,creer_population)
->>>>>>> 4918fd843abb27bfe117aa4e5f02b8c9f5f5abb7
+
+dbDisconnect(connexion)

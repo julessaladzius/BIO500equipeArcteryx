@@ -46,6 +46,15 @@ donnees <- data.frame(donnees%>%
 group_by(latitude,longitude) %>%
 mutate(cle_geom=cur_group_id()))
 
+#------SUPPRESSION DES DONNÉES SUSPECTES--------#
+# voir fichier read.me pour les détails
+a_exclure <- c(1172, 2463, 1625, 1257, 1260, 1968, 688, 205, 1246, 1245,
+               211, 973, 969, 970, 971, 972, 1931, 1807, 1640, 524,
+               1170, 2345, 1974, 1707)
+donnees <- donnees %>%
+  filter(!cle_pop %in% a_exclure)
+#-----------------------------------------------#
+
 #--------TABLEAU SECONDAIRE ABONDANCES--------
 
 #nouveau dataframe avec années, valeurs et clé pop
@@ -67,28 +76,33 @@ unnest(c(years,values))) #déplier le dataframe et créer une ligne pour chaque 
 source("Scripts/fct_cleanup_years.r")
 abondance <- cleanup_years(abondance)
 
-summary(abondance)
+
 head(abondance)
+
 
 #--------TABLEAU SECONDAIRE SOURCE--------
 
 source <- subset(donnees,select=c(cle_source,original_source,title,publisher,owner,license),subset=!duplicated(cbind(cle_source,original_source,title,publisher,owner,license)))
 
 head(source)
-summary(source)
+
 
 #--------TABLEAU SECONDAIRE GEOM--------
 
 geom <- subset(donnees,select=c(cle_geom,latitude,longitude),subset=!duplicated(cbind(cle_geom,latitude,longitude)))
 
 head(geom)
-summary(geom)
+
 
 #--------TABLEAU SECONDAIRE TAXO--------
 #La table "Table_taxo" à été produite à partir de la table "taxonomie" présente dans les données fournies, avec le script "Production Table_taxo.R"
 
 taxo <- read.csv("data/Nettoyé/Table_taxo.csv")
-
+#Supprimer les quelques lignes avec des informations différentes pour un même TSN
+taxo <- taxo %>%
+  group_by(TSN) %>%
+  slice(1) %>%  # garde la première ligne par TSN
+  ungroup()
 head(taxo)
 
 #--------INTÉGRER TAXO À DONNEES--------
@@ -102,7 +116,7 @@ population <- subset(donnees, select=c(TSN,unit,cle_pop,cle_source,cle_geom),sub
 
 head(population)
 
-<<<<<<< HEAD
+
 
 #--#--#--#--#--#--#--#--#--#--#--#--#--#
 
@@ -114,7 +128,7 @@ library(DBI)
 library(RSQLite)
 
 # je sais plus trop, il faut faire db.connect et tout, j'ai ajouté dans get.ignore le fichier sql alors on pourra refaire le code chq fois.
-=======
+
 ##----CRÉATION DES TABLES EN SQL----##
 
 library(RSQLite)
@@ -160,48 +174,52 @@ PRIMARY KEY(cle_geom)
 dbSendQuery(connexion,creer_geom)
 
 
+#---------------------------------------#
+library(dplyr)
 
 
->>>>>>> 51ccf7eaf5f9ea9542e3a8ab838122a1ee4959bd
+taxo %>%
+  group_by(TSN) %>%
+  filter(n() > 1)
+names(taxo)
 
+#-------------------years#---------------------------------------#
 #Connexion au serveur
 
-connexion <- dbConnect(SQLite(),db.name="donnees")
+connexion <- dbConnect(SQLite(),db.name="donneessql")
+
+# Contrainte de clé étrangère
+dbExecute(connexion, "PRAGMA foreign_keys = ON;")
+
+file.exists("donnees") #JE TROUVE PAAAAAAS
+
 
 #Création de la table "abondance"
-
-head(abondance)
-
-
 creer_abondance <- 
   "CREATE TABLE abondance(
-years	INTEGER,
-val		REAL, 
+years	  INTEGER,
+val		  REAL, 
 cle_pop	INTEGER,
-PRIMARY KEY(cle_pop)
+PRIMARY KEY(cle_pop, years)
 );"
 dbSendQuery(connexion,creer_abondance) #****modifier la colonne "values" par "val", sinon erreur parce que c'est une commande SQL
 
+
 # Création de la table "source"
-
-head(source)
-
 creer_source <- 
   "CREATE TABLE source(
-cle_source		INTEGER,
+cle_source		  INTEGER,
 original_source VARCHAR(100),
-title			VARCHAR(500),
-publisher		VARCHAR(100),
-owner			VARCHAR(100),
+title			      VARCHAR(500),
+publisher		    VARCHAR(100),
+owner			      VARCHAR(100),
 license			VARCHAR(100),
 PRIMARY KEY(cle_source)
 );"
 dbSendQuery(connexion,creer_source)
 
+
 # Création de la table "geom"
-
-head(geom)
-
 creer_geom <- 
   "CREATE TABLE geom(
 cle_geom	INTEGER,
@@ -211,8 +229,8 @@ PRIMARY KEY(cle_geom)
 );"
 dbSendQuery(connexion,creer_geom)
 
-# Création de la table "taxo"
 
+# Création de la table "taxo"
 creer_taxo <- 
   "CREATE TABLE taxo(
 observed_scientific_name VARCHAR(100),
@@ -231,3 +249,18 @@ PRIMARY KEY(TSN)
 );"
 dbSendQuery(connexion,creer_taxo)
 
+
+# Création de la table finale "population"
+creer_population <- "
+CREATE TABLE population (
+  cle_pop INTEGER,
+  TSN INTEGER,
+  unit VARCHAR(50),
+  cle_source INTEGER,
+  cle_geom INTEGER,
+  PRIMARY KEY(cle_pop),
+  FOREIGN KEY (TSN) REFERENCES taxo(TSN),
+  FOREIGN KEY (cle_geom) REFERENCES geom(cle_geom),
+  FOREIGN KEY (cle_source) REFERENCES source(cle_source)
+);"
+dbSendQuery(connexion, creer_population)

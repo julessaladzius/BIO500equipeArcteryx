@@ -120,17 +120,17 @@ connexion <- dbConnect(SQLite(),db.name="donnees")
 
 #Création de la table "abondance"
 
-head(abondance)
-
-
 creer_abondance <- 
   "CREATE TABLE abondance(
 years	INTEGER,
 val		REAL, 
 cle_pop	INTEGER,
-PRIMARY KEY(cle_pop)
+PRIMARY KEY (years,val,cle_pop)
 );"
-dbSendQuery(connexion,creer_abondance) #****modifier la colonne "values" par "val", sinon erreur parce que c'est une commande SQL
+dbSendQuery(connexion,creer_abondance) 
+
+#****modifier la colonne "values" par "val", sinon erreur parce que c'est une commande SQL
+colnames(abondance)[2] <- "val"
 
 # Création de la table "source"
 

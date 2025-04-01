@@ -50,7 +50,7 @@ mutate(cle_geom=cur_group_id()))
 # voir fichier read.me pour les détails
 a_exclure <- c(1172, 2463, 1625, 1257, 1260, 1968, 688, 205, 1246, 1245,
                211, 973, 969, 970, 971, 972, 1931, 1807, 1640, 524,
-               1170, 2345, 1974, 1707)
+               1170, 2345, 1974, 1707, 102, 1800)
 donnees <- donnees %>%
   filter(!cle_pop %in% a_exclure)
 #-----------------------------------------------#
@@ -124,10 +124,10 @@ head(population)
 
 #--#--#--#--#--#--#--#--#--#--#--#--#--#
 
-#taxo %>%
-  #group_by(TSN) %>%
-  #filter(n() > 1)
-#names(taxo)
+population %>%
+  group_by(cle_pop) %>%
+  filter(n() > 1)
+names(population)
 
 
 ##----CRÉATION DES TABLES EN SQL----##
@@ -141,7 +141,7 @@ library(dplyr)
 
 #Connexion au serveur
 
-#connexion <- dbConnect(SQLite(),dbname="database/donneessql")
+connexion <- dbConnect(SQLite(),dbname="database/donneessql")
 
 # Contrainte de clé étrangère
 dbExecute(connexion, "PRAGMA foreign_keys = ON;")
@@ -171,7 +171,7 @@ title			      VARCHAR(500),
 publisher		    VARCHAR(100),
 owner			      VARCHAR(100),
 license			VARCHAR(100),
-PRIMARY KEY(cle_source,original_source,title,publisher,owner,license)
+PRIMARY KEY(cle_source)
 );"
 dbSendQuery(connexion,creer_source)
 
@@ -182,7 +182,7 @@ creer_geom <-
 cle_geom	INTEGER,
 latitude	REAL,
 longitude 	REAL,
-PRIMARY KEY(cle_geom,latitude,longitude)
+PRIMARY KEY(cle_geom)
 );"
 dbSendQuery(connexion,creer_geom)
 
@@ -191,7 +191,7 @@ dbSendQuery(connexion,creer_geom)
 creer_taxo <- 
   "CREATE TABLE taxo(
 observed_scientific_name VARCHAR(100),
-valid_scientific_names	 VARCHAR(100),
+valid_scientific_name	 VARCHAR(100),
 rank					 VARCHAR(100),
 vernacular_fr			 VARCHAR(100),
 kingdom					 VARCHAR(100),
@@ -241,12 +241,12 @@ FOREIGN KEY (cle_geom) REFERENCES geom(cle_geom)
 );"
 dbSendQuery(connexion,creer_population)
 
-dbDisconnect(connexion)
+#dbDisconnect(connexion)
 
 ##---- INJECTION DES DONNÉES ----##
 
 #abondance
-dbWriteTable(connexion,append=T,name="abondance",value=abondance_check,row.names=F)
+dbWriteTable(connexion,append=T,name="abondance",value=abondance,row.names=F)
 
 #source
 dbWriteTable(connexion,append=T,name="source",value=source,row.names=F)
@@ -260,3 +260,32 @@ dbWriteTable(connexion,append=T,name="taxo",value=taxo,row.names=F)
 #population
 dbWriteTable(connexion,append=T,name="population",value=population,row.names=F)
 
+
+
+
+
+#-----------#-----REQUÊTES-----#------------#
+dbGetQuery(connexion, "SELECT * FROM population LIMIT 10;")
+
+
+# méga requête qui combine toutes les tables #
+resultat_test <- dbGetQuery(connexion, "
+SELECT 
+  a.cle_pop,
+  a.years,
+  a.val,
+  p.unit,
+  t.valid_scientific_name,
+  g.latitude,
+  g.longitude,
+  s.title AS source_title,
+  s.publisher AS source_publisher
+FROM abondance a
+JOIN population p ON a.cle_pop = p.cle_pop
+JOIN taxo t ON p.TSN = t.TSN
+JOIN geom g ON p.cle_geom = g.cle_geom
+JOIN source s ON p.cle_source = s.cle_source
+LIMIT 20;
+")
+
+View(resultat_test)

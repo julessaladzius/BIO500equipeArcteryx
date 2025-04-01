@@ -8,6 +8,7 @@ Le ciel est bleu et tout va bien!
 Populations supprimées car differentes valeurs de cle_pop+years: 
 1172 2463 1625 1257 1260 1968  688  205 1246 1245  211  973  969  970  971  972 1931 1807 1640  524 1170 2345
 1974 1707
+102 1800
 
 cle_source est unique c'est bien. 
 cle_geom est unique c'est bien.

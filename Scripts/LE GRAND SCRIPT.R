@@ -124,20 +124,15 @@ head(population)
 
 #--#--#--#--#--#--#--#--#--#--#--#--#--#
 
-population %>%
-  group_by(cle_pop) %>%
-  filter(n() > 1)
-names(population)
+#population %>%
+#  group_by(cle_pop) %>%
+#  filter(n() > 1)
+#names(population)
 
 
 ##----CRÉATION DES TABLES EN SQL----##
 
 library(RSQLite)
-
-library(dplyr)
-
-
-
 
 #Connexion au serveur
 

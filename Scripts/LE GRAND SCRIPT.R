@@ -183,3 +183,20 @@ dbSendQuery(connexion,creer_taxo)
 
 colnames(taxo)[9] <- "ord" #modification colonne "order" par "ord" sinon erreur
 taxo <- subset(taxo,select=-c(X)) # enlève colonne "X" 
+
+# Création de la table "population"
+
+creer_population <- 
+  "CREATE TABLE population(
+TSN			INTEGER,
+unit		VARCHAR(100),
+cle_pop		INTEGER,
+cle_source	INTEGER,
+cle_geom 	INTEGER,
+PRIMARY KEY (TSN,unit,cle_pop,cle_source,cle_geom),
+FOREIGN KEY (TSN) REFERENCES taxo(TSN),
+FOREIGN KEY (cle_pop) REFERENCES abondance(cle_pop),
+FOREIGN KEY (cle_source) REFERENCES source(cle_source),
+FOREIGN KEY (cle_geom) REFERENCES geom(cle_geom) 
+);"
+dbSendQuery(connexion,creer_population)

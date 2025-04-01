@@ -246,7 +246,7 @@ dbDisconnect(connexion)
 ##---- INJECTION DES DONNÉES ----##
 
 #abondance
-dbWriteTable(connexion,append=T,name="abondance",value=abondance_check,row.names=F)
+dbWriteTable(connexion,append=T,name="abondance",value=abondance,row.names=F)
 
 #source
 dbWriteTable(connexion,append=T,name="source",value=source,row.names=F)

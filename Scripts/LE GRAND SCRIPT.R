@@ -269,7 +269,7 @@ dbGetQuery(connexion, "SELECT * FROM population LIMIT 10;")
 
 
 # méga requête qui combine toutes les tables #
-resultat_test <- dbGetQuery(connexion, "
+megarequete <- dbGetQuery(connexion, "
 SELECT 
   a.cle_pop,
   a.years,
@@ -288,4 +288,4 @@ JOIN source s ON p.cle_source = s.cle_source
 LIMIT 20;
 ")
 
-View(resultat_test)
+View(megarequete)

@@ -242,3 +242,21 @@ FOREIGN KEY (cle_geom) REFERENCES geom(cle_geom)
 dbSendQuery(connexion,creer_population)
 
 dbDisconnect(connexion)
+
+##---- INJECTION DES DONNÉES ----##
+
+#abondance
+dbWriteTable(connexion,append=T,name="abondance",value=abondance_check,row.names=F)
+
+#source
+dbWriteTable(connexion,append=T,name="source",value=source,row.names=F)
+
+#geom
+dbWriteTable(connexion,append=T,name="geom",value=geom,row.names=F)
+
+#taxo
+dbWriteTable(connexion,append=T,name="taxo",value=taxo,row.names=F)
+
+#population
+dbWriteTable(connexion,append=T,name="population",value=population,row.names=F)
+

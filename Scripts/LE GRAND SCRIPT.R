@@ -123,12 +123,12 @@ head(population)
 ##- ##- ##- I N J E C T I O N ##- ##- ##
 
 #--#--#--#--#--#--#--#--#--#--#--#--#--#
-
+# code cool pour sélectionner des parties
 #population %>%
-#  group_by(cle_pop) %>%
+#  group_by(cle_source) %>%
 #  filter(n() > 1)
 #names(population)
-
+#unique(source$cle_source)
 
 ##----CRÉATION DES TABLES EN SQL----##
 
@@ -236,7 +236,7 @@ FOREIGN KEY (cle_geom) REFERENCES geom(cle_geom)
 );"
 dbSendQuery(connexion,creer_population)
 
-#dbDisconnect(connexion)
+dbDisconnect(connexion)
 
 ##---- INJECTION DES DONNÉES ----##
 

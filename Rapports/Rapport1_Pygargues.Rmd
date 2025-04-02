@@ -1,0 +1,116 @@
+---
+title: "Analyse de populations de Pygargues"
+author: "Jules Saladzius"
+date: "2025-04-01"
+output: html_document
+---
+
+```{r}
+#Il faut runner LE GRAND SCRIPT avant.
+```
+
+# Contexte
+
+Nous analysons la pygargue à tête blanche (TSN:175420) car elle est une espèce indicatrice à forte valeur symbolique.
+
+Dans notre base de donnée, nous avons 5 populations de Pygargue à tête blanche. Nous en avons séléctionné 3 pour lesquelles nos données sont de bonne qualité pour lesquelles les populations sont suivies sur au moins 15 ans.
+
+Ces trois populations (cle_pop: 978, 979, 980) sont suivies sur (formule qui compte le nombre de ligne avec cle_pop=978). Les données proviennent de la même source (BBS) et elles ont la même unité, un indice standardisé produit par le BBS. Cela nous permet de les comparer directement.
+
+# Données
+
+Voici les emplacements des populations. Cela correspond à l'endroit ou la route/échantillonage a été fait, donc ce n'est pas représentatif de la province en entier.
+
+|                 |           |          |                                   |
+|-----------------|-----------|----------|-----------------------------------|
+| Population      | Longitude | Latitude | Lieu                              |
+| A (cle_pop:978) | -62.73598 | 45.29015 | Governor Lake, Nouvelle-Écosse    |
+| B (cle_pop:979) | -66.29159 | 46.66660 | Ludlow Parish, Nouveau-Brunswick  |
+| C (cle_pop:980) | -60.79843 | 53.00339 | Labrador, Terre-Neuve et Labrador |
+
+### Informations taxonomiques:
+
+```{r, echo = FALSE}
+subset(taxo, TSN==175420)
+```
+
+### Source des données:
+
+```{r, echo = FALSE}
+subset(source, cle_source == 106)
+```
+
+# Résultats
+
+```{r}
+#Requête des données complètes sur la pygargue à tête blanche (TSN:175420)
+#En fait c'est juste sur les 3 populations qu'on va étudier
+
+datapyga <- "
+SELECT
+  taxo.*,
+  population.unit,
+  population.cle_pop,
+  source.title,
+  source.original_source,
+  source.publisher,
+  source.owner,
+  source.license,
+  geom.latitude,
+  geom.longitude,
+  abondance.years,
+  abondance.val
+FROM taxo
+JOIN population ON taxo.TSN = population.TSN
+JOIN source ON population.cle_source = source.cle_source
+JOIN geom ON population.cle_geom = geom.cle_geom
+JOIN abondance ON population.cle_pop = abondance.cle_pop
+WHERE population.cle_pop = 978 OR population.cle_pop=979 OR population.cle_pop=980; 
+"
+datapyga <- dbGetQuery(connexion, datapyga)
+
+
+```
+
+```{r}
+#-VISUALISATION-#
+
+library(ggplot2)
+
+# Créer une colonne descriptive pour la légende
+datapyga$population_desc <- factor(datapyga$cle_pop,
+                                   levels = c(978, 979, 980),
+                                   labels = c("Population Nouvelle-Écosse",
+                                              "Population Nouveau-Brunswick",
+                                              "Population Labrador"))
+
+# Créer le graphique
+ggplot(datapyga, aes(x = years, y = val, color = population_desc)) +
+  geom_line(size = 0.8) +                        
+  geom_point(size = 1.8) +                        
+  scale_x_continuous(breaks = pretty(datapyga$years)) +  # Graduation années
+  ylim(0, 1) +
+  scale_color_manual(values = c("gold", "#4B3621","grey")) + #Notez le choix de couleur
+  labs(
+    title = "Suivi de populations de Pygargues à tête blanche",
+    subtitle = "Données du Relevé des oiseaux nicheurs de l'Amérique du Nord (BBS)",
+    x = "Année",
+    y = "Indice d'abondance standardisé",
+    color = ""
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold"),
+    axis.title.y = element_text(size = 10),
+    axis.title.x = element_text(size = 10),
+    legend.position = "bottom",
+    panel.background = element_rect(fill = "#f9f7f0", color = NA),
+    plot.background = element_rect(fill = "#f9f7f0", color = NA)
+  )
+```
+
+# Analyse
+
+On peut observer que ces populations sont toutes les trois en forte hausse, et que cette hausse est en augmentation.
+
+La pygargue semble bien se porter, cela est sans doute dû aux grands efforts de réhabilitation et de protection de l'espèce.

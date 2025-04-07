@@ -1,6 +1,6 @@
 ---
-title: "Analyse de populations de Pygargues"
-author: "Jules Saladzius"
+title: "Analyse des changements de biodiversité"
+author: "Équipe Arcteryx"
 date: "2025-04-01"
 output: html_document
 ---
@@ -9,24 +9,32 @@ output: html_document
 #Il faut runner LE GRAND SCRIPT avant.
 ```
 
-# Contexte
+# Résumé
 
-Nous analysons la pygargue à tête blanche (TSN:175420) car elle est une espèce indicatrice à forte valeur symbolique.
+# Introduction résumant les questions
 
-Dans notre base de donnée, nous avons 5 populations de Pygargue à tête blanche. Nous en avons séléctionné 3 pour lesquelles nos données sont de bonne qualité pour lesquelles les populations sont suivies sur au moins 15 ans.
+Nous présentons ici trois analyses à différentes échelle taxonomique.
+
+La première analyse s'intéresse à le pygargue à tête blanche (TSN:175420), une espèce indicatrice situé au sommet de la chaine alimentaire et à forte valeur symbolique. Nous analyserons et comparerons l'évolution dans le temps de trois populations au Québec. Ces populations sont suivies via le Breeding Bird Survey et les données couvrent une grande période. Cette analyse permettra de répondre à notre question à savoir comment les mesures gouvernementales peuvent influencer l'état des populations sauvages. Cette analyse fait suite à l'interdiction en 1970 de l'utilisation du DDT, qui avait causé un déclin catastrophique de l'espèce. (source)
+
+# Première analyse - Pygargue à tête blanche
+
+Nous analysons
+
+Dans notre base de donnée, nous avons 5 populations de Pygargue à tête blanche. Nous en avons séléctionné 3 pour lesquelles nos données sont de bonne qualité et pour lesquelles les populations sont suivies sur au moins 15 ans.
 
 Ces trois populations (cle_pop: 978, 979, 980) sont suivies sur (formule qui compte le nombre de ligne avec cle_pop=978). Les données proviennent de la même source (BBS) et elles ont la même unité, un indice standardisé produit par le BBS. Cela nous permet de les comparer directement.
 
-# Données
+## Méthode
 
 Voici les emplacements des populations. Cela correspond à l'endroit ou la route/échantillonage a été fait, donc ce n'est pas représentatif de la province en entier.
 
-|                 |           |          |                                   |
-|-----------------|-----------|----------|-----------------------------------|
-| Population      | Longitude | Latitude | Lieu                              |
-| A (cle_pop:978) | -62.73598 | 45.29015 | Governor Lake, Nouvelle-Écosse    |
-| B (cle_pop:979) | -66.29159 | 46.66660 | Ludlow Parish, Nouveau-Brunswick  |
-| C (cle_pop:980) | -60.79843 | 53.00339 | Labrador, Terre-Neuve et Labrador |
+|                    |           |          |                                   |
+|---------------|---------------|---------------|---------------------------|
+| Population         | Longitude | Latitude | Lieu                              |
+| A (cle\_<pop:978>) | -62.73598 | 45.29015 | Governor Lake, Nouvelle-Écosse    |
+| B (cle\_<pop:979>) | -66.29159 | 46.66660 | Ludlow Parish, Nouveau-Brunswick  |
+| C (cle\_<pop:980>) | -60.79843 | 53.00339 | Labrador, Terre-Neuve et Labrador |
 
 ### Informations taxonomiques:
 
@@ -34,13 +42,13 @@ Voici les emplacements des populations. Cela correspond à l'endroit ou la route
 subset(taxo, TSN==175420)
 ```
 
-### Source des données:
+### Source des données
 
 ```{r, echo = FALSE}
 subset(source, cle_source == 106)
 ```
 
-# Résultats
+## Résultats
 
 ```{r}
 #Requête des données complètes sur la pygargue à tête blanche (TSN:175420)
@@ -109,8 +117,20 @@ ggplot(datapyga, aes(x = years, y = val, color = population_desc)) +
   )
 ```
 
-# Analyse
+## Analyse
 
 On peut observer que ces populations sont toutes les trois en forte hausse, et que cette hausse est en augmentation.
 
 La pygargue semble bien se porter, cela est sans doute dû aux grands efforts de réhabilitation et de protection de l'espèce.
+
+# Deuxième analyse
+
+# Troisième analyse
+
+# Discussion générale 
+
+-   Une discussion, enrichie de citations provenant de la littérature scientifique
+
+-   Références interne aux figures et à la bibliographie
+
+# Bibliographie

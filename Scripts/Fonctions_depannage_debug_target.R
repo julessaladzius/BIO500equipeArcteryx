@@ -1,6 +1,3 @@
-Nullify<-function(x){
-x<-NULL  
-}
 
 modif_cleanup<-function(donnees){
   #Ajustement données préalables
@@ -76,11 +73,11 @@ Keys_mold<-function(donnees){
     geom <- subset(donnees,select=c(cle_geom,latitude,longitude),subset=!duplicated(cbind(cle_geom,latitude,longitude)))  
   }
   
-  fct_taxo_sec<-function(){
+  fct_taxo_sec<-function(Tab_taxo){
     #--------TABLEAU SECONDAIRE TAXO--------
     #La table "Table_taxo" à été produite à partir de la table "taxonomie" présente dans les données fournies, avec le script "Production Table_taxo.R"
     
-    taxo <- read.csv("data/Nettoyé/Table_taxo.csv")
+    taxo <- read.csv(Tab_taxo)
     #Supprimer les quelques lignes avec des informations différentes pour un même TSN
     taxo <- taxo %>%
       group_by(TSN) %>%

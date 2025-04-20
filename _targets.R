@@ -1,5 +1,5 @@
 #### Répertoire - à modifier par l'utilisateur ####
-#### Loading des packages et scripts nécessaires ####
+
 
 library("targets")
 library("tarchetypes")
@@ -81,6 +81,17 @@ list(
     name = geom_sec,
     command= fct_geom_sec(donnees_pop_post_filter)
       
+  ),
+tar_target(
+  name = taxo_path,
+  command= "data/Nettoyé/Table_taxo.csv",
+  format = "file"
+  
+  ),
+  tar_target(
+    name = taxo_read_setup,
+    command= fct_taxo_sec(taxo_path)
+    
   )
 )
 

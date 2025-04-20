@@ -47,7 +47,7 @@ Keys_mold<-function(donnees){
   
   corne_abondance<-function(Donnees_filtrees){
     #nouveau dataframe avec années, valeurs et clé pop
-    abondance <- subset(Donnees_filtrees, select=c(years,values,cle_pop))
+    abondance <- subset(donnees, select=c(years,values,cle_pop))
     
     #fonction pour conversion en valeurs numerique
     convertion_array_list <- function(x) {
@@ -66,11 +66,11 @@ Keys_mold<-function(donnees){
   }
   
   fct_source_sec<-function(Donnees_filtrees){
-    source <- subset(Donnees_filtrees,select=c(cle_source,original_source,title,publisher,owner,license),subset=!duplicated(cbind(cle_source,original_source,title,publisher,owner,license)))
+    source <- subset(donnees,select=c(cle_source,original_source,title,publisher,owner,license),subset=!duplicated(cbind(cle_source,original_source,title,publisher,owner,license)))
   }
   
   fct_geom_sec<-function(Donnees_filtrees){
-    geom <- subset(Donnees_filtrees,select=c(cle_geom,latitude,longitude),subset=!duplicated(cbind(cle_geom,latitude,longitude)))  
+    geom <- subset(donnees,select=c(cle_geom,latitude,longitude),subset=!duplicated(cbind(cle_geom,latitude,longitude)))  
   }
   
   #--------TABLEAU SECONDAIRE TAXO--------
@@ -89,13 +89,13 @@ Keys_mold<-function(donnees){
   #--------INTÉGRER TAXO À DONNEES--------
   
   fct_integration <- function(Donnees_filtrees,Tab_taxo){
-  donnees <- merge(Donnes_filtrees,Tab_taxo,by="observed_scientific_name")
+  donnees <- merge(donnees,taxo,by="observed_scientific_name")
   }
   
   #--------TABLEAU PRIMAIRE POPULATION--------
   
   fct_population_prim <- function(Donnees_avec_taxo){
-    population <- subset(Donnees_avec_taxo, select=c(TSN,unit,cle_pop,cle_source,cle_geom),subset=!duplicated(cbind(TSN,unit,cle_pop,cle_source,cle_geom)))
+    population <- subset(donnees, select=c(TSN,unit,cle_pop,cle_source,cle_geom),subset=!duplicated(cbind(TSN,unit,cle_pop,cle_source,cle_geom)))
   }
   
   

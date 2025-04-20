@@ -92,6 +92,10 @@ tar_target(
     name = taxo_read_setup,
     command= fct_taxo_sec(taxo_path)
     
+  ),
+  tar_target(
+    name = donnees_pop_taxo,
+    command = fct_integration(donnees_pop_post_filter,taxo_read_setup)
   )
 )
 

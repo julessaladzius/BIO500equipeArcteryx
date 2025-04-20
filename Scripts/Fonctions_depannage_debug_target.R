@@ -89,13 +89,13 @@ Keys_mold<-function(donnees){
   #--------INTÉGRER TAXO À DONNEES--------
   
   fct_integration <- function(Donnees_filtrees,Tab_taxo){
-  donnees <- merge(donnees,taxo,by="observed_scientific_name")
+  donnees <- merge(Donnees_filtrees,Tab_taxo,by="observed_scientific_name")
   }
   
   #--------TABLEAU PRIMAIRE POPULATION--------
   
   fct_population_prim <- function(Donnees_avec_taxo){
-    population <- subset(donnees, select=c(TSN,unit,cle_pop,cle_source,cle_geom),subset=!duplicated(cbind(TSN,unit,cle_pop,cle_source,cle_geom)))
+    population <- subset(Donnees_avec_taxo, select=c(TSN,unit,cle_pop,cle_source,cle_geom),subset=!duplicated(cbind(TSN,unit,cle_pop,cle_source,cle_geom)))
   }
   
   

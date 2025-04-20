@@ -94,8 +94,8 @@ Keys_mold<-function(donnees){
   
   #--------TABLEAU PRIMAIRE POPULATION--------
   
-  fct_population_prim <- function(Donnees_filtrees){
-    population <- subset(donnees, select=c(TSN,unit,cle_pop,cle_source,cle_geom),subset=!duplicated(cbind(TSN,unit,cle_pop,cle_source,cle_geom)))
+  fct_population_prim <- function(Donnees_avec_taxo){
+    population <- subset(Donnees_avec_taxo, select=c(TSN,unit,cle_pop,cle_source,cle_geom),subset=!duplicated(cbind(TSN,unit,cle_pop,cle_source,cle_geom)))
   }
   
   

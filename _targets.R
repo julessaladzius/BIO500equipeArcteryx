@@ -68,7 +68,7 @@ list(
     
   ),
   tar_target(
-    name = Abondance_sec,
+    name = abondance_sec,
     command=corne_abondance(donnees_pop_post_filter)
       
     
@@ -110,6 +110,10 @@ list(
   tar_target(
     name = connexion,
     command = dbConnect(SQLite(),donnees_sql_path)
+  ),
+  tar_target(
+    name = abondance_sql,
+    command = fct_abondance_sql(connexion,abondance_sec)
   )
 )
 

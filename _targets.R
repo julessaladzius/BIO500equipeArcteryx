@@ -6,6 +6,7 @@ library("tarchetypes")
 library(dplyr)
 library(readr)
 library(tidyverse)
+library(RSQLite)
 
 #tar_option_set(
 #packages = c("") # Packages that your targets need for their tasks.
@@ -24,7 +25,7 @@ tar_source('Scripts/Fonctions_depannage_debug_target.R')
 #source("Scripts/LE GRAND SCRIPT.R")
 
 tar_option_set(
-  packages = c("dplyr", "readr","ggplot2","tidyverse")
+  packages = c("dplyr", "readr","ggplot2","tidyverse","RSQLite")
 )
 
 #À ajouter après ajout table taxo sans passer par grand script à cause erreurs
@@ -100,6 +101,15 @@ list(
   tar_target(
     name = population_prim,
     command = fct_population_prim(donnees_pop_taxo)
+  ),
+  tar_target(
+    name = donnees_sql_path,
+    command = "database/donneessql",
+    format = "file"
+  ),
+  tar_target(
+    name = connexion,
+    command = dbConnect(SQLite(),donnees_sql_path)
   )
 )
 

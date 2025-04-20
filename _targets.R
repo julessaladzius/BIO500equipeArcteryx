@@ -113,7 +113,11 @@ list(
   ),
   tar_target(
     name = abondance_sql,
-    command = fct_abondance_sql(connexion,abondance_sec)
+    command = fct_abondance_sql(connexion,abondance_sec),
+  ),
+  tar_target(
+    name = source_sql,
+    command = fct_source_sql(connexion,source_sec)
   )
 )
 

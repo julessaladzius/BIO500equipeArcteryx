@@ -90,7 +90,7 @@ Keys_mold<-function(donnees){
   
   fct_integration <- function(Donnees_filtrees,Tab_taxo){
   
-  donnees <- merge(taxo,donnees,by="observed_scientific_name")
+  donnees <- merge(Tab_taxo,Donnees_filtrees,by="observed_scientific_name")
   }
   
   #--------TABLEAU PRIMAIRE POPULATION--------

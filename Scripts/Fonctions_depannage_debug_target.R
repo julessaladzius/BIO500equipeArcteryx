@@ -73,9 +73,10 @@ Keys_mold<-function(donnees){
     geom <- subset(donnees,select=c(cle_geom,latitude,longitude),subset=!duplicated(cbind(cle_geom,latitude,longitude)))  
   }
   
+  #--------TABLEAU SECONDAIRE TAXO--------
+  #La table "Table_taxo" à été produite à partir de la table "taxonomie" présente dans les données fournies, avec le script "Production Table_taxo.R"
+  
   fct_taxo_sec<-function(Tab_taxo){
-    #--------TABLEAU SECONDAIRE TAXO--------
-    #La table "Table_taxo" à été produite à partir de la table "taxonomie" présente dans les données fournies, avec le script "Production Table_taxo.R"
     
     taxo <- read.csv(Tab_taxo)
     #Supprimer les quelques lignes avec des informations différentes pour un même TSN
@@ -84,4 +85,21 @@ Keys_mold<-function(donnees){
       slice(1) %>%  # garde la première ligne par TSN
       ungroup()  
   }
+  
+  #--------INTÉGRER TAXO À DONNEES--------
+  
+  fct_integration <- function(Donnees_filtrees,Tab_taxo){
+  
+  donnees <- merge(taxo,donnees,by="observed_scientific_name")
+  }
+  
+  #--------TABLEAU PRIMAIRE POPULATION--------
+  
+  fct_population_prim <- function(Donnees_filtrees){
+    population <- subset(donnees, select=c(TSN,unit,cle_pop,cle_source,cle_geom),subset=!duplicated(cbind(TSN,unit,cle_pop,cle_source,cle_geom)))
+  }
+  
+  
+
+  
   

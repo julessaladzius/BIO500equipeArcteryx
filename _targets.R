@@ -60,7 +60,7 @@ list(
     command= Keys_mold(donnees_clean)
     
   ),
-  tar_target,
+  
   tar_target(
     name = donnees_pop_post_filter,
     command=filtre_SUS_pop(Keys) 
@@ -82,7 +82,7 @@ list(
     command= fct_geom_sec(donnees_pop_post_filter)
       
   ),
-tar_target(
+  tar_target(
   name = taxo_path,
   command= "data/Nettoyé/Table_taxo.csv",
   format = "file"
@@ -98,7 +98,7 @@ tar_target(
     command = fct_integration(donnees_pop_post_filter,taxo_read_setup)
   ),
   tar_target(
-    name = population_prim
+    name = population_prim,
     command = fct_population_prim(donnees_pop_taxo)
   )
 )

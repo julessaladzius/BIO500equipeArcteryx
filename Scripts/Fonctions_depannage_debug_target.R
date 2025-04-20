@@ -47,7 +47,7 @@ Keys_mold<-function(donnees){
   
   corne_abondance<-function(Donnees_filtrees){
     #nouveau dataframe avec années, valeurs et clé pop
-    abondance <- subset(donnees, select=c(years,values,cle_pop))
+    abondance <- subset(Donnees_filtrees, select=c(years,values,cle_pop))
     
     #fonction pour conversion en valeurs numerique
     convertion_array_list <- function(x) {
@@ -66,11 +66,11 @@ Keys_mold<-function(donnees){
   }
   
   fct_source_sec<-function(Donnees_filtrees){
-    source <- subset(donnees,select=c(cle_source,original_source,title,publisher,owner,license),subset=!duplicated(cbind(cle_source,original_source,title,publisher,owner,license)))
+    source <- subset(Donnees_filtrees,select=c(cle_source,original_source,title,publisher,owner,license),subset=!duplicated(cbind(cle_source,original_source,title,publisher,owner,license)))
   }
   
   fct_geom_sec<-function(Donnees_filtrees){
-    geom <- subset(donnees,select=c(cle_geom,latitude,longitude),subset=!duplicated(cbind(cle_geom,latitude,longitude)))  
+    geom <- subset(Donnees_filtrees,select=c(cle_geom,latitude,longitude),subset=!duplicated(cbind(cle_geom,latitude,longitude)))  
   }
   
   #--------TABLEAU SECONDAIRE TAXO--------
@@ -99,6 +99,28 @@ Keys_mold<-function(donnees){
   }
   
   
-
+  #Création de la table "abondance" et injection des donnees
+  
+  fct_abondance_sql <- function(conn, df) {
+    if ("values" %in% colnames(df)) {
+      colnames(df)[colnames(df) == "values"] <- "val"
+    }
+    creer_abondance <- 
+      "CREATE TABLE abondance(
+years	  INTEGER,
+val		  REAL, 
+cle_pop	INTEGER,
+PRIMARY KEY(cle_pop, years)
+);"
+    dbSendQuery(conn,creer_abondance) 
+  
+    dbWriteTable(conn,append=T,name="abondance",value=df,row.names=F)
+  }
+  
+  
+  
+  
+  
+  
   
   

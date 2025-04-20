@@ -8,7 +8,7 @@ library(readr)
 library(tidyverse)
 
 #tar_option_set(
-packages = c("") # Packages that your targets need for their tasks.
+#packages = c("") # Packages that your targets need for their tasks.
 # format = "qs", # Optionally set the default storage format. qs is fast.
 
 

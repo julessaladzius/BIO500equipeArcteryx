@@ -1,29 +1,70 @@
 #### Répertoire - à modifier par l'utilisateur ####
-
-setwd("/Users/francoismartin/Desktop/PROJETBIO500/BIO500equipeArcteryx")
-
 #### Loading des packages et scripts nécessaires ####
 
 library("targets")
 library("tarchetypes")
+library(dplyr)
+library(readr)
+library(tidyverse)
 
-source("Scripts/LE GRAND SCRIPT.R")
+#tar_option_set(
+packages = c("") # Packages that your targets need for their tasks.
+# format = "qs", # Optionally set the default storage format. qs is fast.
+
+
+#sources scripts
+
+tar_source('Scripts/fct_cleanup_geom.R')
+tar_source('Scripts/fct_cleanup_col.R')
+tar_source('Scripts/fct_cleanup_years.R')
+tar_source('Scripts/fct_load_data.R')
+#tar_source('Scripts/Production Table_taxo.R') # Manque Taxonomie.csv, donc ajuster working directory ou changer l'emplacement du csv?
+#tar_source('Scripts/Hist_aqua&Hist_TER.R')
+tar_source('Scripts/Fonctions_depannage_debug_target.R')
+#source("Scripts/LE GRAND SCRIPT.R")
 
 tar_option_set(
   packages = c("dplyr", "readr","ggplot2","tidyverse")
 )
 
+#À ajouter après ajout table taxo sans passer par grand script à cause erreurs
+    #tarchetypes::tar_render(
+     # rapport_html,
+      #"Rapports/Rapport1_Pygargues.Rmd",
+      #output_format = "html_document",
+      #params = list(donnees = donnees)
+#),
+
 list(
-  tar_target(
-    donnees,
-    read.csv("data/raw/donnees.csv")
+  
+    tar_target(
+      name = The_way,
+      command = "data/raw/donnees.csv",
+      format = "file"
+      
     ),
-    tarchetypes::tar_render(
-      rapport_html,
-      "Rapports/Rapport1_Pygargues.Rmd",
-      output_format = "html_document",
-      params = list(donnees = donnees)
-    )
+  tar_target(
+    name = donnees,
+    command = read.csv(The_way) 
+    
+    
+  ),
+  tar_target(
+    name = donnees_clean,
+    command= modif_cleanup(donnees)
+    
+    
+  ),
+  tar_target(
+    name = Keys,
+    command= Keys_mold(donnees_clean)
+    
+  ),
+  tar_target(
+    name = donnees_pop_post_Filter,
+    command=filtre_SUS_pop(Keys) 
+    
+  )
 )
 
 

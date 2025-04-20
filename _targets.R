@@ -60,13 +60,29 @@ list(
     command= Keys_mold(donnees_clean)
     
   ),
+  tar_target,
   tar_target(
-    name = donnees_pop_post_Filter,
+    name = donnees_pop_post_filter,
     command=filtre_SUS_pop(Keys) 
     
+  ),
+  tar_target(
+    name = Abondance_sec,
+    command=corne_abondance(donnees_pop_post_filter)
+      
+    
+  ),
+  tar_target(
+    name = source_sec,
+    command= fct_source_sec(donnees_pop_post_filter)
+
+),
+  tar_target(
+    name = geom_sec,
+    command= fct_geom_sec(donnees_pop_post_filter)
+      
   )
 )
-
 
 
 

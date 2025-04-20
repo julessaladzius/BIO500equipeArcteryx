@@ -48,3 +48,43 @@ Keys_mold<-function(donnees){
   #-----------------------------------------------#
   }
   
+  corne_abondance<-function(Donnees_filtrees){
+    #nouveau dataframe avec années, valeurs et clé pop
+    abondance <- subset(donnees, select=c(years,values,cle_pop))
+    
+    #fonction pour conversion en valeurs numerique
+    convertion_array_list <- function(x) {
+      x <- gsub("\\[|\\]", "", x)  
+      as.numeric(unlist(strsplit(x, ","))) 
+    }
+    
+    abondance$values <- lapply(abondance$values, convertion_array_list)
+    abondance$years <- lapply(abondance$years, convertion_array_list)
+    abondance <- data.frame(abondance%>%
+                              unnest(c(years,values))) #déplier le dataframe et créer une ligne pour chaque valeur
+    
+    #Fonction de validation des années
+    abondance <- cleanup_years(abondance)
+    
+  }
+  
+  fct_source_sec<-function(Donnees_filtrees){
+    source <- subset(donnees,select=c(cle_source,original_source,title,publisher,owner,license),subset=!duplicated(cbind(cle_source,original_source,title,publisher,owner,license)))
+  }
+  
+  fct_geom_sec<-function(Donnees_filtrees){
+    geom <- subset(donnees,select=c(cle_geom,latitude,longitude),subset=!duplicated(cbind(cle_geom,latitude,longitude)))  
+  }
+  
+  fct_taxo_sec<-function(){
+    #--------TABLEAU SECONDAIRE TAXO--------
+    #La table "Table_taxo" à été produite à partir de la table "taxonomie" présente dans les données fournies, avec le script "Production Table_taxo.R"
+    
+    taxo <- read.csv("data/Nettoyé/Table_taxo.csv")
+    #Supprimer les quelques lignes avec des informations différentes pour un même TSN
+    taxo <- taxo %>%
+      group_by(TSN) %>%
+      slice(1) %>%  # garde la première ligne par TSN
+      ungroup()  
+  }
+  

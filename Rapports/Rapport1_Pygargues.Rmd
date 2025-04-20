@@ -123,7 +123,68 @@ On peut observer que ces populations sont toutes les trois en forte hausse, et q
 
 La pygargue semble bien se porter, cela est sans doute dû aux grands efforts de réhabilitation et de protection de l'espèce.
 
-# Deuxième analyse
+# Deuxième analyse - Fluctuations interannuelles des populations
+
+
+```{r}
+#### Requête des données de taxonomie et d'abondance pour les populations de Aves, Mammalia et Amphibia, avec un calcul de la variation interannuelle moyenne ####
+
+data_graph <- "
+WITH toutebrute AS (
+SELECT DISTINCT *
+FROM taxo,abondance
+JOIN population USING(TSN,cle_pop)),
+toute AS (
+    SELECT *
+    FROM toutebrute
+    WHERE (cle_pop, years) IN (
+        SELECT cle_pop, years
+        FROM toutebrute
+        GROUP BY cle_pop, years
+        HAVING COUNT(*) = 1)
+    ),
+growth AS (
+SELECT 
+    t1.class,
+    t1.cle_pop,
+    t1.years,
+    t1.val AS current_value,
+    t2.val AS previous_value,
+    ROUND(((t1.val - t2.val) / t2.val) * 100, 2) AS growth_yoy
+FROM 
+    toute t1
+LEFT JOIN 
+    toute t2
+    ON t1.cle_pop = t2.cle_pop AND t1.years = t2.years + 1
+ORDER BY 
+    t1.cle_pop, t1.years
+    )
+SELECT 
+    g.*,
+    ROUND(AVG(g.growth_yoy) OVER (PARTITION BY g.class, g.years), 2) AS moy_growth_yoy
+FROM 
+    growth g
+WHERE g.class IN ('Aves','Mammalia','Amphibia')
+ORDER BY 
+    g.class, g.cle_pop, g.years
+;"
+
+yoy_growth <- dbGetQuery(connexion,data_graph)
+```
+
+## Résultats
+
+```{r, echo=FALSE}
+library(ggplot2)
+
+ggplot(yoy_growth, aes(x=years, y=moy_growth_yoy, group=class,color=class)) +
+  ylab("Variation interannuelle moyenne (%)") +
+  xlab("Années") +
+  labs(title="Fluctuations des populations des principaux taxons terrestres au Québec",color="Classe") +
+  scale_y_continuous(breaks=seq(-100,700,by=50)) +
+  scale_x_continuous(breaks=seq(0,2020,by=5)) +
+  geom_line()
+```
 
 # Troisième analyse
 

@@ -96,6 +96,10 @@ tar_target(
   tar_target(
     name = donnees_pop_taxo,
     command = fct_integration(donnees_pop_post_filter,taxo_read_setup)
+  ),
+  tar_target(
+    name = population_prim
+    command = fct_population_prim(donnees_pop_taxo)
   )
 )
 

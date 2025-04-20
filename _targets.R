@@ -112,6 +112,6 @@ list(
     command = dbConnect(SQLite(),donnees_sql_path)
   )
 )
-
+tar_visnetwork()
 
 

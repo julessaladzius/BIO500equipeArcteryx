@@ -117,9 +117,22 @@ PRIMARY KEY(cle_pop, years)
     dbWriteTable(conn,append=T,name="abondance",value=df,row.names=F)
   }
   
+  # Création de la table "source"
   
-  
-  
+  fct_source_sql <- function(conn, df){
+  creer_source <- 
+    "CREATE TABLE source(
+cle_source		  INTEGER,
+original_source VARCHAR(100),
+title			      VARCHAR(500),
+publisher		    VARCHAR(100),
+owner			      VARCHAR(100),
+license			VARCHAR(100),
+PRIMARY KEY(cle_source)
+);"
+  dbSendQuery(conn,creer_source) 
+  dbWriteTable(conn,append=T,name="source",value=df,row.names=F)
+  }
   
   
   

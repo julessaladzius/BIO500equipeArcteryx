@@ -1,6 +1,8 @@
 setwd("/Users/francoismartin/Desktop/PROJETBIO500/BIO500equipeArcteryx")
 library("targets")
 
+source("Scripts/LE GRAND SCRIPT.R")
+
 tar_option_set(
   packages = c("dplyr", "readr","ggplot2","tidyverse")
 )
@@ -11,3 +13,7 @@ list(
     read.csv("data/raw/donnees.csv")
   )
 )
+
+
+
+

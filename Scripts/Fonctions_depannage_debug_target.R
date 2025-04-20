@@ -88,9 +88,8 @@ Keys_mold<-function(donnees){
   
   #--------INTÉGRER TAXO À DONNEES--------
   
-  fct_integration <- function(Donnees_filtrees,Tab_taxo){
-  
-  donnees <- merge(Tab_taxo,Donnees_filtrees,by="observed_scientific_name")
+  fct_integration <- function(Tab_taxo){
+  donnees <- merge(taxo,donnees,by="observed_scientific_name")
   }
   
   #--------TABLEAU PRIMAIRE POPULATION--------

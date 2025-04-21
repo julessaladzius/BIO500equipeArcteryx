@@ -130,7 +130,12 @@ list(
   tar_target(
     name = population_sql,
     command = fct_population_sql(connexion,population_prim)
-  )
+  ),
+  tarchetypes::tar_render(
+  name = rapport_final,
+  path = "Rapports/Rapport1_Pygargues.Rmd",
+  params = list(db_path = donnees_sql_path)
+)
 )
 
 

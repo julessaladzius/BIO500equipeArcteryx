@@ -101,7 +101,9 @@ Keys_mold<-function(donnees){
   
   #Création de la table "abondance" et injection des donnees
   
-  fct_abondance_sql <- function(conn, df) {
+  fct_abondance_sql <- function(db_path, df) {
+    conn <- dbConnect(RSQLite::SQLite(), db_path)
+    on.exit(dbDisconnect(conn))
     if ("values" %in% colnames(df)) {
       colnames(df)[colnames(df) == "values"] <- "val"
     }
@@ -119,7 +121,9 @@ PRIMARY KEY(cle_pop, years)
   
   # Création de la table "source"
   
-  fct_source_sql <- function(conn, df){
+  fct_source_sql <- function(db_path, df){
+    conn <- dbConnect(RSQLite::SQLite(), db_path)
+    on.exit(dbDisconnect(conn))
   creer_source <- 
     "CREATE TABLE source(
 cle_source		  INTEGER,
@@ -136,7 +140,9 @@ PRIMARY KEY(cle_source)
   
   # Création de la table "geom"
   
-  fct_geom_sql <- function(conn, df){
+  fct_geom_sql <- function(db_path, df){
+    conn <- dbConnect(RSQLite::SQLite(), db_path)
+    on.exit(dbDisconnect(conn))
   creer_geom <- 
     "CREATE TABLE geom(
 cle_geom	INTEGER,
@@ -151,7 +157,9 @@ PRIMARY KEY(cle_geom)
   
   # Création de la table "taxo"
   
-  fct_taxo_sql <- function(conn, df){
+  fct_taxo_sql <- function(db_path, df){
+    conn <- dbConnect(RSQLite::SQLite(), db_path)
+    on.exit(dbDisconnect(conn))
     if ("X" %in% colnames(df)) {
       df <- subset(df, select = -c(X))
     }
@@ -180,7 +188,9 @@ PRIMARY KEY(TSN)
   
   # Création de la table finale "population"
   
-  fct_population_sql <- function(conn, df){
+  fct_population_sql <- function(db_path, df){
+    conn <- dbConnect(RSQLite::SQLite(), db_path)
+    on.exit(dbDisconnect(conn))
   creer_population <- "
 CREATE TABLE population (
   cle_pop INTEGER,

@@ -2,7 +2,6 @@
 title: "Analyse des changements de biodiversité"
 author: "Équipe Arcteryx"
 date: "2025-04-01"
-output: html_document
 output: pdf_document
 params:
   db_path: NULL

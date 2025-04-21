@@ -143,7 +143,7 @@ La pygargue semble bien se porter, cela est sans doute dû aux grands efforts de
 
 
 ```{r}
-#### Requête des données de taxonomie et d'abondance pour les populations de Aves, Mammalia et Amphibia, avec un calcul de la variation interannuelle moyenne ####
+#### Requête des données de taxonomie et d'abondance pour les populations de Aves, avec un calcul de la variation interannuelle moyenne ####
 
 data_graph <- "
 WITH toutebrute AS (
@@ -180,7 +180,7 @@ SELECT
     ROUND(AVG(g.growth_yoy) OVER (PARTITION BY g.class, g.years), 2) AS moy_growth_yoy
 FROM 
     growth g
-WHERE g.class IN ('Aves','Mammalia','Amphibia')
+WHERE g.class IN ('Aves')
 ORDER BY 
     g.class, g.cle_pop, g.years
 ;"
@@ -196,7 +196,7 @@ library(ggplot2)
 ggplot(yoy_growth, aes(x=years, y=moy_growth_yoy, group=class,color=class)) +
   ylab("Variation interannuelle moyenne (%)") +
   xlab("Années") +
-  labs(title="Fluctuations des populations des principaux taxons terrestres au Québec",color="Classe") +
+  labs(title="Fluctuations des populations d'oiseaux (Aves) au Québec",color="Classe") +
   scale_y_continuous(breaks=seq(-100,700,by=50)) +
   scale_x_continuous(breaks=seq(0,2020,by=5)) +
   geom_line()

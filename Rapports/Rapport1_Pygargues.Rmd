@@ -91,7 +91,7 @@ JOIN geom ON population.cle_geom = geom.cle_geom
 JOIN abondance ON population.cle_pop = abondance.cle_pop
 WHERE population.cle_pop = 978 OR population.cle_pop=979 OR population.cle_pop=980; 
 "
-datapyga <- dbGetQuery(connexion, datapyga)
+datapyga <- dbGetQuery(conn, datapyga)
 
 
 ```
@@ -185,7 +185,7 @@ ORDER BY
     g.class, g.cle_pop, g.years
 ;"
 
-yoy_growth <- dbGetQuery(connexion,data_graph)
+yoy_growth <- dbGetQuery(conn,data_graph)
 ```
 
 ## Résultats
@@ -211,3 +211,9 @@ ggplot(yoy_growth, aes(x=years, y=moy_growth_yoy, group=class,color=class)) +
 -   Références interne aux figures et à la bibliographie
 
 # Bibliographie
+
+```{r disconnect, include=FALSE}
+#Déconnexion
+
+dbDisconnect(conn)
+```

@@ -134,6 +134,66 @@ PRIMARY KEY(cle_source)
   dbWriteTable(conn,append=T,name="source",value=df,row.names=F)
   }
   
+  # Création de la table "geom"
   
+  fct_geom_sql <- function(conn, df){
+  creer_geom <- 
+    "CREATE TABLE geom(
+cle_geom	INTEGER,
+latitude	REAL,
+longitude 	REAL,
+PRIMARY KEY(cle_geom)
+);"
+  dbSendQuery(conn,creer_geom)
   
+  dbWriteTable(conn,append=T,name="geom",value=df,row.names=F) 
+  }
+  
+  # Création de la table "taxo"
+  
+  fct_taxo_sql <- function(conn, df){
+    if ("X" %in% colnames(df)) {
+      df <- subset(df, select = -c(X))
+    }
+    if ("order" %in% colnames(df)) {
+      colnames(df)[colnames(df) == "order"] <- "ord"
+    }
+    creer_taxo <- 
+    "CREATE TABLE taxo(
+observed_scientific_name VARCHAR(100),
+valid_scientific_name	 VARCHAR(100),
+rank					 VARCHAR(100),
+vernacular_fr			 VARCHAR(100),
+kingdom					 VARCHAR(100),
+phylum 					 VARCHAR(100),
+class 					 VARCHAR(100),
+ord 					 VARCHAR(100),
+family					 VARCHAR(100),
+genus 					 VARCHAR(100),
+species				     VARCHAR(100),
+TSN 					 INTEGER,
+PRIMARY KEY(TSN)
+);"
+  dbSendQuery(conn,creer_taxo) 
+  dbWriteTable(conn,append=T,name="taxo",value=df,row.names=F) 
+  }
+  
+  # Création de la table finale "population"
+  
+  fct_population_sql <- function(conn, df){
+  creer_population <- "
+CREATE TABLE population (
+  cle_pop INTEGER,
+  TSN INTEGER,
+  unit VARCHAR(50),
+  cle_source INTEGER,
+  cle_geom INTEGER,
+  PRIMARY KEY(cle_pop),
+  FOREIGN KEY (TSN) REFERENCES taxo(TSN),
+  FOREIGN KEY (cle_geom) REFERENCES geom(cle_geom),
+  FOREIGN KEY (cle_source) REFERENCES source(cle_source)
+);"
+  dbSendQuery(conn, creer_population)
+  dbWriteTable(conn,append=T,name="population",value=df,row.names=F) 
+  }
   

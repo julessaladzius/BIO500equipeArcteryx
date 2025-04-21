@@ -108,28 +108,24 @@ list(
     format = "file"
   ),
   tar_target(
-    name = connexion,
-    command = dbConnect(SQLite(),donnees_sql_path)
-  ),
-  tar_target(
     name = abondance_sql,
-    command = fct_abondance_sql(connexion,abondance_sec),
+    command = fct_abondance_sql(donnees_sql_path,abondance_sec),
   ),
   tar_target(
     name = source_sql,
-    command = fct_source_sql(connexion,source_sec)
+    command = fct_source_sql(donnees_sql_path,source_sec)
   ),
   tar_target(
     name = geom_sql,
-    command = fct_geom_sql(connexion,geom_sec)
+    command = fct_geom_sql(donnees_sql_path,geom_sec)
   ),
   tar_target(
     name = taxo_sql,
-    command = fct_taxo_sql(connexion,taxo_read_setup)
+    command = fct_taxo_sql(donnees_sql_path,taxo_read_setup)
   ),
   tar_target(
     name = population_sql,
-    command = fct_population_sql(connexion,population_prim)
+    command = fct_population_sql(donnees_sql_path,population_prim)
   ),
   tarchetypes::tar_render(
   name = rapport_final,

@@ -7,8 +7,22 @@ params:
   db_path: NULL
 ---
 
-```{r}
-#Il faut runner LE GRAND SCRIPT avant.
+```{r setup, include=FALSE}
+#Setup et connexion
+
+library(DBI)
+library(RSQLite)
+library(ggplot2)
+library(dplyr)
+
+# Connexion à la base passée en paramètre
+conn <- dbConnect(SQLite(), params$db_path)
+
+# Lire toutes les tables nécessaires depuis la base SQLite
+taxo       <- dbReadTable(conn, "taxo")
+abondance  <- dbReadTable(conn, "abondance")
+source     <- dbReadTable(conn, "source")
+geom       <- dbReadTable(conn, "geom")
 ```
 
 # Résumé

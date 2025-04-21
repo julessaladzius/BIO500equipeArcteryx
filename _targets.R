@@ -118,6 +118,10 @@ list(
   tar_target(
     name = source_sql,
     command = fct_source_sql(connexion,source_sec)
+  ),
+  tar_target(
+    name = geom_sql,
+    command = fct_geom_sql(connexion,geom_sec)
   )
 )
 

@@ -206,13 +206,19 @@ yoy_growth <- dbGetQuery(conn,data_graph)
 library(ggplot2)
 
 ggplot(yoy_growth, aes(x=years, y=moy_growth_yoy, group=class,color=class)) +
-  ylab("Variation interannuelle moyenne (%)") +
+  ylab("Croissance interannuelle moyenne (%)") +
   xlab("Années") +
   labs(title="Fluctuations des populations d'oiseaux (Aves) au Québec",color="Classe") +
   scale_y_continuous(breaks=seq(-100,700,by=50)) +
   scale_x_continuous(breaks=seq(0,2020,by=5)) +
-  geom_line()
+  geom_line()+
+  geom_smooth(method=lm)
 ```
+
+## Analyse
+
+On remarque des fluctuations importantes dans la croissance interannuelle des populations dans la décennie 1960-1970. Une autre période de variabilité élevée s'observe entre les années 1990 et le début de années 2000. Globalement, la tendance semble être à la baisse sur la période étudiée, avec des pics de croissance de moins en moins fréquents et de faible amplitude.
+
 
 # Troisième analyse
 

@@ -5,6 +5,7 @@ date: "2025-04-01"
 output: html_document
 params:
   db_path: NULL
+bibliography: references.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -33,6 +34,8 @@ Nous présentons ici trois analyses à différentes échelle taxonomique.
 
 La première analyse s'intéresse à le pygargue à tête blanche (TSN:175420), une espèce indicatrice situé au sommet de la chaine alimentaire et à forte valeur symbolique. Nous analyserons et comparerons l'évolution dans le temps de trois populations au Québec. Ces populations sont suivies via le Breeding Bird Survey et les données couvrent une grande période. Cette analyse permettra de répondre à notre question à savoir comment les mesures gouvernementales peuvent influencer l'état des populations sauvages. Cette analyse fait suite à l'interdiction en 1970 de l'utilisation du DDT, qui avait causé un déclin catastrophique de l'espèce. (source)
 
+La deuxième analyse s'intéresse aux variations temporelles des populations d'oiseaux sur le territoire québécois. L'objectif est d'examiner les tendances à grande échelle, et de déterminer si les populations sont globalement en croissance ou en déclin. Ces populations sont soumises à divers stress anthropiques, comme l'usage des pesticides, les modifications au territoire ou les changements climatiques. Une analyse récente de relevés à long terme sur 529 espèces d'oiseaux d'Amérique du Nord a révélé une perte nette de 2,9 milliards d'individus, soit un déclin de 29% par rapport à 1970 [@rosenberg2019]. Le phénomène est particulièrement marqué pour les espèces se reproduisant en forêt boréale,un écosystème majeur au Québec, avec une baisse d'abondance de 33.1% sur cette période [@rosenberg2019].
+
 # Première analyse - Pygargue à tête blanche
 
 Nous analysons
@@ -46,7 +49,7 @@ Ces trois populations (cle_pop: 978, 979, 980) sont suivies sur (formule qui com
 Voici les emplacements des populations. Cela correspond à l'endroit ou la route/échantillonage a été fait, donc ce n'est pas représentatif de la province en entier.
 
 |                    |           |          |                                   |
-|---------------|---------------|---------------|---------------------------|
+|----------------|----------------|----------------|-------------------------|
 | Population         | Longitude | Latitude | Lieu                              |
 | A (cle\_<pop:978>) | -62.73598 | 45.29015 | Governor Lake, Nouvelle-Écosse    |
 | B (cle\_<pop:979>) | -66.29159 | 46.66660 | Ludlow Parish, Nouveau-Brunswick  |
@@ -141,6 +144,15 @@ La pygargue semble bien se porter, cela est sans doute dû aux grands efforts de
 
 # Deuxième analyse - Fluctuations interannuelles des populations
 
+Les valeurs de biomasse dans notre base de données n'étaient pas interprétables directement parce que les unitées de mesures variaient selon les sources. Afin d'uniformiser le tout, nous avons choisi de représenter la croissance des populations sur une année.
+
+## Méthode
+
+La croissance interanuelle pour une population donnée est calculée avec l'équation suivante pour chaque année d'échantillonnage (excepté la première). Les valeurs pour des années d'échantillonnage qui n'étaient pas contiguës (un intervalle de plus d'un an entre les relevés ex. 2004 - 2007) ont été écartées :
+
+$$Croissance = (Valeur_{année} - Valeur_{année-1})/ Valeur_{année-1}* 100$$
+
+Ensuite, afin d'obtenir une seule valeur par année, nous avons calculé la moyenne de la croissance interannuelle à travers toutes les populations.
 
 ```{r}
 #### Requête des données de taxonomie et d'abondance pour les populations de Aves, avec un calcul de la variation interannuelle moyenne ####
@@ -204,7 +216,7 @@ ggplot(yoy_growth, aes(x=years, y=moy_growth_yoy, group=class,color=class)) +
 
 # Troisième analyse
 
-# Discussion générale 
+# Discussion générale
 
 -   Une discussion, enrichie de citations provenant de la littérature scientifique
 

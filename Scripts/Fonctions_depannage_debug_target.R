@@ -107,6 +107,7 @@ Keys_mold<-function(donnees){
     if ("values" %in% colnames(df)) {
       colnames(df)[colnames(df) == "values"] <- "val"
     }
+    dbExecute(conn, "DROP TABLE IF EXISTS abondance;")
     creer_abondance <- 
       "CREATE TABLE abondance(
 years	  INTEGER,
@@ -114,9 +115,9 @@ val		  REAL,
 cle_pop	INTEGER,
 PRIMARY KEY(cle_pop, years)
 );"
-    dbSendQuery(conn,creer_abondance) 
+    dbExecute(conn,creer_abondance) 
   
-    dbWriteTable(conn,append=T,name="abondance",value=df,row.names=F,overwrite = TRUE)
+    dbWriteTable(conn,append=T,name="abondance",value=df,row.names=F)
   }
   
   # Création de la table "source"
@@ -124,6 +125,7 @@ PRIMARY KEY(cle_pop, years)
   fct_source_sql <- function(db_path, df){
     conn <- dbConnect(RSQLite::SQLite(), db_path)
     on.exit(dbDisconnect(conn))
+    dbExecute(conn, "DROP TABLE IF EXISTS source;")
   creer_source <- 
     "CREATE TABLE source(
 cle_source		  INTEGER,
@@ -134,8 +136,8 @@ owner			      VARCHAR(100),
 license			VARCHAR(100),
 PRIMARY KEY(cle_source)
 );"
-  dbSendQuery(conn,creer_source) 
-  dbWriteTable(conn,append=T,name="source",value=df,row.names=F,overwrite = TRUE)
+  dbExecute(conn,creer_source) 
+  dbWriteTable(conn,append=T,name="source",value=df,row.names=F)
   }
   
   # Création de la table "geom"
@@ -143,6 +145,7 @@ PRIMARY KEY(cle_source)
   fct_geom_sql <- function(db_path, df){
     conn <- dbConnect(RSQLite::SQLite(), db_path)
     on.exit(dbDisconnect(conn))
+    dbExecute(conn, "DROP TABLE IF EXISTS geom;")
   creer_geom <- 
     "CREATE TABLE geom(
 cle_geom	INTEGER,
@@ -150,9 +153,9 @@ latitude	REAL,
 longitude 	REAL,
 PRIMARY KEY(cle_geom)
 );"
-  dbSendQuery(conn,creer_geom)
+  dbExecute(conn,creer_geom)
   
-  dbWriteTable(conn,append=T,name="geom",value=df,row.names=F,overwrite = TRUE) 
+  dbWriteTable(conn,append=T,name="geom",value=df,row.names=F) 
   }
   
   # Création de la table "taxo"
@@ -166,6 +169,7 @@ PRIMARY KEY(cle_geom)
     if ("order" %in% colnames(df)) {
       colnames(df)[colnames(df) == "order"] <- "ord"
     }
+    dbExecute(conn, "DROP TABLE IF EXISTS taxo;")
     creer_taxo <- 
     "CREATE TABLE taxo(
 observed_scientific_name VARCHAR(100),
@@ -182,8 +186,8 @@ species				     VARCHAR(100),
 TSN 					 INTEGER,
 PRIMARY KEY(TSN)
 );"
-  dbSendQuery(conn,creer_taxo) 
-  dbWriteTable(conn,append=T,name="taxo",value=df,row.names=F,overwrite = TRUE) 
+  dbExecute(conn,creer_taxo) 
+  dbWriteTable(conn,append=T,name="taxo",value=df,row.names=F) 
   }
   
   # Création de la table finale "population"
@@ -191,6 +195,7 @@ PRIMARY KEY(TSN)
   fct_population_sql <- function(db_path, df){
     conn <- dbConnect(RSQLite::SQLite(), db_path)
     on.exit(dbDisconnect(conn))
+    dbExecute(conn, "DROP TABLE IF EXISTS population;")
   creer_population <- "
 CREATE TABLE population (
   cle_pop INTEGER,
@@ -203,7 +208,7 @@ CREATE TABLE population (
   FOREIGN KEY (cle_geom) REFERENCES geom(cle_geom),
   FOREIGN KEY (cle_source) REFERENCES source(cle_source)
 );"
-  dbSendQuery(conn, creer_population)
-  dbWriteTable(conn,append=T,name="population",value=df,row.names=F,overwrite = TRUE) 
+  dbExecute(conn, creer_population)
+  dbWriteTable(conn,append=T,name="population",value=df,row.names=F) 
   }
   

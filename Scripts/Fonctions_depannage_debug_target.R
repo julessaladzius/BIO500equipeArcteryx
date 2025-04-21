@@ -42,12 +42,12 @@ Keys_mold<-function(donnees){
                  1170, 2345, 1974, 1707, 102, 1800)
   donnees <- donnees %>%
     filter(!cle_pop %in% a_exclure)
-  #-----------------------------------------------#
+
   }
   
   corne_abondance<-function(Donnees_filtrees){
     #nouveau dataframe avec années, valeurs et clé pop
-    abondance <- subset(donnees, select=c(years,values,cle_pop))
+    abondance <- subset(Donnees_filtrees, select=c(years,values,cle_pop))
     
     #fonction pour conversion en valeurs numerique
     convertion_array_list <- function(x) {
@@ -66,11 +66,11 @@ Keys_mold<-function(donnees){
   }
   
   fct_source_sec<-function(Donnees_filtrees){
-    source <- subset(donnees,select=c(cle_source,original_source,title,publisher,owner,license),subset=!duplicated(cbind(cle_source,original_source,title,publisher,owner,license)))
+    source <- subset(Donnees_filtrees,select=c(cle_source,original_source,title,publisher,owner,license),subset=!duplicated(cbind(cle_source,original_source,title,publisher,owner,license)))
   }
   
   fct_geom_sec<-function(Donnees_filtrees){
-    geom <- subset(donnees,select=c(cle_geom,latitude,longitude),subset=!duplicated(cbind(cle_geom,latitude,longitude)))  
+    geom <- subset(Donnees_filtrees,select=c(cle_geom,latitude,longitude),subset=!duplicated(cbind(cle_geom,latitude,longitude)))  
   }
   
   #--------TABLEAU SECONDAIRE TAXO--------

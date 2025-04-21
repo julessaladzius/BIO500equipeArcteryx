@@ -122,6 +122,10 @@ list(
   tar_target(
     name = geom_sql,
     command = fct_geom_sql(connexion,geom_sec)
+  ),
+  tar_target(
+    name = taxo_sql,
+    command = fct_taxo_sql(connexion,taxo_read_setup)
   )
 )
 

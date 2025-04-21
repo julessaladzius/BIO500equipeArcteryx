@@ -126,6 +126,10 @@ list(
   tar_target(
     name = taxo_sql,
     command = fct_taxo_sql(connexion,taxo_read_setup)
+  ),
+  tar_target(
+    name = population_sql,
+    command = fct_population_sql(connexion,population_prim)
   )
 )
 

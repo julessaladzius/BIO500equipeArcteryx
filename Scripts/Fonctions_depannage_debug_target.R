@@ -116,7 +116,7 @@ PRIMARY KEY(cle_pop, years)
 );"
     dbSendQuery(conn,creer_abondance) 
   
-    dbWriteTable(conn,append=T,name="abondance",value=df,row.names=F)
+    dbWriteTable(conn,append=T,name="abondance",value=df,row.names=F,overwrite = TRUE)
   }
   
   # Création de la table "source"
@@ -135,7 +135,7 @@ license			VARCHAR(100),
 PRIMARY KEY(cle_source)
 );"
   dbSendQuery(conn,creer_source) 
-  dbWriteTable(conn,append=T,name="source",value=df,row.names=F)
+  dbWriteTable(conn,append=T,name="source",value=df,row.names=F,overwrite = TRUE)
   }
   
   # Création de la table "geom"
@@ -152,7 +152,7 @@ PRIMARY KEY(cle_geom)
 );"
   dbSendQuery(conn,creer_geom)
   
-  dbWriteTable(conn,append=T,name="geom",value=df,row.names=F) 
+  dbWriteTable(conn,append=T,name="geom",value=df,row.names=F,overwrite = TRUE) 
   }
   
   # Création de la table "taxo"
@@ -183,7 +183,7 @@ TSN 					 INTEGER,
 PRIMARY KEY(TSN)
 );"
   dbSendQuery(conn,creer_taxo) 
-  dbWriteTable(conn,append=T,name="taxo",value=df,row.names=F) 
+  dbWriteTable(conn,append=T,name="taxo",value=df,row.names=F,overwrite = TRUE) 
   }
   
   # Création de la table finale "population"
@@ -204,6 +204,6 @@ CREATE TABLE population (
   FOREIGN KEY (cle_source) REFERENCES source(cle_source)
 );"
   dbSendQuery(conn, creer_population)
-  dbWriteTable(conn,append=T,name="population",value=df,row.names=F) 
+  dbWriteTable(conn,append=T,name="population",value=df,row.names=F,overwrite = TRUE) 
   }
   

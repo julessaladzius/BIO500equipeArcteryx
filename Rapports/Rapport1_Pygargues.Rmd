@@ -211,8 +211,8 @@ ggplot(yoy_growth, aes(x=years, y=moy_growth_yoy, group=class,color=class)) +
   labs(title="Fluctuations des populations d'oiseaux (Aves) au Québec",color="Classe") +
   scale_y_continuous(breaks=seq(-100,700,by=50)) +
   scale_x_continuous(breaks=seq(0,2020,by=5)) +
-  geom_line()+
-  geom_smooth(method=lm)
+  geom_line(color="blue")+
+  geom_smooth(method=lm,color="black")
 ```
 
 ## Analyse

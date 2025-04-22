@@ -39,20 +39,21 @@ tar_option_set(
 
 list(
   tar_target(
-    name = data_dir,
-    command = "data/raw/Données",
+    name = The_way,
+    command = "data/raw/donnees.csv",
     format = "file"
+    
   ),
-
   tar_target(
     name = donnees,
-    command = load_data(data_dir)
-
+    command = read.csv(The_way) 
+    
     
   ),
   tar_target(
     name = donnees_clean,
     command= modif_cleanup(donnees)
+    
     
     
   ),

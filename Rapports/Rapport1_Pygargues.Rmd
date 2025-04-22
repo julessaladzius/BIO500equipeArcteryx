@@ -30,7 +30,7 @@ geom       <- dbReadTable(conn, "geom")
 
 Ce projet porte du la question: **Quelles tendances générales peut-on observer dans la dynamique de la biodiversité au Québec ?** Nous avons utilisé un grand jeu de données de séries temporelles populationnel d'une grande diversité d'espèces quebecoises compilé par Biodiversité Québec. Un pipeline automatisé avec le package `{targets}` assure la reproductibilité des étapes de nettoyage, de l'injection des données avec `{SQLite}` , ainsi que de l'analyse complète. Notre analyse révèle une augmentation marquée de l'abondance de la Pygargue à tête blanche, témoignant de l'efficacité des mesures gouvernementales pour l'interdiction du DDT. Nous révélons également une forte fluctuation interannuelle des populations d'oiseaux ainsi qu'une différence entre les populations terrestres et marines, ces dernières se portant nettement MIEUX OU PIRE OU QUOI.
 
-# Introduction 
+# Introduction
 
 Nous présentons ici trois analyses à différentes échelle taxonomique.
 
@@ -38,8 +38,7 @@ La première analyse s'intéresse à le pygargue à tête blanche (TSN:175420), 
 
 La deuxième analyse s'intéresse aux variations temporelles des populations d'oiseaux sur le territoire québécois. L'objectif est d'examiner les tendances à grande échelle, et de déterminer **si les populations d'oiseaux du territoire quebecois sont globalement en croissance ou en déclin**. Ces populations sont soumises à divers stress anthropiques, comme l'usage des pesticides, les modifications au territoire ou les changements climatiques. Une analyse récente de relevés à long terme sur 529 espèces d'oiseaux d'Amérique du Nord a révélé une perte nette de 2,9 milliards d'individus, soit un déclin de 29% par rapport à 1970 [@rosenberg_decline_2019]. Le phénomène est particulièrement marqué pour les espèces se reproduisant en forêt boréale,un écosystème majeur au Québec, avec une baisse d'abondance de 33.1% sur cette période [@rosenberg_decline_2019].
 
-La troisième analyse s'intéresse à Les populations classes ayant terrestres strictement terrestres et celles dont le mode de vie est aquatique  sont différentes dans la mesure où les facteurs qui les influencent les altérent sont de nature différentes. Par exemple, les animaux animaux aquatiques sont suceptibles de réagir à des variations chimiques de l'eau, ce que l'on peut observer notamment chez les poissions d'élevage, et d'ingérer des microplastiques dissous, là où ceux qui sont typiquement terrestres seeront davantage affectés par des facteurs tels que l'altération des habitats.
-De fait, pour cette section de l'analyse de tendance l'intérêt sera de **tester la supposition selon laquelle il y a une divergence dans les variations des populations selon leur milieu de vie**.
+La troisième analyse s'intéresse à Les populations classes ayant terrestres strictement terrestres et celles dont le mode de vie est aquatique sont différentes dans la mesure où les facteurs qui les influencent les altérent sont de nature différentes. Par exemple, les animaux animaux aquatiques sont suceptibles de réagir à des variations des propriétes de l'eau telles la concentration en oxygène et la température[@mallik_management_2025], ce que l'on peut observer notamment chez les poissions d'élevage par exemple, et d'ingérer des microplastiques dissous[@trevisan_nanoplastics_2022], là où ceux qui sont typiquement terrestres devraient être davantage affectés par des facteurs tels que l'altération des habitats par l'activité humaine,tel la conversion des habitats terrestres[@august_human_2002]. De fait, pour cette section de l'analyse de tendance l'intérêt sera de **tester la supposition selon laquelle il y a une divergence dans les variations des populations selon leur milieu de vie**.
 
 l'objectif est de répondre à la question de recherche: **En gras.**
 
@@ -54,7 +53,7 @@ Ces trois populations ont toutes des données provenant de la même source, le B
 Voici les emplacements des populations. Cela correspond à l'endroit ou la route/échantillonage a été fait, donc ce n'est pas représentatif de la province en entier.
 
 |                    |           |          |                                   |
-|-----------------|-----------------|-----------------|-----------------------|
+|-----------------|-----------------|-----------------|--------------------|
 | Population         | Longitude | Latitude | Lieu                              |
 | A (cle\_<pop:978>) | -62.73598 | 45.29015 | Governor Lake, Nouvelle-Écosse    |
 | B (cle\_<pop:979>) | -66.29159 | 46.66660 | Ludlow Parish, Nouveau-Brunswick  |
@@ -227,17 +226,17 @@ On remarque des fluctuations importantes dans la croissance interannuelle des po
 # Troisième analyse- Répartition des population terrestres et aquatiques par % de variation annuelle
 
 ## Méthode
-Afin de répartir sommairement les espèces entre les deux grandes catégories, soit terrestre et aquatiques, il a été choisi de sélectionner les populations selon leur classe.Ainsi, si une classe comporte typiquement des organismes dont le cycle de vie n'implique généralement pas une période de vie aquatique,elle est considérée comme terrestre, et inversement les classes considérées aquatiques le sont sur la base qu'une part de leur cycle de vie au moins est aquatique.  
+
+Afin de répartir sommairement les espèces entre les deux grandes catégories, soit terrestre et aquatiques, il a été choisi de sélectionner les populations selon leur classe.Ainsi, si une classe comporte typiquement des organismes dont le cycle de vie n'implique généralement pas une période de vie aquatique,elle est considérée comme terrestre, et inversement les classes considérées aquatiques le sont sur la base qu'une part de leur cycle de vie au moins est aquatique.
 
 Le point de comparaison utilisé se basera sur une moyenne annuelle du pourcentage de variation au sein de chaque population, soit :
 
-$$Moyenne variation/An=$$
-$$  (((AbondanceFinale - AbondanceInitiale)/ AbondanceInitiale)/NombreAnnéeEchantilloné)* 100$$
+$$Moyenne variation/An=$$ $$  (((AbondanceFinale - AbondanceInitiale)/ AbondanceInitiale)/NombreAnnéeEchantilloné)* 100$$
 
 Ce calcul sera utilisé afin de déterminer la répartition des populations à l'aide d'un histogramme représentant le nombre de population pourles deux catégories. Les deux histogrammes ainsi obtenus seront la base de comparaison de l'analyse. De plus, ces histogrammes permettront de visualiser quels classes sont les plus échantillonnées.
 
-
 ## Résultats
+
 ```{r,echo=FALSE}
 
 
@@ -388,15 +387,12 @@ abline(v= Constante_TER_pourcent,col='brown' , lwd=2)
 
 
 ```
+
 #Analyse
 
-Selon ce qu'on peut observer, parmi les classes sélectionnées, on remarque qu'il ya un plus grand nombre de populations échantillonnées dans les classes Aves et Mammalia que dans les classes considérés ici comme aquatique, impliquant donc un plus grand échantillonnage.
-Par contre, on peut difficilement affirmer qu'il y ait une divergence nette entre les deux catégories à cette échelle. La moyenne globale de la variation moyenne par an dans les deux cas avoisine 50% et les population sont majoritairement répartis dans l'intervalle de [-50, 50]% dans les deux. La seule différence marquante semble être qu'il y a plus de populations d'aves et mammalia présentes dans l'intervalle [-50,0]% qu'il y en dans ce même intervalle pour les classes aquatiques.
+Selon ce qu'on peut observer, parmi les classes sélectionnées, on remarque qu'il ya un plus grand nombre de populations échantillonnées dans les classes Aves et Mammalia que dans les classes considérés ici comme aquatique, impliquant donc un plus grand échantillonnage. Par contre, on peut difficilement affirmer qu'il y ait une divergence nette entre les deux catégories à cette échelle. La moyenne globale de la variation moyenne par an dans les deux cas avoisine 50% et les population sont majoritairement répartis dans l'intervalle de [-50, 50]% dans les deux. La seule différence marquante semble être qu'il y a plus de populations d'aves et mammalia présentes dans l'intervalle [-50,0]% qu'il y en dans ce même intervalle pour les classes aquatiques.
 
-
-
-Il est à noter que certaines classes du jeu de données sont absentes de cette analyse, par effet d'ambiguité résultant de la classification grossière utilisé pour répartir l'ensemble des populations en 2, donc toutes les populations ne sont pas inclues.
-# Discussion générale
+Il est à noter que certaines classes du jeu de données sont absentes de cette analyse, par effet d'ambiguité résultant de la classification grossière utilisé pour répartir l'ensemble des populations en 2, donc toutes les populations ne sont pas inclues. \# Discussion générale
 
 Notre question était: Quelles tendances générales peut-on observer dans la dynamique de la biodiversité au Québec ? Nos analyses montrent des résultats différents selon l'échelle taxonomique observée.
 

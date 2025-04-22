@@ -154,7 +154,7 @@ $$Croissance = (Valeur_{année} - Valeur_{année-1})/ Valeur_{année-1}* 100$$
 
 Ensuite, afin d'obtenir une seule valeur par année, nous avons calculé la moyenne de la croissance interannuelle à travers toutes les populations.
 
-```{r,include=FALSE}
+```{r,echo=FALSE}
 #### Requête des données de taxonomie et d'abondance pour les populations de Aves, avec un calcul de la variation interannuelle moyenne ####
 
 data_graph <- "

@@ -272,7 +272,7 @@ JOIN population p ON t.TSN = p.TSN
 JOIN abondance a ON p.cle_pop = a.cle_pop                                          ;
 "
 
-Data_aqua <- dbGetQuery(connexion, Filtre_Aqua)
+Data_aqua <- dbGetQuery(conn, Filtre_Aqua)
 #View(Data_aqua)
 
 
@@ -341,7 +341,7 @@ JOIN population p ON t.TSN = p.TSN
 JOIN abondance a ON p.cle_pop = a.cle_pop;
 "
 
-Data_TER <- dbGetQuery(connexion, Filtre_TER)
+Data_TER <- dbGetQuery(conn, Filtre_TER)
 View(Data_TER)
 
 #Section 4: Calcul de variation TERrestre

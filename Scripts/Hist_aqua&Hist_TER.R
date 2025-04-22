@@ -47,11 +47,12 @@ SELECT
   t.class
 FROM class_TSN t
 JOIN population p ON t.TSN = p.TSN
-JOIN abondance a ON p.cle_pop = a.cle_pop;
+JOIN abondance a ON p.cle_pop = a.cle_pop                                          ;
 "
 
 InstantI <- dbGetQuery(connexion, Filtre_Aqua)
 View(InstantI)
+
 
 #Section 2: Calcul de variation
 
@@ -136,63 +137,63 @@ Data_TER <- dbGetQuery(connexion, Filtre_TER)
 View(Data_TER)
 
 
+#Version 2 de calcul de variation de moyenne par population
+
+
+
 #Section 4: Calcul de variation TERrestre
 
 #Hist: obtient intervalle annéeIII
 hist(Data_TER$years)
 
-#Sélection manuelle par subset pour éviter Bug:À optimiser
-
-T_Ter<-Data_TER$years
-VII<-subset(Data_TER,T_Ter==1985)
-VIII<-subset(Data_TER,T_Ter==1986)
-IX<-subset(Data_TER,T_Ter==1987)
-X<-subset(Data_TER,T_Ter==1988)
-XI<-subset(Data_TER,T_Ter==1989)
-XII<-subset(Data_TER,T_Ter==1990)
-
-Intervalle85_90_TER<-rbind(VII,VIII,IX,X,XI,XII)
-
 
 #Boucle de calcul de variation de des population sur intervalle de temps 
 
-#longueur boucle
-b<-sort(unique(Intervalle85_90_TER$cle_pop))
+#longueur boucle& et vecteur pour sélection par cle pop avec subset
+b<-sort(unique(Data_TER$cle_pop))
 
-
+#------------Explication vieille boucle-----------------------
 #simplification écriture par objet
+#Time<-Intervalle85_90_TER$years
+#A_Cible<-Intervalle85_90_TER$val
+#Pop_cible<-Intervalle85_90_TER$cle_pop
 
-Time<-Intervalle85_90_TER$years
-A_Cible<-Intervalle85_90_TER$val
-Pop_cible<-Intervalle85_90_TER$cle_pop
 
 #Création vecteur vide pour stocker variation
 percent_pop_var_TER<-c()
 
 #création objet boucle
+
+
+
 i=1
 for (i in 1:length(b)) {
-  Rmax<-which(Pop_cible==b[i]&Time==max(Time))
-  Val_F<-A_Cible[Rmax]
-  Rmin<-which(Pop_cible==b[i]&Time==min(Time))
-  Val_I<-A_Cible[Rmin]
-  
-  #calculpourcentage variation
-  if(length(Val_F)!=0&length(Val_I)!=0){
-    y<-((Val_F/Val_I)-1)*100
-    percent_pop_var_TER<-c(percent_pop_var_TER,y)
-  }
-  
-  i=i+1
+Intervalle_variant<-subset(Data_TER,cle_pop==b[i],)
+
+Rmax<-which.max(Intervalle_variant$years)
+Val_F<-Intervalle_variant$val[Rmax]
+
+Rmin<-which.min(Intervalle_variant$years)
+Val_I<-Intervalle_variant$val[Rmin]
+
+if(Val_I!=0) {
+y<-((((Val_F-Val_I)/Val_I)
+     *100)/length(Intervalle_variant))
+percent_pop_var_TER<-c(percent_pop_var_TER,y)
 }
+i=i+1
+}
+
 View(percent_pop_var_TER)
 percent_var_<-data.frame(percent_pop_var_TER)
 
+
+
 #Section 3: Histogramme
 
-Histo_Terrestre<-hist(percent_pop_var_TER,main = ' %variation pour population des classes Aves et Mammalia de 1985 à 1990',
-     xlab = 'Poucentage de variation',ylab = 'Nombre population aquatique',
-     breaks = 50,freq = TRUE,xlim = c(-100, 500),ylim = c(0,25))
+Histo_Terrestre<-hist(percent_pop_var_TER,main = ' %variation abondance par an pour population des classes Aves et Mammalia de 1985 à 1990',
+     xlab = 'variation moyenne par an',ylab = 'Nombre population Terrestre',
+     breaks = 50,freq = TRUE,xlim = c(-250, 600),ylim = c(0,175))
 
 
 

@@ -38,7 +38,8 @@ La première analyse s'intéresse à le pygargue à tête blanche (TSN:175420), 
 
 La deuxième analyse s'intéresse aux variations temporelles des populations d'oiseaux sur le territoire québécois. L'objectif est d'examiner les tendances à grande échelle, et de déterminer **si les populations d'oiseaux du territoire quebecois sont globalement en croissance ou en déclin**. Ces populations sont soumises à divers stress anthropiques, comme l'usage des pesticides, les modifications au territoire ou les changements climatiques. Une analyse récente de relevés à long terme sur 529 espèces d'oiseaux d'Amérique du Nord a révélé une perte nette de 2,9 milliards d'individus, soit un déclin de 29% par rapport à 1970 [@rosenberg_decline_2019]. Le phénomène est particulièrement marqué pour les espèces se reproduisant en forêt boréale,un écosystème majeur au Québec, avec une baisse d'abondance de 33.1% sur cette période [@rosenberg_decline_2019].
 
-La troisième analyse s'intéresse à
+La troisième analyse s'intéresse à Les populations classes ayant terrestres strictement terrestres et celles dont le mode de vie est aquatique  sont différentes dans la mesure où les facteurs qui les influencent les altérent sont de nature différentes. Par exemple, les animaux animaux aquatiques sont suceptibles de réagir à des variations chimiques de l'eau, ce que l'on peut observer notamment chez les poissions d'élevage, et d'ingérer des microplastiques dissous, là où ceux qui sont typiquement terrestres seeront davantage affectés par des facteurs tels que l'altération des habitats.
+De fait, pour cette section de l'analyse de tendance l'intérêt sera de **tester la supposition selon laquelle il y a une divergence dans les variations des populations selon leur milieu de vie**.
 
 l'objectif est de répondre à la question de recherche: **En gras.**
 
@@ -225,8 +226,6 @@ On remarque des fluctuations importantes dans la croissance interannuelle des po
 
 # Troisième analyse- Répartition des population terrestres et aquatiques par % de variation annuelle
 
-Les populations classes ayant terrestres strictement terrestres et celles dont le mode de vie est aquatique  sont différentes dans la mesure où les facteurs qui les influencent les altérent sont de nature différentes. Par exemple, les animaux animaux aquatiques sont suceptibles de réagir à des variations chimiques de l'eau, ce que l'on peut observer notamment chez les poissions d'élevage, et d'ingérer des microplastiques dissous, là où ceux qui sont typiquement terrestres seeront davantage affectés par des facteurs tels que l'altération des habitats.
-De fait, pour cette section de l'anlyse de tendance l'intérêt sera de tester la supposition selon laquelle il y a une divergence dans les variations des populations selon leur milieu de vie.
 ## Méthode
 Afin de répartir sommairement les espèces entre les deux grandes catégories, soit terrestre et aquatiques, il a été choisi de sélectionner les populations selon leur classe.Ainsi, si une classe comporte typiquement des organismes dont le cycle de vie n'implique généralement pas une période de vie aquatique,elle est considérée comme terrestre, et inversement les classes considérées aquatiques le sont sur la base qu'une part de leur cycle de vie au moins est aquatique.  
 

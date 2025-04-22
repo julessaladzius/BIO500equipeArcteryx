@@ -14,11 +14,12 @@ library(RSQLite)
 
 
 #sources scripts
-
+tar_source("Scripts/fct_load_data.R")
 tar_source('Scripts/fct_cleanup_geom.R')
 tar_source('Scripts/fct_cleanup_col.R')
 tar_source('Scripts/fct_cleanup_years.R')
 tar_source('Scripts/fct_load_data.R')
+
 #tar_source('Scripts/Production Table_taxo.R') # Manque Taxonomie.csv, donc ajuster working directory ou changer l'emplacement du csv?
 #tar_source('Scripts/Hist_aqua&Hist_TER.R')
 tar_source('Scripts/Fonctions_depannage_debug_target.R')
@@ -37,17 +38,16 @@ tar_option_set(
 #),
 
 list(
-  
-    tar_target(
-      name = The_way,
-      command = "data/raw/donnees.csv",
-      format = "file"
-      
-    ),
+  tar_target(
+    name = data_dir,
+    command = "data/raw/Données",
+    format = "file"
+  ),
+
   tar_target(
     name = donnees,
-    command = read.csv(The_way) 
-    
+    command = load_data(data_dir)
+
     
   ),
   tar_target(
@@ -109,7 +109,7 @@ list(
   ),
   tar_target(
     name = abondance_sql,
-    command = fct_abondance_sql(donnees_sql_path,abondance_sec),
+    command = fct_abondance_sql(donnees_sql_path,abondance_sec)
   ),
   tar_target(
     name = source_sql,

@@ -223,17 +223,185 @@ ggplot(yoy_growth, aes(x=years, y=moy_growth_yoy, group=class,color=class)) +
 
 On remarque des fluctuations importantes dans la croissance interannuelle des populations dans la décennie 1960-1970. Une autre période de variabilité élevée s'observe entre les années 1990 et le début de années 2000. Globalement, la tendance semble être à la baisse sur la période étudiée, avec des pics de croissance de moins en moins fréquents et de faible amplitude.
 
-# Troisième analyse
+# Troisième analyse- Répartition des population terrestres et aquatiques par % de variation annuelle
 
+Les populations classes ayant terrestres strictement terrestres et celles dont le mode de vie est aquatique  sont différentes dans la mesure où les facteurs qui les influencent les altérent sont de nature différentes. Par exemple, les animaux animaux aquatiques sont suceptibles de réagir à des variations chimiques de l'eau, ce que l'on peut observer notamment chez les poissions d'élevage, et d'ingérer des microplastiques dissous, là où ceux qui sont typiquement terrestres seeront davantage affectés par des facteurs tels que l'altération des habitats.
+De fait, pour cette section de l'anlyse de tendance l'intérêt sera de tester la supposition selon laquelle il y a une divergence dans les variations des populations selon leur milieu de vie.
 ## Méthode
+Afin de répartir sommairement les espèces entre les deux grandes catégories, soit terrestre et aquatiques, il a été choisi de sélectionner les populations selon leur classe.Ainsi, si une classe comporte typiquement des organismes dont le cycle de vie n'implique généralement pas une période de vie aquatique,elle est considérée comme terrestre, et inversement les classes considérées aquatiques le sont sur la base qu'une part de leur cycle de vie au moins est aquatique.  
+
+Le point de comparaison utilisé se basera sur une moyenne annuelle du pourcentage de variation au sein de chaque population, soit :
+
+$$Moyenne variation/An=$$
+$$  (((AbondanceFinale - AbondanceInitiale)/ AbondanceInitiale)/NombreAnnéeEchantilloné)* 100$$
+
+Ce calcul sera utilisé afin de déterminer la répartition des populations à l'aide d'un histogramme représentant le nombre de population pourles deux catégories. Les deux histogrammes ainsi obtenus seront la base de comparaison de l'analyse. De plus, ces histogrammes permettront de visualiser quels classes sont les plus échantillonnées.
+
 
 ## Résultats
+```{r,echo=FALSE}
 
+
+#Exclut ttestudines et reptilia > connaissances personelles faible en la matière donc exclusion 
+##Selection dans catégorie Terrestre des classes avec cycle vital n'impliquant pas typiquement étape de vie aquatique à un certain stade parmi classe de banque de données;
+#soit Aves, Mammalia et squamata 
+
+#Selection dans catégorie aqua des classes avec cycle vital impliquant étape de vie aquatique à un certain stade parmi classe de banque de données;
+#soit chondrostei,Elasmobranchii,Teleostei,Amphibia,Holostei,,Chondrichthyes,,Myxini et sans squamata ou Testudines( ici terrestre surtout) 
+#Exclut Reptilia, Squamata,Mammalia, Aves et Testudines
+
+
+Filtre_Aqua <- "
+WITH class_TSN AS (
+  SELECT TSN, class
+  FROM taxo
+  WHERE class LIKE '%Petromyzonti%'
+     OR class LIKE '%Myxini%'
+     OR class LIKE '%Elasmobranchii%'
+     OR class LIKE '%Chondrichthyes%'
+     OR class LIKE '%Chondrostei%'
+     OR class LIKE '%Holostei%'
+     OR class LIKE '%Amphibia%'
+)
+SELECT 
+  a.cle_pop,
+  a.years,
+  a.val,
+  p.unit,
+  t.class
+FROM class_TSN t
+JOIN population p ON t.TSN = p.TSN
+JOIN abondance a ON p.cle_pop = a.cle_pop                                          ;
+"
+
+Data_aqua <- dbGetQuery(connexion, Filtre_Aqua)
+#View(Data_aqua)
+
+
+#Section 2: Calcul de variation
+#Boucle de calcul de variation de des population sur intervalle de temps 
+
+#longueur boucle
+a<-sort(unique(Data_aqua$cle_pop))
+
+#Création vecteur vide pour stocker variation
+percent_pop_var_aqua<-c()
+
+#création objet boucle
+
+i=1
+for (i in 1:length(a)) {
+  Intervalle_variant<-subset(Data_aqua,cle_pop==a[i],)
+  
+  Rmax<-which.max(Intervalle_variant$years)
+  Val_F<-Intervalle_variant$val[Rmax]
+  
+  Rmin<-which.min(Intervalle_variant$years)
+  Val_I<-Intervalle_variant$val[Rmin]
+  
+  if(Val_I!=0) {
+    y<-((((Val_F-Val_I)/Val_I)
+         *100)/length(Intervalle_variant))
+    percent_pop_var_aqua<-c(percent_pop_var_aqua,y)
+  }
+  i=i+1
+}
+
+#Section pour voir données: Retirer # pourrun ensuite
+#percent_var_<-data.frame(percent_pop_var_aqua)
+#View(percent_var_)
+
+#Section 3: Histogramme
+
+hist(percent_pop_var_aqua,main = ' Répartition populations aquatique ', 
+     xlab = 'variation moyenne par an',ylab = 'Nombre population aquatique',
+     breaks = 100,freq = TRUE,xlim = c(-100, 800),ylim = c(0,175))
+Constante_aqua<-mean(percent_pop_var_aqua)
+abline(v= Constante_aqua,col='blue' , lwd=2)
+
+
+#Graphique terrestre
+##Selcetion dans catégorie Terrestre des classes avec cycle vital n'impliquant pas typiquement étape de vie aquatique à un certain stade parmi classe de banque de données;
+#soit Aves, Mammalia et squamata 
+
+Filtre_TER <- 
+"
+WITH class_TSN_TER AS (
+  SELECT TSN, class
+  FROM taxo
+  WHERE class LIKE '%Mammalia%'
+     OR class LIKE '%Aves%'
+)
+SELECT 
+  a.cle_pop,
+  a.years,
+  a.val,
+  p.unit,
+  t.class
+FROM class_TSN_TER t
+JOIN population p ON t.TSN = p.TSN
+JOIN abondance a ON p.cle_pop = a.cle_pop;
+"
+
+Data_TER <- dbGetQuery(connexion, Filtre_TER)
+View(Data_TER)
+
+#Section 4: Calcul de variation TERrestre
+#Boucle de calcul de variation de des population sur intervalle de temps 
+
+#longueur boucle& et vecteur pour sélection par cle pop avec subset
+b<-sort(unique(Data_TER$cle_pop))
+
+#Création vecteur vide pour stocker variation
+percent_pop_var_TER<-c()
+
+#création objet boucle
+
+i=1
+for (i in 1:length(b)) {
+Intervalle_variant<-subset(Data_TER,cle_pop==b[i],)
+
+Rmax<-which.max(Intervalle_variant$years)
+Val_F<-Intervalle_variant$val[Rmax]
+
+Rmin<-which.min(Intervalle_variant$years)
+Val_I<-Intervalle_variant$val[Rmin]
+
+if(Val_I!=0) {
+y<-((((Val_F-Val_I)/Val_I)
+     *100)/length(Intervalle_variant))
+percent_pop_var_TER<-c(percent_pop_var_TER,y)
+}
+i=i+1
+}
+
+View(percent_pop_var_TER)
+percent_var_<-data.frame(percent_pop_var_TER)
+
+#Section 3: Histogramme
+
+Histo_Terrestre<-hist(percent_pop_var_TER,main = ' Répartition populations des classes Aves et Mammalia',
+     xlab = 'variation moyenne par an',ylab = 'Nombre population Terrestre',
+     breaks = 100,freq = TRUE,xlim = c(-100, 600),ylim = c(0,175))
+
+Constante_TER_pourcent<-mean(percent_pop_var_TER)
+abline(v= Constante_TER_pourcent,col='brown' , lwd=2)
+
+
+```
+#Analyse
+
+Selon ce qu'on peut observer, parmi les classes sélectionnées, on remarque qu'il ya un plus grand nombre de populations échantillonnées dans les classes Aves et Mammalia que dans les classes considérés ici comme aquatique, impliquant donc un plus grand échantillonnage.
+Par contre, on peut difficilement affirmer qu'il y ait une divergence nette entre les deux catégories à cette échelle. La moyenne globale de la variation moyenne par an dans les deux cas avoisine 50% et les population sont majoritairement répartis dans l'intervalle de [-50, 50]% dans les deux. La seule différence marquante semble être qu'il y a plus de populations d'aves et mammalia présentes dans l'intervalle [-50,0]% qu'il y en dans ce même intervalle pour les classes aquatiques.
+
+
+
+Il est à noter que certaines classes du jeu de données sont absentes de cette analyse, par effet d'ambiguité résultant de la classification grossière utilisé pour répartir l'ensemble des populations en 2, donc toutes les populations ne sont pas inclues.
 # Discussion générale
 
 Notre question était: Quelles tendances générales peut-on observer dans la dynamique de la biodiversité au Québec ? Nos analyses montrent des résultats différents selon l'échelle taxonomique observée.
 
-Nos résultats montrent une tendance nette à la hausse chez les populations de Pygargue à tête blanche (*Haliaeetus leucocephalus*) sélectionnées. Comme le montre la Figure 1, la population de la Nouvelle-Écosse est celle qui s'est rétablie le plus rapidement, possiblement car son déclin avait été moindre. Cette croissance concorde avec les efforts de conservation mis en place à partir des années 1970, notamment l’interdiction du DDT, pesticide qui causait un amincissement critique des coquilles d’œufs et une chute des taux de reproduction chez les rapaces​. Toutefois, ces cas semblent être l’exception. Une étude majeure de [@rosenberg_decline_2019] a révélé une perte de près de 3 milliards d’oiseaux en Amérique du Nord depuis 1970, représentant une chute de 29 % de l’abondance totale des populations aviaires, y compris chez des espèces communes et généralistes​. Notre seconde analyse révèle de large fluctuation chez les espèces aviaires, dont des période, comme entre 1995-2005, où la fluctuation était particulièrement marquée. À l'échelle de (Troisieme analyse).
+Nos résultats montrent une tendance nette à la hausse chez les populations de Pygargue à tête blanche (*Haliaeetus leucocephalus*) sélectionnées. Comme le montre la Figure 1, la population de la Nouvelle-Écosse est celle qui s'est rétablie le plus rapidement, possiblement car son déclin avait été moindre. Cette croissance concorde avec les efforts de conservation mis en place à partir des années 1970, notamment l’interdiction du DDT, pesticide qui causait un amincissement critique des coquilles d’œufs et une chute des taux de reproduction chez les rapaces​. Toutefois, ces cas semblent être l’exception. Une étude majeure de [@rosenberg_decline_2019] a révélé une perte de près de 3 milliards d’oiseaux en Amérique du Nord depuis 1970, représentant une chute de 29 % de l’abondance totale des populations aviaires, y compris chez des espèces communes et généralistes​. Notre seconde analyse révèle de large fluctuation chez les espèces aviaires, dont des période, comme entre 1995-2005, où la fluctuation était particulièrement marquée. Si l'on considère une échelle très générale répartissant les populations entre deux catégories, soit aquatiques et terrestres, il n'est pas possible d'observer de tendances marquées en trait au % de variation d'abondance annuelle. Cependant, cela permet tout de même d'observer que les classes aves et mammalia semble surreprésentés conmparativement à toutes les autres.
 
 # Bibliographie
 

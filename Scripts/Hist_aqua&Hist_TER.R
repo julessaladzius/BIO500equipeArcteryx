@@ -1,6 +1,5 @@
 
 
-
 #Exclut ttestudines et reptilia > connaissances personelles faible en la matière donc exclusion 
 ##Selection dans catégorie Terrestre des classes avec cycle vital n'impliquant pas typiquement étape de vie aquatique à un certain stade parmi classe de banque de données;
 #soit Aves, Mammalia et squamata 
@@ -8,9 +7,6 @@
 #Selection dans catégorie aqua des classes avec cycle vital impliquant étape de vie aquatique à un certain stade parmi classe de banque de données;
 #soit chondrostei,Elasmobranchii,Teleostei,Amphibia,Holostei,,Chondrichthyes,,Myxini et sans squamata ou Testudines( ici terrestre surtout) 
 #Exclut Reptilia, Squamata,Mammalia, Aves et Testudines
-
-
-InstantI<- dbGetQuery(connexion,Filtre_Aqua)
 
 
 Filtre_Aqua <- "
@@ -37,7 +33,7 @@ JOIN abondance a ON p.cle_pop = a.cle_pop                                       
 "
 
 Data_aqua <- dbGetQuery(connexion, Filtre_Aqua)
-View(Data_aqua)
+#View(Data_aqua)
 
 
 #Section 2: Calcul de variation
@@ -77,7 +73,7 @@ for (i in 1:length(a)) {
 
 Histoaqua<-hist(percent_pop_var_aqua,main = ' %variation pour population des classes animales aquatiques de 1985 à 1990', 
      xlab = 'Poucentage de variation',ylab = 'Nombre population aquatique',
-     breaks = 50,freq = TRUE,xlim = c(-100, 1000))
+     breaks = 50,freq = TRUE,xlim = c(-50, 1000))
 Constante_aqua<-mean(percent_pop_var_aqua)
 abline(v= Constante_aqua,col='blue' , lwd=2)
 
@@ -140,13 +136,11 @@ i=i+1
 View(percent_pop_var_TER)
 percent_var_<-data.frame(percent_pop_var_TER)
 
-
-
 #Section 3: Histogramme
 
 Histo_Terrestre<-hist(percent_pop_var_TER,main = ' %variation abondance par an de populations des classes Aves et Mammalia',
      xlab = 'variation moyenne par an',ylab = 'Nombre population Terrestre',
-     breaks = 50,freq = TRUE,xlim = c(-250, 600),ylim = c(0,175))
+     breaks = 100,freq = TRUE,xlim = c(-250, 600),ylim = c(0,175))
 
 Constante_TER_pourcent<-mean(percent_pop_var_TER)
 abline(v= Constante_TER_pourcent,col='brown' , lwd=2)

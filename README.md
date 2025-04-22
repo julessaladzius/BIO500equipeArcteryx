@@ -1,8 +1,40 @@
-# BIO500equipeArcteryx
-Avec les données de séries temporelles
-modification par jules voici notre proejt
+Équipe Arcteryx
+Projet final - BIO500
+Ce projet vise à nettoyer, structurer et analyser les données de séries temporelles de suivi de populations 
 
-Le ciel est bleu et tout va bien!
+Jules Saladzius
+Nathan Bousquet
+François Martin
+
+-------------------
+Dépendances utilisées
+- tidyverse
+- targets
+- tarchetypes
+- RSQLite
+- rmarkdown
+-------------------
+
+Toute la lecture, traitement et l'analyse des données se fait avec un pipeline _target executable avec la fonction
+tar_make()
+
+Celle-ci génère un HTML du rapport final dans le dossier Rapports/
+
+-------------------
+
+Les données sources sont stockées dans :
+- `data/raw/Données/` 
+- `data/Nettoyé/Table_taxo.csv` -> table taxonomique standardisée (produite via l'API de ITIS)
+La base SQLite est générée automatiquement : `database/donneessql`
+
+
+------------------
+Merci
+
+
+
+
+--- Info pour Validation des données ---
 
 Élaboration des clé primaires
 Populations supprimées car differentes valeurs de cle_pop+years: 

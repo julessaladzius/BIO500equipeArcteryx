@@ -1,5 +1,5 @@
 ---
-title: "Analyse des changements de biodiversité"
+title: "L'Envol de la biodiversité: Analyse des populations animales du Québec"
 author: "Équipe Arcteryx"
 date: "2025-04-01"
 output: html_document
@@ -28,28 +28,32 @@ geom       <- dbReadTable(conn, "geom")
 
 # Résumé
 
-# Introduction résumant les questions
+Ce projet porte du la question: **Quelles tendances générales peut-on observer dans la dynamique de la biodiversité au Québec ?** Nous avons utilisé un grand jeu de données de séries temporelles populationnel d'une grande diversité d'espèces quebecoises compilé par Biodiversité Québec. Un pipeline automatisé avec le package `{targets}` assure la reproductibilité des étapes de nettoyage, de l'injection des données avec `{SQLite}` , ainsi que de l'analyse complète. Notre analyse révèle une augmentation marquée de l'abondance de la Pygargue à tête blanche, témoignant de l'efficacité des mesures gouvernementales pour l'interdiction du DDT. Nous révélons également une forte fluctuation interannuelle des populations d'oiseaux ainsi qu'une différence entre les populations terrestres et marines, ces dernières se portant nettement MIEUX OU PIRE OU QUOI.
+
+# Introduction 
 
 Nous présentons ici trois analyses à différentes échelle taxonomique.
 
-La première analyse s'intéresse à le pygargue à tête blanche (TSN:175420), une espèce indicatrice situé au sommet de la chaine alimentaire et à forte valeur symbolique. Nous analyserons et comparerons l'évolution dans le temps de trois populations au Québec. Ces populations sont suivies via le Breeding Bird Survey et les données couvrent une grande période. Cette analyse permettra de répondre à notre question à savoir comment les mesures gouvernementales peuvent influencer l'état des populations sauvages. Cette analyse fait suite à l'interdiction en 1970 de l'utilisation du DDT, qui avait causé un déclin catastrophique de l'espèce. (source)
+La première analyse s'intéresse à le pygargue à tête blanche (TSN:175420), une espèce indicatrice situé au sommet de la chaine alimentaire et à forte valeur symbolique. Nous analyserons et comparerons l'évolution dans le temps de trois populations au Québec. Ces populations sont suivies via le Breeding Bird Survey et les données couvrent une grande période. Cette analyse permettra de répondre à notre question à savoir **comment les mesures gouvernementales peuvent influencer l'état des populations sauvages**. Cette analyse fait suite à l'interdiction en 1970 de l'utilisation du DDT, qui avait causé un déclin catastrophique de l'espèce [@noauthor_pygargue_nodate].
 
-La deuxième analyse s'intéresse aux variations temporelles des populations d'oiseaux sur le territoire québécois. L'objectif est d'examiner les tendances à grande échelle, et de déterminer si les populations sont globalement en croissance ou en déclin. Ces populations sont soumises à divers stress anthropiques, comme l'usage des pesticides, les modifications au territoire ou les changements climatiques. Une analyse récente de relevés à long terme sur 529 espèces d'oiseaux d'Amérique du Nord a révélé une perte nette de 2,9 milliards d'individus, soit un déclin de 29% par rapport à 1970 [@rosenberg2019]. Le phénomène est particulièrement marqué pour les espèces se reproduisant en forêt boréale,un écosystème majeur au Québec, avec une baisse d'abondance de 33.1% sur cette période [@rosenberg2019].
+La deuxième analyse s'intéresse aux variations temporelles des populations d'oiseaux sur le territoire québécois. L'objectif est d'examiner les tendances à grande échelle, et de déterminer **si les populations d'oiseaux du territoire quebecois sont globalement en croissance ou en déclin**. Ces populations sont soumises à divers stress anthropiques, comme l'usage des pesticides, les modifications au territoire ou les changements climatiques. Une analyse récente de relevés à long terme sur 529 espèces d'oiseaux d'Amérique du Nord a révélé une perte nette de 2,9 milliards d'individus, soit un déclin de 29% par rapport à 1970 [@rosenberg_decline_2019]. Le phénomène est particulièrement marqué pour les espèces se reproduisant en forêt boréale,un écosystème majeur au Québec, avec une baisse d'abondance de 33.1% sur cette période [@rosenberg_decline_2019].
+
+La troisième analyse s'intéresse à
+
+l'objectif est de répondre à la question de recherche: **En gras.**
 
 # Première analyse - Pygargue à tête blanche
 
-Nous analysons
+Notre base de données contient cinq populations de Pygargue à tête blanche (*Haliaeetus leucocephalus*) suivies au Québec. Nous avons sélectionné trois d'entre elles (cle_pop : 978, 979, 980) pour lesquelles les séries temporelles sont de bonne qualité, continues, et couvrent au moins 25 ans de suivi.
 
-Dans notre base de donnée, nous avons 5 populations de Pygargue à tête blanche. Nous en avons séléctionné 3 pour lesquelles nos données sont de bonne qualité et pour lesquelles les populations sont suivies sur au moins 15 ans.
-
-Ces trois populations (cle_pop: 978, 979, 980) sont suivies sur (formule qui compte le nombre de ligne avec cle_pop=978). Les données proviennent de la même source (BBS) et elles ont la même unité, un indice standardisé produit par le BBS. Cela nous permet de les comparer directement.
+Ces trois populations ont toutes des données provenant de la même source, le Breeding Bird Survey (BBS), et les données sont exprimées selon un indice d’abondance standardisé ajusté pour l’effort d’échantillonnage. Cette uniformité de source et de méthodologie permet une comparaison directe et fiable entre les populations.
 
 ## Méthode
 
 Voici les emplacements des populations. Cela correspond à l'endroit ou la route/échantillonage a été fait, donc ce n'est pas représentatif de la province en entier.
 
 |                    |           |          |                                   |
-|----------------|----------------|----------------|-------------------------|
+|-----------------|-----------------|-----------------|-----------------------|
 | Population         | Longitude | Latitude | Lieu                              |
 | A (cle\_<pop:978>) | -62.73598 | 45.29015 | Governor Lake, Nouvelle-Écosse    |
 | B (cle\_<pop:979>) | -66.29159 | 46.66660 | Ludlow Parish, Nouveau-Brunswick  |
@@ -58,13 +62,13 @@ Voici les emplacements des populations. Cela correspond à l'endroit ou la route
 ### Informations taxonomiques:
 
 ```{r, echo = FALSE}
-subset(taxo, TSN==175420)
+DBI::dbGetQuery(conn, "SELECT * FROM taxo WHERE TSN = 175420")
 ```
 
-### Source des données
+### Source des données:
 
 ```{r, echo = FALSE}
-subset(source, cle_source == 106)
+DBI::dbGetQuery(conn, "SELECT * FROM source WHERE cle_source = 106")
 ```
 
 ## Résultats
@@ -219,14 +223,17 @@ ggplot(yoy_growth, aes(x=years, y=moy_growth_yoy, group=class,color=class)) +
 
 On remarque des fluctuations importantes dans la croissance interannuelle des populations dans la décennie 1960-1970. Une autre période de variabilité élevée s'observe entre les années 1990 et le début de années 2000. Globalement, la tendance semble être à la baisse sur la période étudiée, avec des pics de croissance de moins en moins fréquents et de faible amplitude.
 
-
 # Troisième analyse
+
+## Méthode
+
+## Résultats
 
 # Discussion générale
 
--   Une discussion, enrichie de citations provenant de la littérature scientifique
+Notre question était: Quelles tendances générales peut-on observer dans la dynamique de la biodiversité au Québec ? Nos analyses montrent des résultats différents selon l'échelle taxonomique observée.
 
--   Références interne aux figures et à la bibliographie
+Nos résultats montrent une tendance nette à la hausse chez les populations de Pygargue à tête blanche (*Haliaeetus leucocephalus*) sélectionnées. Comme le montre la Figure 1, la population de la Nouvelle-Écosse est celle qui s'est rétablie le plus rapidement, possiblement car son déclin avait été moindre. Cette croissance concorde avec les efforts de conservation mis en place à partir des années 1970, notamment l’interdiction du DDT, pesticide qui causait un amincissement critique des coquilles d’œufs et une chute des taux de reproduction chez les rapaces​. Toutefois, ces cas semblent être l’exception. Une étude majeure de [@rosenberg_decline_2019] a révélé une perte de près de 3 milliards d’oiseaux en Amérique du Nord depuis 1970, représentant une chute de 29 % de l’abondance totale des populations aviaires, y compris chez des espèces communes et généralistes​. Notre seconde analyse révèle de large fluctuation chez les espèces aviaires, dont des période, comme entre 1995-2005, où la fluctuation était particulièrement marquée. À l'échelle de (Troisieme analyse).
 
 # Bibliographie
 
